@@ -514,9 +514,10 @@ class Auth extends MY_Controller {
 		if($this->input->post('submit')!='')
 		{
 			//validate form input
-			$this->form_validation->set_rules('full_name', $this->lang->line('register_validation_fullname_label'), 'required|xss_clean');
+			$this->form_validation->set_rules('fullname', $this->lang->line('register_validation_fullname_label'), 'required|xss_clean');
 			$this->form_validation->set_rules('email', $this->lang->line('register_validation_email_label'), 'required|valid_email|is_unique['.$tables['users'].'.email]');
 			$this->form_validation->set_rules('phone', $this->lang->line('register_validation_phone_label'), 'required|xss_clean|integer');
+			$this->form_validation->set_rules('gender', $this->lang->line('register_validation_gender_label'), 'required');
 			$this->form_validation->set_rules('company', $this->lang->line('register_validation_company_label'), 'required|xss_clean');
 			$this->form_validation->set_rules('password', $this->lang->line('register_validation_password_label'), 'required|min_length[' . $this->config->item('min_password_length', 'ion_auth') . ']|max_length[' . $this->config->item('max_password_length', 'ion_auth') . ']|matches[password_confirm]');
 			$this->form_validation->set_rules('password_confirm', $this->lang->line('register_validation_password_confirm_label'), 'required');
