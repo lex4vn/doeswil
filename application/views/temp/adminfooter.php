@@ -1,6 +1,6 @@
 <div class="row">
    <div class="col-md-12">
-      <div class="modal-footer footer">Copyright &copy;  <a href="http://www.digitalvidhya.com" target="_blank"><?php if(isset($site_data->copy_right)) echo $site_data->copy_right; ?></a>  - All Rights Reserved. </div>
+      <div class="modal-footer footer">Copyright &copy;  <a href="http://www.ksoft.vn" target="_blank"><?php if(isset($site_data->copy_right)) echo $site_data->copy_right; ?></a>  - All Rights Reserved. </div>
    </div>
 </div>
 </div>

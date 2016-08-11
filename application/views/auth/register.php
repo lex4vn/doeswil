@@ -30,133 +30,217 @@
             
             <!--  A	-->
              <h1 class="inner-hed">A. <?php echo lang('register_subheading'); ?></h1>
-             <div class="form-group paddin-cont">
-                 <label class="col-lg-3 control-label" for="fullname"><?php echo lang('register_fullname_label'); ?> <span style="color:red;">*</span></label>
-                 <div class="col-lg-9 ">
-                     <?php echo form_input($full_name);?>
-                 </div>
-             </div>
-            <div class="form-group paddin-cont">
-               <label class="col-lg-3 control-label" for="gender"><?php echo lang('register_gender_label'); ?><span style="color:red;">*</span></label>
-               <div class="col-lg-9 ">
-                  <?php echo form_dropdown($gender['name'],$gender['options']);?>
-               </div>
+             <!--  fullname	-->
+             <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                     <div class="form-group paddin-cont">
+                         <label class="col-lg-12 control-label" for="fullname"><?php echo lang('register_fullname_label'); ?> <span style="color:red;">*</span></label>
+                         <div class="col-lg-12 ">
+                             <?php echo form_input($fullname);?>
+                         </div>
+                     </div>
+                </div>
+            
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="form-group paddin-cont">
+                       <label class="col-lg-12 control-label" for="gender"><?php echo lang('register_gender_label'); ?><span style="color:red;">*</span></label>
+                       <div class="col-lg-12 ">
+                          <?php echo form_dropdown($gender['name'],$gender['options']);?>
+                       </div>
+                    </div>
+                </div>
             </div>
-            <div class="form-group paddin-cont">
-               <label class="col-lg-3 control-label" for="ftname"><?php echo lang('register_photo_label'); ?> <span style="color:red;">*</span></label>
-               <div class="col-lg-9 ">
+            <!-- end fullname	-->
+            
+            <div class="row">
+            <div class="col-lg-12 form-group">
+               <label class="col-lg-12 control-label" for="image"><?php echo lang('register_photo_label'); ?> <span style="color:red;">*</span></label>
+               <div class="col-lg-12 ">
                   <input type="file" name="image" id="image" class=""/>
                </div>
             </div>
-             <div class="form-group paddin-cont">
-               <label class="col-lg-3 control-label" for="birthdate"><?php echo lang('register_date_of_birth_label'); ?><span style="color:red;">*</span></label>
-               <div class="col-lg-9 ">
-                  <?php echo form_input($birthdate);?>
-               </div>
             </div>
-             <div class="form-group paddin-cont">
-                 <label class="col-lg-3 control-label" for="birthplace"><?php echo lang('register_place_of_birth_label'); ?><span style="color:red;">*</span></label>
-                 <div class="col-lg-9 ">
-                     <?php echo form_input($birthplace);?>
+            
+            <!--  birthdate	-->
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                     <div class="form-group paddin-cont">
+                       <label class="col-lg-12 control-label" for="birthdate"><?php echo lang('register_date_of_birth_label'); ?><span style="color:red;">*</span></label>
+                       <div class="col-lg-12 ">
+                           <div class='input-group date'>
+                              <?php echo form_input($birthdate);?>
+                              <span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+                           </div>
+                       </div>
+                    </div>
+                </div>
+            
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                     <div class="form-group paddin-cont">
+                         <label class="col-lg-12 control-label" for="birthplace"><?php echo lang('register_place_of_birth_label'); ?><span style="color:red;">*</span></label>
+                         <div class="col-lg-12 ">
+                             <?php echo form_input($birthplace);?>
+                         </div>
+                     </div>            
+                </div>
+            </div><!--  end	birthdate -->
+            
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="form-group paddin-cont">
+                     <label class="col-lg-12 control-label" for="card_id_no"><?php echo lang('register_id_card_no_label'); ?><span style="color:red;">*</span></label>
+                     <div class="col-lg-12 ">
+                         <?php echo form_input($card_id_no);?>
+                     </div>
                  </div>
-             </div>
-             <div class="form-group paddin-cont">
-                 <label class="col-lg-3 control-label" for="card_id_no"><?php echo lang('register_id_card_no_label'); ?><span style="color:red;">*</span></label>
-                 <div class="col-lg-9 ">
-                     <?php echo form_input($card_id_no);?>
                  </div>
-             </div>
-             <div class="form-group paddin-cont">
-                 <label class="col-lg-3 control-label" for="date_of_issue"><?php echo lang('register_date_of_issue_label'); ?><span style="color:red;">*</span></label>
-                 <div class="col-lg-9 ">
-                     <?php echo form_input($date_of_issue);?>
+                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                 <div class="form-group paddin-cont">
+                     <label class="col-lg-12 control-label" for="date_of_issue"><?php echo lang('register_date_of_issue_label'); ?><span style="color:red;">*</span></label>
+                     <div class="col-lg-12 ">
+                         <div class='input-group date'>
+                         <?php echo form_input($date_of_issue);?>
+                         <span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+                         </div>
+                     </div>
                  </div>
-             </div>
-             <div class="form-group paddin-cont">
-                 <label class="col-lg-3 control-label" for="issued_police"><?php echo lang('register_issued_by_police_label'); ?><span style="color:red;">*</span></label>
-                 <div class="col-lg-9 ">
-                     <?php echo form_input($issued_police);?>
                  </div>
-             </div>
-             <div class="form-group paddin-cont">
-                 <label class="col-lg-3 control-label" for="phone"><?php echo lang('register_phone_label'); ?><span style="color:red;">*</span></label>
-                 <div class="col-lg-9 ">
-                     <?php echo form_input($phone);?>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="form-group paddin-cont">
+                     <label class="col-lg-12 control-label" for="issued_police"><?php echo lang('register_issued_by_police_label'); ?><span style="color:red;">*</span></label>
+                     <div class="col-lg-12 ">
+                         <?php echo form_input($issued_police);?>
+                     </div>
                  </div>
-             </div>
-             <div class="form-group paddin-cont">
-                 <label class="col-lg-3 control-label" for="email"><?php echo lang('register_email_label'); ?> <span style="color:red;">*</span></label>
-                 <div class="col-lg-9 ">
-                     <?php echo form_input($email);?>
                  </div>
-             </div>
-            <div class="form-group paddin-cont">
-               <label class="col-lg-3 control-label" for="ftname"><?php echo lang('register_password_label'); ?> <span style="color:red;">*</span></label>
-               <div class="col-lg-9 ">
-                  <?php echo form_input($password);?>
-               </div>
             </div>
-            <div class="form-group paddin-cont">
-                <label class="col-lg-3 control-label" for="ftname"><?php echo lang('register_password_confirm_label'); ?> <span style="color:red;">*</span></label>
-               <div class="col-lg-9 ">
-                  <?php echo form_input($password_confirm);?>
-               </div>
-            </div>             
+
+        
+
+
+             
+            <!--  email	-->
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                     <div class="form-group paddin-cont">
+                         <label class="col-lg-12 control-label" for="email"><?php echo lang('register_email_label'); ?> <span style="color:red;">*</span></label>
+                         <div class="col-lg-12 ">
+                             <?php echo form_input($email);?>
+                         </div>
+                     </div>     
+                </div>
+            
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                     <div class="form-group paddin-cont">
+                         <label class="col-lg-12 control-label" for="phone"><?php echo lang('register_phone_label'); ?><span style="color:red;">*</span></label>
+                         <div class="col-lg-12 ">
+                             <?php echo form_input($phone);?>
+                         </div>
+                     </div>               
+                </div>
+            </div><!--  end	email -->
+            
+             
+            <!--  password	-->
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="form-group paddin-cont">
+                       <label class="col-lg-12 control-label" for="password"><?php echo lang('register_password_label'); ?> <span style="color:red;">*</span></label>
+                       <div class="col-lg-12 ">
+                          <?php echo form_input($password);?>
+                       </div>
+                    </div>
+                </div>
+            
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="form-group paddin-cont">
+                        <label class="col-lg-12 control-label" for="password_confirm"><?php echo lang('register_password_confirm_label'); ?> <span style="color:red;">*</span></label>
+                       <div class="col-lg-12 ">
+                          <?php echo form_input($password_confirm);?>
+                       </div>
+                    </div>                 
+                </div>
+            </div><!--  end	password -->
+            
              <div class="form-group paddin-cont">
-                 <label class="col-lg-3 control-label" for="permanent_address"><?php echo lang('register_permanent_address_label'); ?><span style="color:red;">*</span></label>
-                 <div class="col-lg-9 ">
+                 <label class="col-lg-12 control-label" for="permanent_address"><?php echo lang('register_permanent_address_label'); ?><span style="color:red;">*</span></label>
+                 <div class="col-lg-12 ">
                      <?php echo form_input($permanent_address);?>
                  </div>
              </div>
              <div class="form-group paddin-cont">
-                 <label class="col-lg-3 control-label" for="temp_address"><?php echo lang('register_temporary_address_label'); ?><span style="color:red;">*</span></label>
-                 <div class="col-lg-9 ">
+                 <label class="col-lg-12 control-label" for="temp_address"><?php echo lang('register_temporary_address_label'); ?><span style="color:red;">*</span></label>
+                 <div class="col-lg-12 ">
                      <?php echo form_input($temp_address);?>
                  </div>
              </div>
              <div class="form-group paddin-cont">
-                 <label class="col-lg-3 control-label" for="major"><?php echo lang('register_major_label'); ?><span style="color:red;">*</span></label>
-                 <div class="col-lg-9 ">
+                 <label class="col-lg-12 control-label" for="major"><?php echo lang('register_major_label'); ?><span style="color:red;">*</span></label>
+                 <div class="col-lg-12 ">
                      <?php echo form_input($major);?>
                  </div>
              </div>
 
              <div class="form-group paddin-cont">
-                 <label class="col-lg-3 control-label" for="university"><?php echo lang('register_university_label'); ?><span style="color:red;">*</span></label>
-                 <div class="col-lg-9 ">
+                 <label class="col-lg-12 control-label" for="university"><?php echo lang('register_university_label'); ?><span style="color:red;">*</span></label>
+                 <div class="col-lg-12 ">
                      <?php echo form_input($university);?>
                  </div>
              </div>
-             <div class="form-group paddin-cont">
-                 <label class="col-lg-3 control-label" for="student_code"><?php echo lang('register_student_code_label'); ?><span style="color:red;">*</span></label>
-                 <div class="col-lg-9 ">
-                     <?php echo form_input($student_code);?>
+             
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                     <div class="form-group paddin-cont">
+                         <label class="col-lg-12 control-label" for="student_code"><?php echo lang('register_student_code_label'); ?><span style="color:red;">*</span></label>
+                         <div class="col-lg-12 ">
+                             <?php echo form_input($student_code);?>
+                         </div>
+                     </div>
                  </div>
-             </div>
+                 
+                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                     <div class="form-group paddin-cont">
+                       <label class="col-lg-12 control-label" for="registered_field"><?php echo lang('register_registered_field_label'); ?><span style="color:red;">*</span></label>
+                       <div class="col-lg-12 ">
+                          <?php echo form_dropdown($registered_field['name'],$registered_field['options']);?>
+                       </div>
+                    </div>
+                </div>
+            </div> 
+            
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                     <div class="form-group paddin-cont">
+                         <label class="col-lg-12 control-label" for="score"><?php echo lang('register_average_gpa_label'); ?><span style="color:red;">*</span></label>
+                         <div class="col-lg-12 ">
+                             <?php echo form_input($score);?>
+                         <em>The GPA's decimal should be separated from integer by a dot. Ex: Correct answer: 7.6; wrong answer: 7,6.</em>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                     <div class="form-group paddin-cont">
+                         <label class="col-lg-12 control-label" for="date_graduation"><?php echo lang('register_expected_graduation_label'); ?><span style="color:red;">*</span></label>
+                         <div class="col-lg-12 ">
+                             <div class='input-group date'>
+                                 <?php echo form_input($date_graduation);?>
+                                  <span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+                               </div>
+                         </div>
+                     </div>
+
+                 </div>
+                
+            </div>
 
              <div class="form-group paddin-cont">
-                 <label class="col-lg-3 control-label" for="score"><?php echo lang('register_average_gpa_label'); ?><span style="color:red;">*</span></label>
-                 <div class="col-lg-9 ">
-                     <?php echo form_input($score);?>
-                 <em>The GPA's decimal should be separated from integer by a dot. Ex: Correct answer: 7.6; wrong answer: 7,6.</em>
-                 </div>
-             </div>
-
-             <div class="form-group paddin-cont">
-                 <label class="col-lg-3 control-label" for="date_graduation"><?php echo lang('register_expected_graduation_label'); ?><span style="color:red;">*</span></label>
-                 <div class="col-lg-9 ">
-                     <?php echo form_input($date_graduation);?>
-                 </div>
-             </div>
-
-             <div class="form-group paddin-cont">
-                 <label class="col-lg-3 control-label" for="english_proficiency"><?php echo lang('register_english_proficiency_label'); ?><span style="color:red;">*</span></label>
-                 <div class="col-lg-9 ">
+                 <label class="col-lg-12 control-label" for="english_proficiency"><?php echo lang('register_english_proficiency_label'); ?><span style="color:red;">*</span></label>
+                 <div class="col-lg-12 ">
                      <?php echo form_input($english_proficiency);?>
                  </div>
              </div>
-             <br/><br/><br/><br/><br/><br/>
-             
+             <div class="clearfix"></div>
+             <div class="spacer"></div>
              
              <!--  B	-->
              <h1 class="inner-hed">B. <?php echo lang('register_heading_achievement_label'); ?></h1>
@@ -173,8 +257,8 @@
                      <?php echo form_textarea($achievements);?>
                  </div>
              </div>
-             <br/><br/><br/><br/><br/><br/>
-             
+             <div class="clearfix"></div>
+             <div class="spacer"></div>
              
              <!--  C	-->
              <h1 class="inner-hed">C. <?php echo lang('register_heading_achievement_label'); ?></h1>
@@ -203,18 +287,10 @@
                  </div>
              </div>
 
-            <div style="margin-left:60px;" class="form-group ">
-               <div class="col-lg-offset-1 col-lg-10 padd">
+            <div class="form-group text-center">
                   <?php echo form_submit('submit', $this->lang->line('new_user_submit_btn'),'class="btn btn-danger butt"');?>
-               </div>
             </div>
             <?php echo form_close(); ?>
-         </div>
-         <div class="text-center">
-            <ul class="list-inline">
-               <li><a class="text-muted" href="<?php echo base_url(); ?>auth/login"><?php echo lang('login_submit_btn'); ?></a></li>
-               <li><a class="text-muted" href="<?php echo base_url(); ?>auth/forgot_password"><?php echo lang('login_forgot_password'); ?></a></li>
-            </ul>
          </div>
       </div>
    </div>
@@ -226,7 +302,10 @@
 <script src="<?php echo base_url();?>assets/designs/js/jquery.min.js"></script>
 <script src="<?php echo base_url();?>assets/designs/js/jquery.validate.min.js"></script>
 <script src="<?php echo base_url();?>assets/designs/js/additional-methods.min.js"></script>
-<script type="text/javascript"> 
+<script type="text/javascript">
+    $(function () {
+                $('.input-group.date').datepicker();
+    });
    (function($,W,D)
    {
       var JQUERY4U = {};
@@ -273,25 +352,92 @@
    		//form validation rules
               $("#user_creation_form").validate({
                   rules: {
-   				fullname: {
-                          required: true,
-                          lettersonly: true,
-   					rangelength: [3, 30]
-                      },                    
-   				phone: {
-                          required: true,
-   					phoneNumber: true,
-   					rangelength: [10, 11]
-                      },
-   				email: {
-                          required: true,
-   					email: true,
-   					check_duplicate_email: true
-                      },
-   				image: {
-                          required: true,
-						  accept: "jpg|jpeg|png"
-                      },
+       				fullname: {
+                            required: true,
+                            lettersonly: true,
+                            rangelength: [3, 30]
+                          },  
+       				gender: {
+                            required: true,
+                          },
+       				birthdate: {
+                            required: true,
+                          },
+       				birthplace: {
+                            required: true,
+                          },
+       				card_id_no: {
+                            required: true,
+                          },
+       				date_of_issue: {
+                            required: true,
+                          },
+       				issued_police: {
+                            required: true,
+                          },
+       				permanent_address: {
+                            required: true,
+                          },
+       				temp_address: {
+                            required: true,
+                          },
+       				major: {
+                            required: true,
+                          },
+       				university: {
+                            required: true,
+                          },
+       				score: {
+                            required: true,
+                          },
+       				student_code: {
+                            required: true,
+                          },
+       				date_graduation: {
+                            required: true,
+                          },
+                          
+                          
+       				english_proficiency: {
+                            required: true,
+                          },
+       				extracurricular_activities: {
+                            required: true,
+                          },
+       				achievements: {
+                            required: true,
+                          },
+       				experiences: {
+                            required: true,
+                          },
+       				career_pursuit: {
+                            required: true,
+                          },
+       				factor: {
+                            required: true,
+                          },
+       				objectives: {
+                            required: true,
+                          },
+       				registered_field: {
+                            required: true,
+                          },
+                          
+                          
+       				phone: {
+                        required: true,
+       					phoneNumber: true,
+       					rangelength: [10, 11]
+                          },
+       				email: {
+                        required: true,
+       					email: true,
+       					check_duplicate_email: true
+                          },
+   	// 			image: {
+    //                       required: true,
+				// 		  accept: "jpg|jpeg|png"
+    //                   },
    				password:{
    					required:true,
    					rangelength: [8, 30]
@@ -305,17 +451,23 @@
    			messages: {
    				fullname: {
                           required: "Please enter your last name."
-                      },                    
+                      },      
+   				gender: {
+                          required: "Please select an option from the list."
+                      },                      
    				phone: {
                           required: "Please enter your number."
+                      },
+   				card_id_no: {
+                          required: "Please enter your ID number."
                       },
    				email: {
                           required: "Please enter your email-id."
                       },
-   				image: {
-                          required: "Please upload your photo.",
-						  accept: "Only jpg / jpeg / png images are accepted."
-                      },
+   	// 			image: {
+    //                       required: "Please upload your photo.",
+				// 		  accept: "Only jpg / jpeg / png images are accepted."
+    //                   },
    				password:{
    					required: "Please enter password."
    				},

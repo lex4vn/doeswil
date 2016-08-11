@@ -3,7 +3,7 @@
 <!-- Slider-->
 <div data-ride="carousel" class="carousel slide banner" id="myCarousel">
    <div class="container-fluid padding">
-      <img src="<?php echo base_url(); ?>assets/designs/images/inner-banner.png" width="100%">
+      <img src="<?php echo base_url(); ?>assets/designs/images/wilmar.jpg" width="100%">
    </div>
 </div>
 <!-- Slider-->

@@ -42,7 +42,7 @@
          <?php echo form_input($password);?>
       </p>
       <p class="type">
-         <?php echo form_submit('submit', $this->lang->line('login_submit_btn'),'class="btn btn-lg btn-primary butt"');?>
+         <?php echo form_submit('submit', $this->lang->line('login_submit_btn'),'class="btn btn-lg btn-primary butt button-float-right"');?>
       </p>
       <?php echo form_close();?>
       <p class="forget"><a href="<?php echo base_url(); ?>auth/forgot_password"><?php echo lang('login_forgot_password'); ?></a></p>

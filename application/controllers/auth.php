@@ -505,7 +505,7 @@ class Auth extends MY_Controller {
 	//create a new user
 	function register()
 	{
-		$this->data['title'] = "Create User";
+		$this->data['title'] = "Register";
 	
 		//$this->load->config('ion_auth');
 		$this->config->load('ion_auth', TRUE);
@@ -518,14 +518,12 @@ class Auth extends MY_Controller {
 			$this->form_validation->set_rules('email', $this->lang->line('register_validation_email_label'), 'required|valid_email|is_unique['.$tables['users'].'.email]');
 			$this->form_validation->set_rules('phone', $this->lang->line('register_validation_phone_label'), 'required|xss_clean|integer');
 			$this->form_validation->set_rules('gender', $this->lang->line('register_validation_gender_label'), 'required');
-			$this->form_validation->set_rules('company', $this->lang->line('register_validation_company_label'), 'required|xss_clean');
+		//	$this->form_validation->set_rules('company', $this->lang->line('register_validation_company_label'), 'required|xss_clean');
 			$this->form_validation->set_rules('password', $this->lang->line('register_validation_password_label'), 'required|min_length[' . $this->config->item('min_password_length', 'ion_auth') . ']|max_length[' . $this->config->item('max_password_length', 'ion_auth') . ']|matches[password_confirm]');
 			$this->form_validation->set_rules('password_confirm', $this->lang->line('register_validation_password_confirm_label'), 'required');
 			
 			if(!empty($_FILES['image']['name'])) {
-
 				$this->form_validation->set_rules('image',"Image", 'callback__image_check['.$_FILES['image']['name'].']');			
-
 			}
 
 			if ($this->form_validation->run() == true)
@@ -558,6 +556,7 @@ class Auth extends MY_Controller {
 					'career_pursuit'      => $this->input->post('career_pursuit'),
 					'factor'      => $this->input->post('factor'),
 					'objectives'      => $this->input->post('objectives'),
+					'registered_field'      => $this->input->post('registered_field'),
 					'date_of_registration'      => date('Y-m-d')
 				);
 				
@@ -577,22 +576,21 @@ class Auth extends MY_Controller {
 				//display the create user form
 				//set the flash data error message if there is one
 				$this->prepare_flashmessage((validation_errors() ? validation_errors() : ($this->ion_auth->errors() ? $this->ion_auth->errors() : $this->session->flashdata('message'))),1);
-				redirect("auth/register", 'refresh');
+			//	redirect("auth/register", 'refresh');
 				
 			}
 		}
-		$this->data['full_name'] = array(
-			'name'  => 'full_name',
+		$this->data['fullname'] = array(
+			'name'  => 'fullname',
 			'class'=>'form-control',
 			'placeholder'=> lang('register_fullname_placeholder'),
-			'id'    => 'full_name',
+			'id'    => 'fullname',
 			'type'  => 'text',
-			'value' => $this->form_validation->set_value('full_name'),
+			'value' => $this->form_validation->set_value('fullname'),
 		);
 		$this->data['gender'] = array(
 			'name'  => 'gender',
 			'options'=> array(
-				'0'=> '',
 				'1'=> lang('male'),
 				'2'=> lang('female')
 			),
@@ -616,6 +614,14 @@ class Auth extends MY_Controller {
 				'type'  => 'text',
 				'value' => $this->form_validation->set_value('birthplace'),
 			);
+			$this->data['card_id_no'] = array(
+				'name'  => 'card_id_no',
+				'class'=>'form-control',
+				'placeholder'=> lang('register_card_id_no_placeholder'),
+				'id'    => 'card_id_no',
+				'type'  => 'text',
+				'value' => $this->form_validation->set_value('card_id_no'),
+			);
 			$this->data['date_of_issue'] = array(
 				'name'  => 'date_of_issue',
 				'class'=>'form-control',
@@ -632,14 +638,15 @@ class Auth extends MY_Controller {
 				'type'  => 'text',
 				'value' => $this->form_validation->set_value('email'),
 			);
-			$this->data['company'] = array(
-				'name'  => 'company',
+			$this->data['issued_police'] = array(
+				'name'  => 'issued_police',
 				'class'=>'form-control',
-				'placeholder'=>'Company',
-				'id'    => 'company',
+				'placeholder'=>lang('register_issued_police_placeholder'),
+				'id'    => 'issued_police',
 				'type'  => 'text',
-				'value' => $this->form_validation->set_value('company'),
+				'value' => $this->form_validation->set_value('issued_police'),
 			);
+
 			$this->data['phone'] = array(
 				'name'  => 'phone',
 				'class'=>'form-control',
@@ -647,14 +654,6 @@ class Auth extends MY_Controller {
 				'id'    => 'phone',
 				'type'  => 'text',
 				'value' => $this->form_validation->set_value('phone'),
-			);
-			$this->data['birthplace'] = array(
-				'name'  => 'birthplace',
-				'class'=>'form-control',
-				'placeholder'=>lang('register_place_of_birth_placeholder'),
-				'id'    => 'birthplace',
-				'type'  => 'text',
-				'value' => $this->form_validation->set_value('birthplace'),
 			);
 
 			$this->data['password'] = array(
@@ -673,7 +672,135 @@ class Auth extends MY_Controller {
 				'type'  => 'password',
 				'value' => $this->form_validation->set_value('password_confirm'),
 			);
-
+			$this->data['permanent_address'] = array(
+				'name'  => 'permanent_address',
+				'class'=>'form-control',
+				'placeholder'=>'',
+				'id'    => 'permanent_address',
+				'type'  => 'text',
+				'value' => $this->form_validation->set_value('permanent_address'),
+			);
+			$this->data['temp_address'] = array(
+				'name'  => 'temp_address',
+				'class'=>'form-control',
+				'placeholder'=>'',
+				'id'    => 'temp_address',
+				'type'  => 'text',
+				'value' => $this->form_validation->set_value('temp_address'),
+			);
+			$this->data['major'] = array(
+				'name'  => 'major',
+				'class'=>'form-control',
+				'placeholder'=>'',
+				'id'    => 'major',
+				'type'  => 'text',
+				'value' => $this->form_validation->set_value('major'),
+			);
+			$this->data['university'] = array(
+				'name'  => 'university',
+				'class'=>'form-control',
+				'placeholder'=>'',
+				'id'    => 'university',
+				'type'  => 'text',
+				'value' => $this->form_validation->set_value('university'),
+			);
+			$this->data['student_code'] = array(
+				'name'  => 'student_code',
+				'class'=>'form-control',
+				'placeholder'=>'',
+				'id'    => 'student_code',
+				'type'  => 'text',
+				'value' => $this->form_validation->set_value('student_code'),
+			);
+			$this->data['score'] = array(
+				'name'  => 'score',
+				'class'=>'form-control',
+				'placeholder'=>'',
+				'id'    => 'score',
+				'type'  => 'text',
+				'value' => $this->form_validation->set_value('score'),
+			);
+			
+			$this->data['date_graduation'] = array(
+				'name'  => 'date_graduation',
+				'class'=>'form-control',
+				'placeholder'=> lang('date_placeholder'),
+				'id'    => 'date_graduation',
+				'type'  => 'text',
+				'value' => $this->form_validation->set_value('date_graduation'),
+			);
+			
+			$this->data['english_proficiency'] = array(
+				'name'  => 'english_proficiency',
+				'class'=>'form-control',
+				'placeholder'=> '',
+				'id'    => 'english_proficiency',
+				'type'  => 'text',
+				'value' => $this->form_validation->set_value('english_proficiency'),
+			);
+			// Data text-area
+			$this->data['extracurricular_activities'] = array(
+				'name'  => 'extracurricular_activities',
+				'class'=>'form-control',
+				'placeholder'=> '',
+				'id'    => 'extracurricular_activities',
+				'type'  => 'text',
+				'value' => $this->form_validation->set_value('extracurricular_activities'),
+			);
+			$this->data['achievements'] = array(
+				'name'  => 'achievements',
+				'class'=>'form-control',
+				'placeholder'=> '',
+				'id'    => 'achievements',
+				'type'  => 'text',
+				'value' => $this->form_validation->set_value('achievements'),
+			);
+			$this->data['experiences'] = array(
+				'name'  => 'experiences',
+				'class'=>'form-control',
+				'placeholder'=> '',
+				'id'    => 'experiences',
+				'type'  => 'text',
+				'value' => $this->form_validation->set_value('experiences'),
+			);
+			
+			$this->data['career_pursuit'] = array(
+				'name'  => 'career_pursuit',
+				'class'=>'form-control',
+				'placeholder'=> '',
+				'id'    => 'career_pursuit',
+				'type'  => 'text',
+				'value' => $this->form_validation->set_value('career_pursuit'),
+			);
+			$this->data['factor'] = array(
+				'name'  => 'factor',
+				'class'=>'form-control',
+				'placeholder'=> '',
+				'id'    => 'factor',
+				'type'  => 'text',
+				'value' => $this->form_validation->set_value('factor'),
+			);
+			$this->data['objectives'] = array(
+				'name'  => 'objectives',
+				'class'=>'form-control',
+				'placeholder'=> '',
+				'id'    => 'objectives',
+				'type'  => 'text',
+				'value' => $this->form_validation->set_value('objectives'),
+			);
+			
+			
+			$this->data['registered_field'] = array(
+				'name'  => 'registered_field',
+				'options'=> array(
+					'Technical'=> 'Technical',
+					'Economics'=> 'Economics',
+					'Social science'=> 'Social science'
+				),
+				'selected'    => array(
+					'1'=> 'Technical'
+				)
+			);
 
 		$this->data['extracurricular_activities'] = array(
 			'name'  => 'extracurricular_activities',

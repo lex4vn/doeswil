@@ -67,6 +67,7 @@ $lang['register_place_of_birth_label']               = 'Place of birth:';
 $lang['register_place_of_birth_placeholder']               = 'Place of birth';
 $lang['register_place_of_birth_placeholder']               = 'Your place of birth';
 $lang['register_id_card_no_label']               = 'ID Card No.:';
+$lang['register_card_id_no_placeholder']               = 'Your card id number';
 $lang['register_date_of_issue_label']               = 'Date of issue:';
 $lang['register_issued_by_police_label']               = 'Issued by Police of:';
 $lang['register_permanent_address_label']               = 'Permanent Address:';
@@ -102,6 +103,7 @@ $lang['register_photo_label']                       = 'Photo';
 $lang['register_password_label']                    = 'Password:';
 $lang['register_password_confirm_label']            = 'Confirm Password:';
 $lang['register_submit_btn']                        = 'Create User';
+$lang['register_registered_field_label']                        = 'Registered field in the contest:';
 $lang['new_user_submit_btn']                           = 'Submit';
 $lang['signup_user_submit_btn']                        = 'Sign Up';
 $lang['register_validation_fname_label']            = 'First Name';
@@ -111,6 +113,10 @@ $lang['register_validation_phone1_label']           = 'First Part of Phone';
 $lang['register_validation_phone2_label']           = 'Second Part of Phone';
 $lang['register_validation_phone3_label']           = 'Third Part of Phone';
 $lang['register_validation_company_label']          = 'Company Name';
+
+$lang['register_validation_gender_label']          = 'Gender';
+
+
 $lang['register_validation_password_label']         = 'Password';
 $lang['register_validation_password_confirm_label'] = 'Password Confirmation';
 $lang['register_join_work_label'] = 'Join to work:';
