@@ -354,7 +354,6 @@
                   rules: {
        				fullname: {
                             required: true,
-                            lettersonly: true,
                             rangelength: [3, 30]
                           },  
        				gender: {

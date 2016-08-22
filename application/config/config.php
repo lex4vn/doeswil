@@ -716,7 +716,7 @@ $config['rewrite_short_tags'] = FALSE;
 
 $config['proxy_ips'] = '';
 
-
+$config['enable_hooks'] = TRUE;
 
 
 

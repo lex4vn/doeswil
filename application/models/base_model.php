@@ -160,6 +160,11 @@ class Base_Model extends CI_Model
 		$this->db->where($condition);
 		return $this->db->get()->row()->$column_name;
 	}
+
+	function getOption($condition)
+	{
+		return $this->base_model->get_single_column_value("option_value",'options',"option_name = '".$condition."'");
+	}
 	
 }
 

@@ -3,6 +3,24 @@
    <ul class="dropdown-menu sid-sub-menu" role="menu" aria-labelledby="dropdownMenu" >
       <li class="dropdown-submenu "> <a href="<?php echo base_url();?>">Home</a> </li>
       <li class="dropdown-submenu <?php if(isset($active_menu) && $active_menu=="dashboard") echo "active";?>"> <a href="<?php echo base_url();?>admin">Dashboard</a> </li>
+	  <li class="dropdown <?php if(isset($active_menu) && $active_menu=="users") echo "active";?>">  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Content </a> 
+	  <ul class="dropdown-menu bg-col" role="menu">  
+		<li class="dropdown-submenu"> 
+		  <a href="<?php echo base_url();?>admin/aboutus">About us</a></li>
+		  <li class="dropdown-submenu"> 
+		  <a href="<?php echo base_url();?>admin/term">Term</a></li>
+		  <li class="dropdown-submenu"> 
+		  <a href="<?php echo base_url();?>admin/contactus">Contact us</a></li>
+			<li class="dropdown-submenu"> 
+		  <a href="<?php echo base_url();?>admin/result">Result</a></li>
+			<li class="dropdown-submenu"> 
+		  <a href="<?php echo base_url();?>admin/guess">Guess</a></li>		  
+	  </ul>
+	  </li>      
+      <li class="dropdown-submenu <?php if(isset($active_menu) && $active_menu=="article") echo "active";?>"> 
+	  <a href="<?php echo base_url();?>admin/article">Tin tức sự kiện</a> </li>
+	  
+	  </li>      
       <li class="dropdown-submenu <?php if(isset($active_menu) && $active_menu=="categories") echo "active";?>"> 
 	  <a href="<?php echo base_url();?>admin/categories">Categories</a> </li>
       <li class="dropdown-submenu <?php if(isset($active_menu) && $active_menu=="subcategories") echo "active";?>"> 

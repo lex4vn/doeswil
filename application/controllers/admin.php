@@ -2154,7 +2154,7 @@ class Admin extends MY_Controller {
 	
 	
 	//About Us Content Updation
-	function aboutusContent()
+	function aboutus()
 	{
 		$this->validate_admin();
 		
@@ -2186,7 +2186,106 @@ class Admin extends MY_Controller {
 		$this->_render_page('temp/admintemplate', $this->data);
 	}
 	
+	//Term Content Updation
+	function term()
+	{
+		$this->validate_admin();
+		
+		$this->load->library('form_validation');
+		$this->form_validation->set_rules(
+		'content', 
+		'Content for Term', 
+		'trim|required'
+		);
+		
+		if ($this->form_validation->run() == true) {		
+			$inputdata['content'] = trim($this->input->post('content'));
+			$inputdata['date_modified'] = date('Y-m-d');
+			$this->base_model->update_operation(
+			$inputdata, 
+			$this->db->dbprefix('aboutus_content')
+			);
+			$msg = "Record Updated Successfully";
+			$this->prepare_flashmessage($msg, 0);
+			redirect('admin/aboutusContent');
+		}
+		
+		$this->data['data'] = $this->base_model->run_query(
+		"select * from ".$this->db->dbprefix('aboutus_content').""
+		);
+		$this->data['title'] 			= 'Update Aboutus Content';
+		$this->data['active_menu'] 		= 'aboutus_content';
+		$this->data['content'] 			= 'admin/content/term';
+		$this->_render_page('temp/admintemplate', $this->data);
+	}	
 	
+	//Contact Us Content Updation
+	function contactus()
+	{
+		$this->validate_admin();
+		
+		$this->load->library('form_validation');
+		$this->form_validation->set_rules(
+		'content', 
+		'Content for Aboutus', 
+		'trim|required'
+		);
+		
+		if ($this->form_validation->run() == true) {		
+			$inputdata['content'] = trim($this->input->post('content'));
+			$inputdata['date_modified'] = date('Y-m-d');
+			$this->base_model->update_operation(
+			$inputdata, 
+			$this->db->dbprefix('aboutus_content')
+			);
+			$msg = "Record Updated Successfully";
+			$this->prepare_flashmessage($msg, 0);
+			redirect('admin/content/contactus');
+		}
+		
+		$this->data['data'] = $this->base_model->run_query(
+		"select * from ".$this->db->dbprefix('aboutus_content').""
+		);
+		$this->data['title'] 			= 'Update Aboutus Content';
+		$this->data['active_menu'] 		= 'aboutus_content';
+		$this->data['content'] 			= 'admin/aboutus_content';
+		$this->_render_page('temp/admintemplate', $this->data);
+	}
+	
+	
+	//Result Content Updation
+	function result()
+	{
+		$this->validate_admin();
+		
+		$this->load->library('form_validation');
+		$this->form_validation->set_rules(
+		'content', 
+		'Content for Aboutus', 
+		'trim|required'
+		);
+		
+		if ($this->form_validation->run() == true) {		
+			$inputdata['content'] = trim($this->input->post('content'));
+			$inputdata['date_modified'] = date('Y-m-d');
+			$this->base_model->update_operation(
+			$inputdata, 
+			$this->db->dbprefix('aboutus_content')
+			);
+			$msg = "Record Updated Successfully";
+			$this->prepare_flashmessage($msg, 0);
+			redirect('admin/content/contactus');
+		}
+		
+		$this->data['data'] = $this->base_model->run_query(
+		"select * from ".$this->db->dbprefix('aboutus_content').""
+		);
+		$this->data['title'] 			= 'Update Aboutus Content';
+		$this->data['active_menu'] 		= 'aboutus_content';
+		$this->data['content'] 			= 'admin/aboutus_content';
+		$this->_render_page('temp/admintemplate', $this->data);
+	}
+		
 	//Get availabile questions according to subject and difficulty level.
 	function get_available_questions()
 	{
@@ -2448,7 +2547,53 @@ class Admin extends MY_Controller {
 		$this->_render_page('temp/admintemplate', $this->data);
 	}
 	
+	function pages()
+	{
+		$this->load->model('page_m');
+		// Fetch all pages
+		$this->data['pages'] = $this->page_m->get_with_parent();
+		$this->data['title'] 	= 'Pages';
+		// Load view
+		$this->data['content'] = 'admin/page/index';
+		$this->_render_page('temp/admintemplate', $this->data);
+	}
 	
+	function editPage ($id = NULL)
+	{ 	$this->load->model('page_m');
+		// Fetch a page or set a new one
+		if ($id) {
+			$this->data['page'] = $this->page_m->get($id);
+			count($this->data['page']) || $this->data['errors'][] = 'page could not be found';
+		}
+		else {
+			die(1);
+			$this->data['page'] = $this->page_m->get_new();
+		}
+		
+		// Pages for dropdown
+		$this->data['pages_no_parents'] = $this->page_m->get_no_parents();
+		
+		// Set up the form
+		$rules = $this->page_m->rules;
+		$this->form_validation->set_rules($rules);
+		
+		// Process the form
+		if ($this->form_validation->run() == TRUE) {
+			$data = $this->page_m->array_from_post(array(
+				'title', 
+				'slug', 
+				'body', 
+				'template', 
+				'parent_id'
+			));
+			$this->page_m->save($data, $id);
+			redirect('admin/pages');
+		}
+		
+		// Load the view
+		$this->data['content'] = 'admin/page/edit';
+		$this->_render_page('temp/admintemplate', $this->data);
+	}
 }
 
 /* End of file admin.php */

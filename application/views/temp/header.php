@@ -54,21 +54,21 @@
                      <!-- Collect the nav links, forms, and other content for toggling -->
                      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav menu-list">
-                           <li class="<?php if(isset($active_menu) && $active_menu=="aboutus") echo "active";?>"><a href="<?php echo base_url(); ?>info/aboutus">Giới thiệu</a></li>
-                           <li class="<?php if(isset($active_menu) && $active_menu=="termsConditions") echo "active";?>"><a href="<?php echo base_url(); ?>termsConditions" title="Thể lệ cuộc thi">Thể lệ</a></li>
-                           <li class="<?php if(isset($active_menu) && $active_menu=="news") echo "active";?>"><a href="<?php echo base_url(); ?>news">Tin tức và sự kiện</a></li>
-                           <li class="<?php if(isset($active_menu) && $active_menu=="result") echo "active";?>"><a href="<?php echo base_url(); ?>result"  title="Kết quả các vòng thi">Kết quả</a></li>
-                           <li class="<?php if(isset($active_menu) && $active_menu=="guess") echo "active";?>"><a href="<?php echo base_url(); ?>guess" title="Dự đoán người thắng cuộc">Dự đoán</a></li>
-                           <li class="<?php if(isset($active_menu) && $active_menu=="exam") echo "active";?>"><a href="<?php echo base_url(); ?>exam">Thi online</a></li>
-                           <li class="<?php if(isset($active_menu) && $active_menu=="pictures") echo "active";?>"><a href="<?php echo base_url(); ?>pictures">Hình ảnh</a></li>
-                           <li class="<?php if(isset($active_menu) && $active_menu=="video") echo "active";?>"><a href="<?php echo base_url(); ?>video" title="Video clip">Video</a></li>
-                           <li class="<?php if(isset($active_menu) && $active_menu=="contactus") echo "active";?>"><a href="<?php echo base_url(); ?>info/contact">Liên hệ</a></li>
+                           <li class="<?php if(isset($active_menu) && $active_menu=="aboutus") echo "active";?>"><a href="<?php echo base_url(); ?>info/aboutus"><?php echo lang('menu_about_us'); ?></a></li>
+                           <li class="<?php if(isset($active_menu) && $active_menu=="term") echo "active";?>"><a href="<?php echo base_url(); ?>term" title="Thể lệ cuộc thi"><?php echo lang('menu_term'); ?></a></li>
+                           <li class="<?php if(isset($active_menu) && $active_menu=="article") echo "active";?>"><a href="<?php echo base_url(); ?>article"><?php echo lang('menu_news'); ?></a></li>
+                           <li class="<?php if(isset($active_menu) && $active_menu=="result") echo "active";?>"><a href="<?php echo base_url(); ?>result"  title="Kết quả các vòng thi"><?php echo lang('menu_result'); ?></a></li>
+                           <li class="<?php if(isset($active_menu) && $active_menu=="guess") echo "active";?>"><a href="<?php echo base_url(); ?>guess" title="Dự đoán người thắng cuộc"><?php echo lang('menu_guess'); ?></a></li>
+                           <li class="<?php if(isset($active_menu) && $active_menu=="exam") echo "active";?>"><a href="<?php echo base_url(); ?>exam"><?php echo lang('menu_exam'); ?></a></li>
+                           <li class="<?php if(isset($active_menu) && $active_menu=="pictures") echo "active";?>"><a href="<?php echo base_url(); ?>pictures"><?php echo lang('menu_images'); ?></a></li>
+                           <li class="<?php if(isset($active_menu) && $active_menu=="video") echo "active";?>"><a href="<?php echo base_url(); ?>video" title="Video clip"><?php echo lang('menu_video'); ?></a></li>
+                           <li class="<?php if(isset($active_menu) && $active_menu=="contactus") echo "active";?>"><a href="<?php echo base_url(); ?>info/contact"><?php echo lang('menu_contact_us'); ?></a></li>
 
                            <li class="dropdown active">
                               <a href="<?php echo base_url();?>user" class="dropdown-toggle menu-drop" data-toggle="dropdown">Ngôn ngữ<b class="caret"></b></a>
                               <ul class="dropdown-menu menu-drop">
-                                 <li><a id="vietnamese" href="<?php echo base_url();?>">Tiếng Việt</a></li>
-                                 <li><a id="english" href="<?php echo base_url();?>">English</a></li>
+                                 <li><a id="vietnamese" href="<?php echo base_url();?>langswitch/switchLanguage/vietnamese?url=<?php echo base_url(uri_string()); ?>">Tiếng Việt</a></li>
+                                 <li><a id="english" href="<?php echo base_url();?>langswitch/switchLanguage/english?url=<?php echo base_url(uri_string()); ?>">English</a></li>
                               </ul>
                            </li>
 

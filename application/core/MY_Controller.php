@@ -21,7 +21,17 @@ class MY_Controller extends CI_Controller
 		$site_data = $this->base_model->fetch_records_from($table);
 		$this->session->set_userdata('site_data', $site_data[0]);
 		$this->data['site_data'] = $this->session->userdata('site_data');	
-		
+		$this->session->set_userdata('last_page', current_url());
+		        $site_lang = $this->session->userdata('site_lang');
+        if ($site_lang) {
+            $this->lang->load('auth',$this->session->userdata('site_lang'));
+            $this->lang->load('ion_auth',$this->session->userdata('site_lang'));
+            $this->lang->load('merchant',$this->session->userdata('site_lang'));
+        } else {
+            $this->lang->load('auth','english');
+            $this->lang->load('ion_auth','english');
+            $this->lang->load('merchant','english');
+        }
 		
 	}
 			
