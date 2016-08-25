@@ -1,7 +1,7 @@
 <!-- Slider-->
 <div data-ride="carousel" class="carousel slide banner" id="myCarousel">
    <div class="container-fluid padding">
-      <img src="<?php echo base_url(); ?>assets/designs/images/inner-banner.png" width="100%">
+      <img src="<?php echo base_url(); ?>assets/designs/images/wilmar.jpg" width="100%">
    </div>
 </div>
 <!-- Slider-->
@@ -23,7 +23,7 @@
       <div class="col-md-8 col-xs-12">
          <h1 class="form-hed">SIGN <span class="block"> IN</span></h1>
          <div class="col-md-12 formgro">
-            <!--  <div id="infoMessage"><?php  echo $message;?></div>	-->
+            <!--  <div id="infoMessage"><?php  //echo $message;?></div>	-->
             <?php echo $this->session->flashdata('message'); ?>
             <?php echo form_open("auth/login",'class="form-signin" id="login_form"');?>
             <div class="form-group paddin-cont">
