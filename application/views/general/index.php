@@ -27,8 +27,10 @@
          </div>
       </div>
    </div>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/IYtzbg2KYlU" frameborder="0" allowfullscreen></iframe>
-   <a data-slide="prev" href="#myCarousel" class="left carousel-control"><span class="glyphicon glyphicon-chevron-left"></span></a>
+    <div class="carousel-caption width-form">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/IYtzbg2KYlU" frameborder="0" allowfullscreen></iframe>
+    </div>
+       <a data-slide="prev" href="#myCarousel" class="left carousel-control"><span class="glyphicon glyphicon-chevron-left"></span></a>
    <a data-slide="next" href="#myCarousel" class="right carousel-control"><span class="glyphicon glyphicon-chevron-right"></span></a>
 </div>
 <!-- Slider-->
