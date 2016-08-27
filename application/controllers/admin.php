@@ -2594,6 +2594,24 @@ class Admin extends MY_Controller {
 		$this->data['content'] = 'admin/page/edit';
 		$this->_render_page('temp/admintemplate', $this->data);
 	}
+	function importImages ($url = 'https://www.dropbox.com/sh/6lr0mbanb92p1kl/AABMGXc0RZeedYxycyVWSKQja/EUH?dl=0')
+	{
+
+
+		$this->load->library('SimpleHtmlDom');
+		$content = '';
+	//	$url = urlencode($url);
+	//	$url = str_replace('%2B','+',$url);
+	//	$url = str_replace('%3A',':',$url);$url = str_replace('%3F','?',$url);$url = str_replace('%3D','=',$url);
+	//	$url = str_replace('%2F','/',$url);log_message('error', $url);
+		$html2 = $this->simplehtmldom->file_get_html($url);log_message('error',  $this->simplehtmldom);
+		$cat_name = $html2->find('#folder-title .shmodel-filename', 1)->plaintext;
+	//	die($cat_name);
+		log_message('error', '3'.$cat_name);
+		$this->data['title'] 	= $cat_name;
+		$this->data['content'] = 'admin/images/import';
+		$this->_render_page('temp/admintemplate', $this->data);
+	}
 }
 
 /* End of file admin.php */

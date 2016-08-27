@@ -59,9 +59,15 @@
                            <li class="<?php if(isset($active_menu) && $active_menu=="article") echo "active";?>"><a href="<?php echo base_url(); ?>article"><?php echo lang('menu_news'); ?></a></li>
                            <li class="<?php if(isset($active_menu) && $active_menu=="result") echo "active";?>"><a href="<?php echo base_url(); ?>result"  title="Kết quả các vòng thi"><?php echo lang('menu_result'); ?></a></li>
                            <li class="<?php if(isset($active_menu) && $active_menu=="guess") echo "active";?>"><a href="<?php echo base_url(); ?>guess" title="Dự đoán người thắng cuộc"><?php echo lang('menu_guess'); ?></a></li>
-                           <li class="<?php if(isset($active_menu) && $active_menu=="exam") echo "active";?>"><a href="<?php echo base_url(); ?>exam"><?php echo lang('menu_exam'); ?></a></li>
-                           <li class="<?php if(isset($active_menu) && $active_menu=="pictures") echo "active";?>"><a href="<?php echo base_url(); ?>pictures"><?php echo lang('menu_images'); ?></a></li>
+
+                           <li class="<?php if(isset($active_menu) && $active_menu=="pictures") echo "active";?>"><a href="<?php echo base_url(); ?>images"><?php echo lang('menu_images'); ?></a></li>
                            <li class="<?php if(isset($active_menu) && $active_menu=="video") echo "active";?>"><a href="<?php echo base_url(); ?>video" title="Video clip"><?php echo lang('menu_video'); ?></a></li>
+                           <?php if ($this->ion_auth->logged_in() && ($this->ion_auth->is_admin() || $this->ion_auth->is_moderator())) { ?>
+                              <li class="<?php if(isset($active_menu) && $active_menu=="exam") echo "active";?>"><a href="<?php echo base_url(); ?>exam"><?php echo lang('menu_exam'); ?></a></li>
+
+                           <?php }else{ ?>
+                              <li class="<?php if(isset($active_menu) && $active_menu=="register") echo "active";?>"><a href="<?php echo base_url(); ?>auth/register"><?php echo lang('menu_register'); ?></a></li>
+                           <?php } ?>
                            <li class="<?php if(isset($active_menu) && $active_menu=="contactus") echo "active";?>"><a href="<?php echo base_url(); ?>info/contact"><?php echo lang('menu_contact_us'); ?></a></li>
 
                            <li class="dropdown active">

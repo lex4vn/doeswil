@@ -30,3 +30,4 @@ $lang['menu_images'] = 'Hình ảnh';
 $lang['menu_exam'] = 'Thi online';
 $lang['menu_video'] = 'Video';
 $lang['menu_contact_us'] = 'Liên hệ';
+$lang['menu_register'] = 'Đăng ký';

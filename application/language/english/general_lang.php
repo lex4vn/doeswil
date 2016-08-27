@@ -30,3 +30,4 @@ $lang['menu_images'] = 'Images';
 $lang['menu_exam'] = 'Exam online';
 $lang['menu_video'] = 'Video';
 $lang['menu_contact_us'] = 'Contact us';
+$lang['menu_register'] = 'Register';
