@@ -27,29 +27,7 @@
          </div>
       </div>
    </div>
-   <?php $this->load->library('ion_auth');		
-      if( !$this->ion_auth->logged_in() )		
-      {
-      ?>
-   <div class="carousel-caption width-form f-h">
-      <div id="infoMessage"><?php  echo $message;?></div>
-      <?php echo form_open("auth/login",'class="form-signin"');?>
-      <h1 class="form-hed">SIGN <span class="block"> IN</span></h1>
-      <p class="type">
-         <?php echo form_input($identity);?>
-      </p>
-      <p class="type">
-         <?php echo form_input($password);?>
-      </p>
-      <p class="type">
-         <?php echo form_submit('submit', $this->lang->line('login_submit_btn'),'class="btn btn-lg btn-primary butt button-float-right"');?>
-      </p>
-      <?php echo form_close();?>
-      <p class="forget"><a href="<?php echo base_url(); ?>auth/forgot_password"><?php echo lang('login_forgot_password'); ?></a></p>
-      <p class="forget"> <a href="<?php echo base_url(); ?>auth/register"> <?php echo lang('signup_user_submit_btn'); ?></a></p>
-      
-   </div>
-   <?php } ?>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/IYtzbg2KYlU" frameborder="0" allowfullscreen></iframe>
    <a data-slide="prev" href="#myCarousel" class="left carousel-control"><span class="glyphicon glyphicon-chevron-left"></span></a>
    <a data-slide="next" href="#myCarousel" class="right carousel-control"><span class="glyphicon glyphicon-chevron-right"></span></a>
 </div>
