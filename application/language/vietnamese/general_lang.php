@@ -19,7 +19,10 @@
 
 // Home
 $lang['home'] = 'Trang chủ';
-
+$lang['partner'] = 'Đối tác';
+$lang['result'] = 'Kết quả thi online';
+$lang['exam'] = 'Thi Online';
+$lang['language'] = 'Ngôn ngữ';
 // Menu
 $lang['menu_term'] = 'Thể lệ';
 $lang['menu_news'] = 'Tin tức và sự kiện';

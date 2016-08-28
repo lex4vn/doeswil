@@ -19,6 +19,10 @@
 
 // Home
 $lang['home'] = 'Home';
+$lang['partner'] = 'Partner';
+$lang['result'] = 'Result';
+$lang['exam'] = 'Exam Online';
+$lang['language'] = 'Language';
 
 // Menu
 $lang['menu_term'] = 'Term';

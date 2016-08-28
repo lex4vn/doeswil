@@ -4,7 +4,7 @@ class Admin extends MY_Controller {
 
 /*
 | -----------------------------------------------------
-| PRODUCT NAME: 	DIGI ONLINE EXAMINITION SYSTEM (DOES)
+| PRODUCT NAME: 	Wilmar CLV Awards
 | -----------------------------------------------------
 | AUTHER:			DIGITAL VIDHYA TEAM
 | -----------------------------------------------------
@@ -29,8 +29,8 @@ class Admin extends MY_Controller {
         parent::__construct();
 		
 		$this->load->library('form_validation');
-		
-    }
+		//require_once APPPATH.'third_party/PHPExcel';
+	}
 	
 	/***Admin Dashboard (Default Function. If no function is called, this function
 	 will be called)***/
@@ -2604,13 +2604,79 @@ class Admin extends MY_Controller {
 	//	$url = str_replace('%2B','+',$url);
 	//	$url = str_replace('%3A',':',$url);$url = str_replace('%3F','?',$url);$url = str_replace('%3D','=',$url);
 	//	$url = str_replace('%2F','/',$url);log_message('error', $url);
-		$html2 = $this->simplehtmldom->file_get_html($url);log_message('error',  $this->simplehtmldom);
+		$html2 = $this->simplehtmldom->file_get_html($url);
+		log_message('error',  $this->simplehtmldom);
 		$cat_name = $html2->find('#folder-title .shmodel-filename', 1)->plaintext;
 	//	die($cat_name);
 		log_message('error', '3'.$cat_name);
 		$this->data['title'] 	= $cat_name;
 		$this->data['content'] = 'admin/images/import';
 		$this->_render_page('temp/admintemplate', $this->data);
+	}
+	public function export(){
+		$heading=array('Dấu thời gian','Full Name:','Gender:','Date of birth:','Place of birth:','ID Card No.:','Date of issue:','Issued by Police of:','Hand phone No.:','Email:','Permanent Address:','Temporary Address:','Major:','University:','Student code:','Average GPA for all previous years:','Expected Graduation date:','English proficiency:','1.Please list down your most important extracurricular activities (if any) (school, union, community service, etc. Describe the activity:','2.Please list down your most significant academic or scholarship achievements (if any). Please specify the company/ university/ organization granted the scholarship or award.','1.Please list down your work experiences (if any). Please describe.','2.What is the plan for your career pursuit in the next three to five years? ','3.What is the most important factor that interests you to work for a company?','4.Tell us about your objectives in life. And how are you going to achieve these objectives? ','Registered field in the contest:','Câu hỏi không có tiêu đề');
+		include(FCPATH.'/assets/excelassets/PHPExcel/IOFactory.php');
+		//Create a new Object
+		$objPHPExcel = new PHPExcel();
+
+		$objPHPExcel->getActiveSheet()->setTitle("User");
+		//Loop Heading
+		$rowNumberH = 1;
+		$colH = 'A';
+
+		foreach($heading as $h){
+			$objPHPExcel->getActiveSheet()->setCellValue($colH.$rowNumberH,$h);
+			$colH++;
+		}
+		//Loop Result
+		$allUsers 	= $this->base_model->run_query(
+			"SELECT u.* FROM users u, users_groups g WHERE u.id=g.user_id
+		and g.group_id=2 and u.id!=1 ORDER BY u.id desc "
+		);
+
+		$i=2;$no = 1;
+		foreach($allUsers as $n):
+			$objPHPExcel->getActiveSheet()->setCellValue('A'.$i,$n->date_of_registration);
+			$objPHPExcel->getActiveSheet()->setCellValue('B'.$i,$n->ussername);
+			$objPHPExcel->getActiveSheet()->setCellValue('C'.$i,$n->gender);
+			$objPHPExcel->getActiveSheet()->setCellValue('D'.$i,$n->birthdate);
+			$objPHPExcel->getActiveSheet()->setCellValue('E'.$i,$n->birthplace);
+			$objPHPExcel->getActiveSheet()->setCellValue('F'.$i,$n->card_id_no);
+			$objPHPExcel->getActiveSheet()->setCellValue('G'.$i,$n->date_of_issue);
+			$objPHPExcel->getActiveSheet()->setCellValue('H'.$i,$n->issued_police);
+			$objPHPExcel->getActiveSheet()->setCellValue('I'.$i,$n->phone);
+			$objPHPExcel->getActiveSheet()->setCellValue('J'.$i,$n->email);
+			$objPHPExcel->getActiveSheet()->setCellValue('K'.$i,$n->permanent_address);
+			$objPHPExcel->getActiveSheet()->setCellValue('L'.$i,$n->temp_address);
+			$objPHPExcel->getActiveSheet()->setCellValue('M'.$i,$n->major);
+			$objPHPExcel->getActiveSheet()->setCellValue('N'.$i,$n->university);
+			$objPHPExcel->getActiveSheet()->setCellValue('O'.$i,$n->student_code);
+			$objPHPExcel->getActiveSheet()->setCellValue('P'.$i,$n->registered_field);
+			$objPHPExcel->getActiveSheet()->setCellValue('Q'.$i,$n->score);
+			$objPHPExcel->getActiveSheet()->setCellValue('R'.$i,$n->date_graduation);
+			$objPHPExcel->getActiveSheet()->setCellValue('S'.$i,$n->english_proficiency);
+			$objPHPExcel->getActiveSheet()->setCellValue('T'.$i,$n->extracurricular_activities);
+			$objPHPExcel->getActiveSheet()->setCellValue('U'.$i,$n->achievements);
+			$objPHPExcel->getActiveSheet()->setCellValue('V'.$i,$n->experiences);
+			$objPHPExcel->getActiveSheet()->setCellValue('W'.$i,$n->career_pursuit);
+			$objPHPExcel->getActiveSheet()->setCellValue('X'.$i,$n->factor);
+			$objPHPExcel->getActiveSheet()->setCellValue('Y'.$i,$n->objectives);
+			$objPHPExcel->getActiveSheet()->setCellValue('Z'.$i,$n->company);
+			$i++;$no++;
+		endforeach;
+
+
+		//Freeze pane
+		$objPHPExcel->getActiveSheet()->freezePane('A2');
+		//Save as an Excel BIFF (xls) file
+		$objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel,'Excel5');
+		$fileName = 'AllUserWilmar.'. date("Y-m-d") .'.xls';
+		header('Content-Type: application/vnd.ms-excel');
+		header('Content-Disposition: attachment;filename='.$fileName);
+		header('Cache-Control: max-age=0');
+
+		$objWriter->save('php://output');
+		exit();
 	}
 }
 

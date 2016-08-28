@@ -49,7 +49,7 @@ if($_POST) {
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-		<title>Install | DOES</title>
+		<title>Install | Wilmar CLV Awards</title>
 
 		<style type="text/css">
 		  body {

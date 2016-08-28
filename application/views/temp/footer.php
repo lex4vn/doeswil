@@ -2,15 +2,19 @@
 <div class="panel-footer padding">
    <div class="container-fluid footer">
       <div class="container">
-         <div class="col-md-7"> 
+         <div class="col-md-4">
          <a href="<?php echo base_url(); ?>">Trang chủ</a> | <a href="<?php echo base_url(); ?>info/aboutus">Giới thiệu</a> | 
          <a href="<?php echo base_url(); ?>info/termsConditions">Thể lệ</a> | 
          <a href="<?php echo base_url(); ?>info/contact">Liên hệ</a></div>
-         
-         <div class="col-md-5 rs-cha">
+         <div class="col-md-4">
+         <audio controls autoplay id="bgmusic">
+            <source src="<?php echo base_url();?>assets/nang-canh-uoc-mo.mp3" type="audio/ogg">
+            Your browser does not support the audio element.
+         </audio>
+         </div>
+         <div class="col-md-4 rs-cha">
             <div class="social">
                <a href="https://www.facebook.com/WilmarCLVAwards" target="_blank"><i class="fa fa-facebook"></i></a>
-               <a href="https://twitter.com/WilmarCLVAwards" target="_blank"><i class="fa fa-twitter"></i></a>
                <a href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus"></i></a>
             </div>
          </div>

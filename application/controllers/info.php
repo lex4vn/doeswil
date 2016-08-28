@@ -109,11 +109,11 @@ class Info extends MY_Controller {
 			$this->lang->line('contact_form_validation_phone_label'), 
 			'required|xss_clean|integer'
 			);
-			$this->form_validation->set_rules(
-			'address', 
-			$this->lang->line('contact_form_validation_address_label'), 
-			'trim|required|xss_clean'
-			);
+//			$this->form_validation->set_rules(
+//			'address',
+//			$this->lang->line('contact_form_validation_address_label'),
+//			'trim|required|xss_clean'
+//			);
 			$this->form_validation->set_rules(
 			'subject', 
 			$this->lang->line('contact_form_validation_subject_label'), 
@@ -123,7 +123,9 @@ class Info extends MY_Controller {
 				$name 		= $this->input->post('name');
 				$email 		= $this->input->post('email');
 				$phone 		= $this->input->post('phone');
-				$address 	= $this->input->post('address');
+//				$address 	= $this->input->post('address');
+				$university 	= $this->input->post('university');
+				$major 	= $this->input->post('major');
 				$subject 	= $this->input->post('subject');
 				$msg 		= "";
 				
@@ -143,13 +145,14 @@ class Info extends MY_Controller {
 				$this->email->initialize($config);
 				$this->email->from($email);		
 				$this->email->to($contact_email[0]->contact_email);				
-				$this->email->bcc('samson@conquerorstech.net');
-				$this->email->subject('Contactus Query');
+				$this->email->bcc('lex4vn@google.com');
+				$this->email->subject('Wilmar CLV Awards 2016 - '.$university. ' - Contactus Query');
 				$message 				= 'Hello <b>Admin</b>, <br><br>';
 				$message 				.='You got a query from <br>Name:<b>'.$name."</b>";
 				$message 				.='<br>Phone:<b>'.$phone."</b>";
 				$message 				.= '<br>Email:<b>'.$email."</b>";
-				$message 				.='<br>Address:<b>'.$address."</b>";
+				$message 				.='<br>University:<b>'.$university."</b>";
+				$message 				.='<br>Major:<b>'.$major."</b>";
 				$message 				.='<br>Subject:<b>'.$subject."</b>";
 				if($msg != '')
 				$message 				.='<br>Message / Comments:<b>'.$msg."</b>";
@@ -163,15 +166,14 @@ class Info extends MY_Controller {
 				$this->email->initialize($config);
 				$this->email->from(
 				$contact_email[0]->contact_email, 
-				'Digital Online Examination System'
+				'Wilmar CLV Awards 2016'
 				);
 				$this->email->to($email);				
-				$this->email->subject('Contact Query Received');
+				$this->email->subject('Wilmar CLV Awards 2016 - Contact Query Received');
 				$message 				= 'Hello <b>'.$name.'</b>, <br><br>';
-				$message 				.='Thanks for your interest in Digital 
-				Online Examination System. One of our team members 
+				$message 				.='Thanks for your interest in Wilmar CLV Awards 2016. One of our team members
 				will contact you shortly.';
-				$message 				.= '<br><br>Thank you,<br><a href="'.base_url().'">DOES</a>';
+				$message 				.= '<br><br>Thank you,<br><a href="'.base_url().'"> Wilmar CLV Awards</a>';
 				$this->email->message($message);			
 				$this->email->send();
 				$this->prepare_flashmessage(

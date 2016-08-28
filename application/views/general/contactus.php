@@ -12,9 +12,9 @@
       <div class="col-md-2 col-xs-12">
          <div class="bradcome-menu">
             <ul>
-               <li><a href="<?php echo base_url(); ?>">Home</a></li>
+               <li><a href="<?php echo base_url(); ?>"><?php echo lang('home'); ?></a></li>
                <li><img src="<?php echo base_url(); ?>assets/designs/images/arrow1.png" width="7" height="6"></li>
-               <li><a href="#"> Contact Us </a></li>
+               <li><a href="#"><?php echo lang('menu_contact_us'); ?></a></li>
             </ul>
          </div>
       </div>
@@ -22,7 +22,7 @@
    </div>
    <div class="container inner-content padding">
       <div class="col-md-8 col-xs-12">
-         <h1 class="inner-hed">Contact Us</h1>
+         <h1 class="inner-hed"><?php echo lang('menu_contact_us'); ?></h1>
          <div class="col-md-12 formgro">
             <?php echo $this->session->flashdata('message');?>
             <form novalidate id="contact_form" name="myForm1" method="POST" action="<?php echo base_url();?>info/contact_request_sent" role="form" class="form-horizontal">
@@ -47,12 +47,24 @@
                      <input type="text" placeholder="phone" id="phone" class="form-control" name="phone" maxlength="11">
                   </div>
                </div>
-               <div class="form-group paddin-cont">
-                  <label class="col-lg-3 control-label" for="pcode">Address <span style="color:red;">*</span></label>
-                  <div class="col-lg-9">
-                     <textarea rows="3" id="address" class="form-control" name="address"  placeholder="Address" ></textarea>
-                  </div>
-               </div>
+                <div class="form-group paddin-cont">
+                    <label class="col-lg-3 control-label" for="university">University</span></label>
+                    <div class="col-lg-9">
+                        <input type="text" placeholder="university" id="university" class="form-control" name="university" maxlength="11">
+                    </div>
+                </div>
+                <div class="form-group paddin-cont">
+                    <label class="col-lg-3 control-label" for="major">Major</label>
+                    <div class="col-lg-9">
+                        <input type="text" placeholder="major" id="major" class="form-control" name="major" maxlength="11">
+                    </div>
+                </div>
+<!--               <div class="form-group paddin-cont">-->
+<!--                  <label class="col-lg-3 control-label" for="pcode">Address <span style="color:red;">*</span></label>-->
+<!--                  <div class="col-lg-9">-->
+<!--                     <textarea rows="3" id="address" class="form-control" name="address"  placeholder="Address" ></textarea>-->
+<!--                  </div>-->
+<!--               </div>-->
                <div class="form-group paddin-cont">
                   <label class="col-lg-3 control-label" for="sub">Subject <span style="color:red;">*</span></label>
                   <div class="col-lg-9">
@@ -76,22 +88,7 @@
 
       </div>
       <?php echo $this->load->view('general/quick_links');?>
-    		   <div class="col-md-4">
-         <div class="contat-us">
-            <div class="services-one" >
-               <div class="services-one-hed">DOES Location:</div>
-               <div class="contct-add">
-                 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-				
-				<div style="overflow:hidden;height:300px;width:342px;">
-				<div id="gmap_canvas" style="height:300px;width:342px;"></div>
-				</div>
-				 
-				 <script type="text/javascript"> function init_map(){var myOptions = {zoom:14,center:new google.maps.LatLng(17.449132,78.38568090000001),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(17.449132, 78.38568090000001)});infowindow = new google.maps.InfoWindow({content:"<b>Hitech City, Hyderabad, Telangana</b><br/>Image gardens Road<br/> Hyderabad" });google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
-               </div>
-            </div>
-         </div>
-      </div>
+
    </div>
    <div class="spacer"></div>
 </div>
@@ -111,7 +108,7 @@
           setupFormValidation: function()
           {
               //Additional Methods			
-   		$.validator.addMethod("lettersonly",function(a,b){return this.optional(b)||/^[a-z ]+$/i.test(a)},"Please enter valid name.");
+   		//$.validator.addMethod("lettersonly",function(a,b){return this.optional(b)||/^[a-z ]+$/i.test(a)},"Please enter valid name.");
    					
    		$.validator.addMethod("phoneNumber", function(uid, element) {
    			return (this.optional(element) || uid.match(/^([0-9]*)$/));
@@ -123,7 +120,6 @@
                   rules: {
                       name: {
                           required: true,
-                          lettersonly: true,
    					rangelength: [3, 30]
                       },
                       email: {
@@ -135,9 +131,9 @@
    					phoneNumber: true,
    					rangelength: [10, 11]
                       },
-   				address:{
-   					required:true
-   				},
+//   				address:{
+//   					required:true
+//   				},
    				subject:{
    					required:true
    				}				
@@ -153,9 +149,9 @@
    				phone: {
                           required: "Please enter your number."
                       },
-   				address:{
-   					required: "Please enter your address."
-   				},
+//   				address:{
+//   					required: "Please enter your address."
+//   				},
    				subject:{
    					required: "Please enter the purpose of contacting."
    				}

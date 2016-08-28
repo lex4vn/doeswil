@@ -35,22 +35,8 @@
 	  <a href="<?php echo base_url();?>admin/notifications">Notifications</a></li>
       <li class="dropdown-submenu <?php if(isset($active_menu) && $active_menu=="testimonials") echo "active";?>"> 
 	  <a href="<?php echo base_url();?>admin/testimonials">Testimonials</a></li>
-	  
-	  <li class="dropdown-submenu <?php if(isset($active_menu) && $active_menu=="payment_report") echo "active";?>"> 
-	  <a href="<?php echo base_url();?>admin/payreport">Payment Report</a></li>
-	  
-	  <li class="dropdown <?php if(isset($active_menu) && $active_menu=="users") echo "active";?>">  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Users </a> 
-	  <ul class="dropdown-menu bg-col" role="menu">  
-		<li class="dropdown-submenu"> 
-		  <a href="<?php echo base_url();?>admin/viewAllUsers">General Users</a></li>
-		<!--  <li class="dropdown-submenu"> 
-		  <a href="<?php echo base_url();?>admin/admins">Admins</a></li>	-->
-		  <li class="dropdown-submenu"> 
-		  <a href="<?php echo base_url();?>admin/moderators">Moderators</a></li>
-		  
-	  </ul>
-	  
-	  </li>
+	   <li class="dropdown-submenu <?php if(isset($active_menu) && $active_menu=="users") echo "active";?>">
+		   <a href="<?php echo base_url();?>admin/viewAllUsers">Users</a></li>
 	  
 	  
       <li class="dropdown <?php if(isset($active_menu) && $active_menu=="tings") echo "active";?>">  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Settings </a> 

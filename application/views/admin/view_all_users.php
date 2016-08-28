@@ -46,7 +46,12 @@ $(document).ready(function() {
  
 
  </div>
- 
+   <div class="row"><div class="col-md-12">
+   <div class="btn-group ga1">
+	   <a href="<?php echo base_url();?>admin/export" class="btn btn-default dropdown-toggle ga-btn">
+		   Export All To Excel
+	   </a>
+   </div> </div> </div>
  <div class="row">
  <div class="col-md-12">
 <table id="example" class="cell-border" cellspacing="0" width="100%">

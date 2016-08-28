@@ -73,7 +73,9 @@ body, html {
     margin-top: 64px;
 }
 .width-form {
-    right: 0;
+    position: absolute;
+    right: 50px;
+    top: 60px;
 }
 .form-hed {
 

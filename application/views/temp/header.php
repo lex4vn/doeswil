@@ -28,7 +28,6 @@
   e.parentNode.insertBefore(L,e)})(window,document,'script','_googCsa');
 </script>
 
-
    </head>
    <body>
       <!---Hedder--->
@@ -71,7 +70,7 @@
                            <li class="<?php if(isset($active_menu) && $active_menu=="contactus") echo "active";?>"><a href="<?php echo base_url(); ?>info/contact"><?php echo lang('menu_contact_us'); ?></a></li>
 
                            <li class="dropdown active">
-                              <a href="<?php echo base_url();?>user" class="dropdown-toggle menu-drop" data-toggle="dropdown">Ngôn ngữ<b class="caret"></b></a>
+                              <a href="<?php echo base_url();?>user" class="dropdown-toggle menu-drop" data-toggle="dropdown"><?php echo lang('language'); ?><b class="caret"></b></a>
                               <ul class="dropdown-menu menu-drop">
                                  <li><a id="vietnamese" href="<?php echo base_url();?>langswitch/switchLanguage/vietnamese?url=<?php echo base_url(uri_string()); ?>">Tiếng Việt</a></li>
                                  <li><a id="english" href="<?php echo base_url();?>langswitch/switchLanguage/english?url=<?php echo base_url(uri_string()); ?>">English</a></li>

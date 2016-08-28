@@ -4,7 +4,7 @@
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Welcome To Digi Online Examination System ( DOES )</title>
+      <title>Welcome To Wilmar CLV Awards 2016</title>
       <!-- Bootstrap -->
       <link href="<?php echo base_url();?>assets/designs/css/bootstrap.css" rel="stylesheet">
       <link href="<?php echo base_url();?>assets/designs/css/style.css" rel="stylesheet" type="text/css">
@@ -33,9 +33,9 @@
       <div class="container-fluid content-bg">
          <div class="spacer"></div>
          <div class="container emailer-wi">
-            <h3>Welcome To Digi Online Examination System ( DOES )</h3>
+            <h3>Welcome To Wilmar CLV Awards 2016</h3>
             <h5> <?php echo sprintf(lang('email_activate_heading'), $identity);?></h5>
-            <p>Thank you for your interest for registering with DOES. It is very helpfull for conducting exams and track the performanance of the students</p>
+            <p>Thank you for your interest for registering with Wilmar CLV Awards 2016. It is very helpfull for conducting exams and track the performanance of the students</p>
             <p><?php echo sprintf(lang('email_activate_subheading'), anchor('auth/activate/'. $id .'/'. $activation, lang('email_activate_link')));?></p>
          </div>
          <div class="spacer"></div>
@@ -46,7 +46,7 @@
       <div class="panel-footer padding">
          <div class="container-fluid copy">
             <div class="container padding">
-               <div class="col-md-5">Copyright ©  2014 Digi Online Examination System (DOES)  All rights reserved.</div>
+               <div class="col-md-5">Copyright ©  Wilmar CLV Awards 2016  All rights reserved.</div>
             </div>
          </div>
       </div>
