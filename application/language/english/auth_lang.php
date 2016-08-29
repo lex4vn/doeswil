@@ -103,6 +103,7 @@ $lang['register_photo_label']                       = 'Photo';
 $lang['register_password_label']                    = 'Password:';
 $lang['register_password_confirm_label']            = 'Confirm Password:';
 $lang['register_submit_btn']                        = 'Create User';
+
 $lang['register_registered_field_label']                        = 'Registered field in the contest:';
 $lang['new_user_submit_btn']                           = 'Submit';
 $lang['signup_user_submit_btn']                        = 'Sign Up';
@@ -117,10 +118,13 @@ $lang['register_validation_company_label']          = 'Company Name';
 $lang['register_validation_gender_label']          = 'Gender';
 
 
+
 $lang['register_validation_password_label']         = 'Password';
 $lang['register_validation_password_confirm_label'] = 'Password Confirmation';
 $lang['register_join_work_label'] = 'Join to work:';
 $lang['register_validation_wrong_confirm_password_label'] = '"Password and Confirm passwords does not match."';
+$lang['register_contest_location_label']           = 'Contest location';
+$lang['register_university_another_label']           = 'If your university is not listed above, please specify';
 // Edit User
 $lang['edit_user_heading']                           = 'Edit User';
 $lang['edit_user_subheading']                        = 'Please enter the user\'s information below.';

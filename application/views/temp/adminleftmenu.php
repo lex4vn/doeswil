@@ -7,6 +7,8 @@
 	  <ul class="dropdown-menu bg-col" role="menu">  
 		<li class="dropdown-submenu"> 
 		  <a href="<?php echo base_url();?>admin/aboutus">About us</a></li>
+		  <li class="dropdown-submenu">
+			  <a href="<?php echo base_url();?>admin/aboutprogram">About program</a></li>
 		  <li class="dropdown-submenu"> 
 		  <a href="<?php echo base_url();?>admin/term">Term</a></li>
 		  <li class="dropdown-submenu"> 

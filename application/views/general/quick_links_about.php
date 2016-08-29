@@ -1,5 +1,12 @@
 <div class="col-md-4">
-   <h1 class="inner-hed">Quick Links</h1>
+   <h1 class="inner-hed"><?php echo lang('menu_about_us');?></h1>
+   <div class="notif">
+      <ul>
+         <li><a href="<?php echo base_url();?>aboutus"><?php echo lang('menu_about_us');?></a></li>
+         <li><a href="<?php echo base_url(); ?>aboutprogram"><?php echo lang('menu_about_program');?></a> </li>
+      </ul>
+   </div>
+   <h1 class="inner-hed"><?php echo lang('quick_link');?></h1>
    <div class="notif">
       <ul>
          <li><a href="<?php echo base_url();?>"><?php echo lang('quick_link_home');?></a></li>

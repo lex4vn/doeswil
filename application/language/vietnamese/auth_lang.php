@@ -103,6 +103,8 @@ $lang['register_validation_password_label']         = 'Mật khẩu';
 $lang['register_validation_password_confirm_label'] = 'Nhập lại mật khẩu';
 $lang['register_join_work_label'] = 'Mảng công việc đăng ký tham gia';
 $lang['register_validation_wrong_confirm_password_label'] = 'Mật khẩu không khớp nhau. Vui lòng thử lại';
+$lang['register_contest_location_label']           = 'Contest location';
+$lang['register_university_another_label']           = 'If your university is not listed above, please specify';
 // Edit User
 $lang['edit_user_heading']                           = 'Cập nhật thông tin';
 $lang['edit_user_subheading']                        = 'Please enter the user\'s information below.';

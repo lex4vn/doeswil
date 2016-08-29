@@ -53,7 +53,14 @@
                      <!-- Collect the nav links, forms, and other content for toggling -->
                      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav menu-list">
-                           <li class="<?php if(isset($active_menu) && $active_menu=="aboutus") echo "active";?>"><a href="<?php echo base_url(); ?>info/aboutus"><?php echo lang('menu_about_us'); ?></a></li>
+                           <li class="dropdown">
+                              <a href="<?php echo base_url();?>user" class="dropdown-toggle menu-drop" data-toggle="dropdown"><?php echo lang('menu_about_us'); ?><b class="caret"></b></a>
+                              <ul class="dropdown-menu menu-drop">
+                                 <li class="<?php if(isset($active_menu) && $active_menu=="aboutus") echo "active";?>"><a href="<?php echo base_url(); ?>aboutus"><?php echo lang('menu_about_us'); ?></a></li>
+                                 <li class="<?php if(isset($active_menu) && $active_menu=="aboutprogram") echo "active";?>"><a href="<?php echo base_url(); ?>aboutprogram"><?php echo lang('menu_about_program'); ?></a></li>
+                              </ul>
+                           </li>
+
                            <li class="<?php if(isset($active_menu) && $active_menu=="term") echo "active";?>"><a href="<?php echo base_url(); ?>term" title="Thể lệ cuộc thi"><?php echo lang('menu_term'); ?></a></li>
                            <li class="<?php if(isset($active_menu) && $active_menu=="article") echo "active";?>"><a href="<?php echo base_url(); ?>article"><?php echo lang('menu_news'); ?></a></li>
                            <li class="<?php if(isset($active_menu) && $active_menu=="result") echo "active";?>"><a href="<?php echo base_url(); ?>result"  title="Kết quả các vòng thi"><?php echo lang('menu_result'); ?></a></li>
@@ -69,7 +76,7 @@
                            <?php } ?>
                            <li class="<?php if(isset($active_menu) && $active_menu=="contactus") echo "active";?>"><a href="<?php echo base_url(); ?>info/contact"><?php echo lang('menu_contact_us'); ?></a></li>
 
-                           <li class="dropdown active">
+                           <li class="dropdown">
                               <a href="<?php echo base_url();?>user" class="dropdown-toggle menu-drop" data-toggle="dropdown"><?php echo lang('language'); ?><b class="caret"></b></a>
                               <ul class="dropdown-menu menu-drop">
                                  <li><a id="vietnamese" href="<?php echo base_url();?>langswitch/switchLanguage/vietnamese?url=<?php echo base_url(uri_string()); ?>">Tiếng Việt</a></li>

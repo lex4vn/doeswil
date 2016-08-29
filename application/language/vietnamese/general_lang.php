@@ -34,3 +34,7 @@ $lang['menu_exam'] = 'Thi online';
 $lang['menu_video'] = 'Video';
 $lang['menu_contact_us'] = 'Liên hệ';
 $lang['menu_register'] = 'Đăng ký';
+$lang['menu_about_program'] = 'Thông tin chương trình';
+
+// Quick link
+$lang['quick_link'] = 'Liên kết';

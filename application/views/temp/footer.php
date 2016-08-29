@@ -3,8 +3,8 @@
    <div class="container-fluid footer">
       <div class="container">
          <div class="col-md-4">
-         <a href="<?php echo base_url(); ?>">Trang chủ</a> | <a href="<?php echo base_url(); ?>info/aboutus">Giới thiệu</a> | 
-         <a href="<?php echo base_url(); ?>info/termsConditions">Thể lệ</a> | 
+         <a href="<?php echo base_url(); ?>">Trang chủ</a> | <a href="<?php echo base_url(); ?>aboutus">Giới thiệu</a> |
+         <a href="<?php echo base_url(); ?>term">Thể lệ</a> |
          <a href="<?php echo base_url(); ?>info/contact">Liên hệ</a></div>
          <div class="col-md-4">
          <audio controls autoplay id="bgmusic">

@@ -28,7 +28,7 @@
  <ul>
 <li><a href="<?php echo base_url();?>admin">Home</a></li>
 <li><img  src="<?php echo base_url();?>assets/designs/images/arrow.png"></li>
-<li><a href="#">Update Aboutus Content</a></li>
+<li><a href="#">Update Term Content</a></li>
  </ul>
  </div>
 
@@ -40,54 +40,121 @@
 			   echo $this->session->flashdata('message');
 			   ?>
 	</div>
- <form method="POST" action="<?php echo base_url();?>admin/aboutusContent" id="aboutus_content_form" enctype="multipart/form-data">
-        <?php if(count($data)>0)
-				$data=$data[0];
-		?>
-		
-		<input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>" />
-        
-		<div class="form-group">
-            <label for="inputEmail">Content for Aboutus Page</label>
-			
-			<?php 
-				$val = '';
-					if( ( $this->input->post( 'content' ) ) )
-					{
-					$val = $this->input->post( 'content' );
-					}
-					elseif(count($data))
-					{
-						$val = $data->content;
-					}
-	
-			?>
-						
-            <textarea class="editors" id="editor1" name="content" placeholder="Type Content for Aboutus Page" ><?php echo $val;?></textarea>
-        </div>
+	 <form method="POST" action="<?php echo base_url();?>admin/term" id="term_form" enctype="multipart/form-data">
 
-		<div class="form-group">
-            <label for="inputEmail">Content Modified Date</label>
-			
-			<?php 
-				$val = '';
-					if( ( $this->input->post( 'date_modified' ) ) )
-					{
-					$val = $this->input->post( 'date_modified' );
-					}
-					elseif(count($data))
-					{
-						$val = date('d-m-Y',strtotime($data->date_modified));
-					}
-	
-			?>
-						
-            <input type="text" class="form-control" name="date_modified" value="<?php echo $val;?>" readonly />
-        </div>
-		
-		<input type="hidden" name="id" value="<?php if(isset($id)) echo $id;?>">
-		
-        <button type="submit" class="btn btn-primary wnm-user">Update</button>
+	 <div id="term" class="container">
+		 <ul class="nav nav-tabs">
+			 <li class="active">
+				 <a  href="#vietnamese" data-toggle="tab">Tiếng Việt</a>
+			 </li>
+			 <li><a href="#english" data-toggle="tab">English</a>
+			 </li>
+		 </ul>
+
+		 <div class="tab-content ">
+			 <div class="tab-pane active" id="vietnamese">
+				 <?php if(count($datavi)>0)
+					 $datavi=$datavi[0];
+				 ?>
+				 <div class="form-group">
+					 <label for="title">Title</label>
+
+					 <?php
+					 $title = '';
+					 if( ( $this->input->post( 'titlevi' ) ) )
+					 {
+						 $title = $this->input->post( 'titlevi' );
+					 }
+					 elseif(count($datavi))
+					 {
+						 $title = $datavi->title;
+					 }
+
+					 ?>
+
+					 <input class="form-control" id="titlevi" name=
+					 "titlevi" placeholder="Enter title" type="text" value=
+							"<?php echo $title;?>">
+				 </div>
+				 <div class="form-group">
+					 <label for="bodyvi">Content for Term Page</label>
+
+					 <?php
+					 $val = '';
+					 if( ( $this->input->post( 'bodyvi' ) ) )
+					 {
+						 $val = $this->input->post( 'bodyvi' );
+					 }
+					 elseif(count($datavi))
+					 {
+						 $val = $datavi->body;
+					 }
+
+					 ?>
+
+					 <textarea class="editors" id="editorvi" name="bodyvi" placeholder="Type Content for Term Page" ><?php echo $val;?></textarea>
+				 </div>
+
+				 <input type="hidden" name="lang" value="vietnamese">
+				 <input type="hidden" name="idvi" value="<?php if(isset($datavi->id)) echo $datavi->id;?>">
+
+
+			 </div>
+			 <div class="tab-pane" id="english">
+				 <?php if(count($dataen)>0)
+					 $dataen=$dataen[0];
+				 ?>
+				 <div class="form-group">
+					 <label for="titleen">Title</label>
+
+					 <?php
+					 $title = '';
+					 if( ( $this->input->post( 'titleen' ) ) )
+					 {
+						 $title = $this->input->post( 'titleen' );
+					 }
+					 elseif(count($dataen))
+					 {
+						 $title = $dataen->title;
+					 }
+
+					 ?>
+
+					 <input class="form-control" id="titleen" name=
+					 "titleen" placeholder="Enter title" type="text" value=
+							"<?php echo $title;?>">
+				 </div>
+				 <div class="form-group">
+					 <label for="bodyen">Content for Term Page</label>
+
+					 <?php
+					 $val = '';
+					 if( ( $this->input->post( 'bodyen' ) ) )
+					 {
+						 $val = $this->input->post( 'bodyen' );
+					 }
+					 elseif(count($dataen))
+					 {
+						 $val = $dataen->body;
+					 }
+
+					 ?>
+
+					 <textarea class="editors" id="editoren" name="bodyen" placeholder="Type Content for Term Page" ><?php echo $val;?></textarea>
+				 </div>
+				 <input type="hidden" name="lang" value="english">
+				 <input type="hidden" name="iden" value="<?php if(isset($dataen->id)) echo $dataen->id;?>">
+			 </div>
+		 </div>
+	 </div>
+
+
+
+
+		 <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>" />
+
+
+		 <button type="submit" class="btn btn-primary wnm-user">Update</button>
 		
   </form>
 
@@ -268,7 +335,7 @@
         setupFormValidation: function()
         {			
 			//form validation rules
-            $("#aboutus_content_form").validate({
+            $("#term_content_form").validate({
                 
 				ignore: "", //To validate hidden fields
 				rules: {
@@ -280,7 +347,7 @@
 				
 				messages: {
 					content: {
-						required: "Please enter content for aboutus page."
+						required: "Please enter content for term page."
 					}
 				},
                 

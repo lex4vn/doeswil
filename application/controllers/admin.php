@@ -2157,35 +2157,110 @@ class Admin extends MY_Controller {
 	function aboutus()
 	{
 		$this->validate_admin();
-		
+
 		$this->load->library('form_validation');
 		$this->form_validation->set_rules(
-		'content', 
-		'Content for Aboutus', 
-		'trim|required'
+			'bodyvi',
+			'Nội dung tiết Việt',
+			'trim|required'
 		);
-		
-		if ($this->form_validation->run() == true) {		
-			$inputdata['content'] = trim($this->input->post('content'));
-			$inputdata['date_modified'] = date('Y-m-d');
-			$this->base_model->update_operation(
-			$inputdata, 
-			$this->db->dbprefix('aboutus_content')
+		$this->form_validation->set_rules(
+			'bodyen',
+			'Content for aboutus',
+			'trim|required'
+		);
+		if ($this->form_validation->run() == true) {
+			$inputdatavi['title'] = trim($this->input->post('titlevi'));
+			$inputdatavi['slug'] = 'aboutus';
+			$inputdatavi['body'] = trim($this->input->post('bodyvi'));
+			//$inputdata['date_modified'] = date('Y-m-d');
+			$where['id'] = trim($this->input->post('idvi'));
+			$this->base_model->update_operation($inputdatavi,
+				$this->db->dbprefix('pages'),
+				$where
 			);
+
+			$inputdataen['title'] = trim($this->input->post('titleen'));
+			$inputdataen['slug'] = 'aboutus';
+			$inputdataen['body'] = trim($this->input->post('bodyen'));
+			//$inputdata['date_modified'] = date('Y-m-d');
+			$where['id'] = trim($this->input->post('iden'));
+			$this->base_model->update_operation($inputdataen,
+				$this->db->dbprefix('pages'),
+				$where
+			);
+
 			$msg = "Record Updated Successfully";
 			$this->prepare_flashmessage($msg, 0);
-			redirect('admin/aboutusContent');
+			redirect('admin/aboutus');
 		}
-		
-		$this->data['data'] = $this->base_model->run_query(
-		"select * from ".$this->db->dbprefix('aboutus_content').""
+
+		$this->data['datavi'] = $this->base_model->run_query(
+			"select * from ".$this->db->dbprefix('pages')." where slug = 'aboutus' and lang='vietnamese'"
 		);
+		$this->data['dataen'] = $this->base_model->run_query(
+			"select * from ".$this->db->dbprefix('pages')." where slug = 'aboutus' and lang='english'"
+		);
+
 		$this->data['title'] 			= 'Update Aboutus Content';
-		$this->data['active_menu'] 		= 'aboutus_content';
-		$this->data['content'] 			= 'admin/aboutus_content';
+		$this->data['active_menu'] 		= 'aboutus';
+		$this->data['content'] 			= 'admin/content/aboutus';
 		$this->_render_page('temp/admintemplate', $this->data);
 	}
-	
+//About Us Content Updation
+	function aboutprogram()
+	{
+		$this->validate_admin();
+
+		$this->load->library('form_validation');
+		$this->form_validation->set_rules(
+			'bodyvi',
+			'Nội dung tiết Việt',
+			'trim|required'
+		);
+		$this->form_validation->set_rules(
+			'bodyen',
+			'Content for about program',
+			'trim|required'
+		);
+		if ($this->form_validation->run() == true) {
+			$inputdatavi['title'] = trim($this->input->post('titlevi'));
+			$inputdatavi['slug'] = 'aboutprogram';
+			$inputdatavi['body'] = trim($this->input->post('bodyvi'));
+			//$inputdata['date_modified'] = date('Y-m-d');
+			$where['id'] = trim($this->input->post('idvi'));
+			$this->base_model->update_operation($inputdatavi,
+				$this->db->dbprefix('pages'),
+				$where
+			);
+
+			$inputdataen['title'] = trim($this->input->post('titleen'));
+			$inputdataen['slug'] = 'aboutprogram';
+			$inputdataen['body'] = trim($this->input->post('bodyen'));
+			//$inputdata['date_modified'] = date('Y-m-d');
+			$where['id'] = trim($this->input->post('iden'));
+			$this->base_model->update_operation($inputdataen,
+				$this->db->dbprefix('pages'),
+				$where
+			);
+
+			$msg = "Record Updated Successfully";
+			$this->prepare_flashmessage($msg, 0);
+			redirect('admin/aboutprogram');
+		}
+
+		$this->data['datavi'] = $this->base_model->run_query(
+			"select * from ".$this->db->dbprefix('pages')." where slug = 'aboutprogram' and lang='vietnamese'"
+		);
+		$this->data['dataen'] = $this->base_model->run_query(
+			"select * from ".$this->db->dbprefix('pages')." where slug = 'aboutprogram' and lang='english'"
+		);
+
+		$this->data['title'] 			= 'Update About Program Content';
+		$this->data['active_menu'] 		= 'aboutus';
+		$this->data['content'] 			= 'admin/content/aboutprogram';
+		$this->_render_page('temp/admintemplate', $this->data);
+	}
 	//Term Content Updation
 	function term()
 	{
@@ -2193,28 +2268,49 @@ class Admin extends MY_Controller {
 		
 		$this->load->library('form_validation');
 		$this->form_validation->set_rules(
-		'content', 
-		'Content for Term', 
+		'bodyvi',
+		'Nội dung tiết Việt',
 		'trim|required'
 		);
-		
-		if ($this->form_validation->run() == true) {		
-			$inputdata['content'] = trim($this->input->post('content'));
-			$inputdata['date_modified'] = date('Y-m-d');
-			$this->base_model->update_operation(
-			$inputdata, 
-			$this->db->dbprefix('aboutus_content')
+		$this->form_validation->set_rules(
+			'bodyen',
+			'Content for Term',
+			'trim|required'
+		);
+		if ($this->form_validation->run() == true) {
+			$inputdatavi['title'] = trim($this->input->post('titlevi'));
+			$inputdatavi['slug'] = 'term';
+			$inputdatavi['body'] = trim($this->input->post('bodyvi'));
+			//$inputdata['date_modified'] = date('Y-m-d');
+			$where['id'] = trim($this->input->post('idvi'));
+			$this->base_model->update_operation($inputdatavi,
+			$this->db->dbprefix('pages'),
+				$where
 			);
+
+			$inputdataen['title'] = trim($this->input->post('titleen'));
+			$inputdataen['slug'] = 'term';
+			$inputdataen['body'] = trim($this->input->post('bodyen'));
+			//$inputdata['date_modified'] = date('Y-m-d');
+			$where['id'] = trim($this->input->post('iden'));
+			$this->base_model->update_operation($inputdataen,
+				$this->db->dbprefix('pages'),
+				$where
+			);
+
 			$msg = "Record Updated Successfully";
 			$this->prepare_flashmessage($msg, 0);
-			redirect('admin/aboutusContent');
+			redirect('admin/term');
 		}
 		
-		$this->data['data'] = $this->base_model->run_query(
-		"select * from ".$this->db->dbprefix('aboutus_content').""
+		$this->data['datavi'] = $this->base_model->run_query(
+		"select * from ".$this->db->dbprefix('pages')." where slug = 'term' and lang='vietnamese'"
 		);
-		$this->data['title'] 			= 'Update Aboutus Content';
-		$this->data['active_menu'] 		= 'aboutus_content';
+		$this->data['dataen'] = $this->base_model->run_query(
+		"select * from ".$this->db->dbprefix('pages')." where slug = 'term' and lang='english'"
+		);
+		$this->data['title'] 			= 'Update Term Content';
+		$this->data['active_menu'] 		= 'term';
 		$this->data['content'] 			= 'admin/content/term';
 		$this->_render_page('temp/admintemplate', $this->data);
 	}	
@@ -2614,7 +2710,7 @@ class Admin extends MY_Controller {
 		$this->_render_page('temp/admintemplate', $this->data);
 	}
 	public function export(){
-		$heading=array('Dấu thời gian','Full Name:','Gender:','Date of birth:','Place of birth:','ID Card No.:','Date of issue:','Issued by Police of:','Hand phone No.:','Email:','Permanent Address:','Temporary Address:','Major:','University:','Student code:','Average GPA for all previous years:','Expected Graduation date:','English proficiency:','1.Please list down your most important extracurricular activities (if any) (school, union, community service, etc. Describe the activity:','2.Please list down your most significant academic or scholarship achievements (if any). Please specify the company/ university/ organization granted the scholarship or award.','1.Please list down your work experiences (if any). Please describe.','2.What is the plan for your career pursuit in the next three to five years? ','3.What is the most important factor that interests you to work for a company?','4.Tell us about your objectives in life. And how are you going to achieve these objectives? ','Registered field in the contest:','Câu hỏi không có tiêu đề');
+		$heading=array('Dấu thời gian','Full Name:','Gender:','Date of birth:','Place of birth:','ID Card No.:','Date of issue:','Issued by Police of:','Hand phone No.:','Email:','Permanent Address:','Temporary Address:','Major:','University:','Student code:','Average GPA for all previous years:','Expected Graduation date:','English proficiency:','1.Please list down your most important extracurricular activities (if any) (school, union, community service, etc. Describe the activity:','2.Please list down your most significant academic or scholarship achievements (if any). Please specify the company/ university/ organization granted the scholarship or award.','1.Please list down your work experiences (if any). Please describe.','2.What is the plan for your career pursuit in the next three to five years? ','3.What is the most important factor that interests you to work for a company?','4.Tell us about your objectives in life. And how are you going to achieve these objectives? ','Registered field in the contest:','Contest location','Câu hỏi không có tiêu đề');
 		include(FCPATH.'/assets/excelassets/PHPExcel/IOFactory.php');
 		//Create a new Object
 		$objPHPExcel = new PHPExcel();
@@ -2662,6 +2758,7 @@ class Admin extends MY_Controller {
 			$objPHPExcel->getActiveSheet()->setCellValue('X'.$i,$n->factor);
 			$objPHPExcel->getActiveSheet()->setCellValue('Y'.$i,$n->objectives);
 			$objPHPExcel->getActiveSheet()->setCellValue('Z'.$i,$n->company);
+			$objPHPExcel->getActiveSheet()->setCellValue('AA'.$i,$n->contest_location);
 			$i++;$no++;
 		endforeach;
 

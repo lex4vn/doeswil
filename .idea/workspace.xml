@@ -2,28 +2,311 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b51c947-b3f0-44d8-ab9c-76cdf3ec1b73" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/designs/images/logo.png" afterPath="$PROJECT_DIR$/assets/designs/images/logo.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/designs/images/wilmar.jpg" afterPath="$PROJECT_DIR$/assets/designs/images/wilmar.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/aboutprogram.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/aboutus.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/general/aboutprogram.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/general/aboutus1.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/general/quick_links_about.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Autoloader.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/CachedObjectStorage/APC.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/CachedObjectStorage/CacheBase.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/CachedObjectStorage/DiscISAM.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/CachedObjectStorage/ICache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/CachedObjectStorage/Igbinary.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/CachedObjectStorage/Memcache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/CachedObjectStorage/Memory.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/CachedObjectStorage/MemoryGZip.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/CachedObjectStorage/MemorySerialized.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/CachedObjectStorage/PHPTemp.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/CachedObjectStorage/SQLite.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/CachedObjectStorage/SQLite3.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/CachedObjectStorage/Wincache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/CachedObjectStorage/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/CachedObjectStorageFactory.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/CalcEngine/CyclicReferenceStack.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/CalcEngine/Logger.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/CalcEngine/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Calculation.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Calculation/Database.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Calculation/DateTime.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Calculation/Engineering.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Calculation/Exception.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Calculation/ExceptionHandler.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Calculation/Financial.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Calculation/FormulaParser.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Calculation/FormulaToken.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Calculation/Function.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Calculation/Functions.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Calculation/Logical.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Calculation/LookupRef.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Calculation/MathTrig.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Calculation/Statistical.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Calculation/TextData.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Calculation/Token/Stack.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Calculation/Token/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Calculation/functionlist.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Calculation/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Cell.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Cell/AdvancedValueBinder.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Cell/DataType.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Cell/DataValidation.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Cell/DefaultValueBinder.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Cell/Hyperlink.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Cell/IValueBinder.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Cell/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Chart.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Chart/DataSeries.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Chart/DataSeriesValues.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Chart/Exception.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Chart/Layout.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Chart/Legend.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Chart/PlotArea.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Chart/Renderer/PHP Charting Libraries.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Chart/Renderer/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Chart/Renderer/jpgraph.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Chart/Title.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Chart/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Comment.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/DocumentProperties.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/DocumentSecurity.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Exception.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/HashTable.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/IComparable.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/IOFactory.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/NamedRange.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/PHPExcel.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Reader/Abstract.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Reader/CSV.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Reader/DefaultReadFilter.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Reader/Excel2003XML.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Reader/Excel2007.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Reader/Excel2007/Chart.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Reader/Excel2007/Theme.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Reader/Excel2007/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Reader/Excel5.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Reader/Excel5/Escher.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Reader/Excel5/MD5.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Reader/Excel5/RC4.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Reader/Excel5/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Reader/Exception.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Reader/Gnumeric.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Reader/HTML.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Reader/IReadFilter.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Reader/IReader.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Reader/OOCalc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Reader/SYLK.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Reader/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/ReferenceHelper.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/RichText.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/RichText/ITextElement.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/RichText/Run.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/RichText/TextElement.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/RichText/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Settings.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/CodePage.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/Date.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/Drawing.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/Escher.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/Escher/DgContainer.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/Escher/DgContainer/SpgrContainer.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/Escher/DgContainer/SpgrContainer/SpContainer.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/Escher/DgContainer/SpgrContainer/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/Escher/DgContainer/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/Escher/DggContainer.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/Escher/DggContainer/BstoreContainer.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/Escher/DggContainer/BstoreContainer/BSE.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/Escher/DggContainer/BstoreContainer/BSE/Blip.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/Escher/DggContainer/BstoreContainer/BSE/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/Escher/DggContainer/BstoreContainer/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/Escher/DggContainer/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/Escher/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/Excel5.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/File.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/Font.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/JAMA/CHANGELOG.TXT" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/JAMA/CholeskyDecomposition.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/JAMA/EigenvalueDecomposition.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/JAMA/LUDecomposition.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/JAMA/Matrix.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/JAMA/QRDecomposition.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/JAMA/SingularValueDecomposition.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/JAMA/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/JAMA/utils/Error.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/JAMA/utils/Maths.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/JAMA/utils/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/OLE.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/OLE/ChainedBlockStream.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/OLE/PPS.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/OLE/PPS/File.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/OLE/PPS/Root.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/OLE/PPS/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/OLE/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/OLERead.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/PCLZip/gnu-lgpl.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/PCLZip/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/PCLZip/pclzip.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/PCLZip/readme.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/PasswordHasher.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/String.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/TimeZone.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/XMLWriter.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/ZipArchive.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/ZipStreamWrapper.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/trend/bestFitClass.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/trend/exponentialBestFitClass.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/trend/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/trend/linearBestFitClass.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/trend/logarithmicBestFitClass.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/trend/polynomialBestFitClass.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/trend/powerBestFitClass.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Shared/trend/trendClass.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Style.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Style/Alignment.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Style/Border.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Style/Borders.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Style/Color.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Style/Conditional.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Style/Fill.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Style/Font.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Style/NumberFormat.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Style/Protection.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Style/Supervisor.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Style/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Worksheet.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Worksheet/AutoFilter.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Worksheet/AutoFilter/Column.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Worksheet/AutoFilter/Column/Rule.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Worksheet/AutoFilter/Column/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Worksheet/AutoFilter/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Worksheet/BaseDrawing.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Worksheet/CellIterator.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Worksheet/ColumnDimension.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Worksheet/Drawing.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Worksheet/Drawing/Shadow.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Worksheet/Drawing/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Worksheet/HeaderFooter.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Worksheet/HeaderFooterDrawing.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Worksheet/MemoryDrawing.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Worksheet/PageMargins.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Worksheet/PageSetup.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Worksheet/Protection.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Worksheet/Row.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Worksheet/RowDimension.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Worksheet/RowIterator.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Worksheet/SheetView.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Worksheet/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/WorksheetIterator.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Writer/Abstract.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Writer/CSV.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Writer/Excel2007.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Writer/Excel2007/Chart.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Writer/Excel2007/Comments.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Writer/Excel2007/ContentTypes.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Writer/Excel2007/DocProps.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Writer/Excel2007/Drawing.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Writer/Excel2007/Rels.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Writer/Excel2007/RelsRibbon.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Writer/Excel2007/RelsVBA.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Writer/Excel2007/StringTable.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Writer/Excel2007/Style.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Writer/Excel2007/Theme.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Writer/Excel2007/Workbook.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Writer/Excel2007/Worksheet.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Writer/Excel2007/WriterPart.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Writer/Excel2007/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Writer/Excel5.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Writer/Excel5/BIFFwriter.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Writer/Excel5/Escher.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Writer/Excel5/Font.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Writer/Excel5/Parser.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Writer/Excel5/Workbook.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Writer/Excel5/Worksheet.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Writer/Excel5/Xf.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Writer/Excel5/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Writer/Exception.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Writer/HTML.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Writer/IWriter.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Writer/PDF.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Writer/PDF/Core.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Writer/PDF/DomPDF.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Writer/PDF/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Writer/PDF/mPDF.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Writer/PDF/tcPDF.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/Writer/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/locale/bg/config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/locale/bg/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/locale/cs/config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/locale/cs/functions" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/locale/cs/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/locale/da/config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/locale/da/functions" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/locale/da/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/locale/de/config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/locale/de/functions" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/locale/de/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/locale/en/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/locale/en/uk/config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/locale/en/uk/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/locale/es/config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/locale/es/functions" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/locale/es/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/locale/fi/config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/locale/fi/functions" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/locale/fi/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/locale/fr/config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/locale/fr/functions" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/locale/fr/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/locale/hu/config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/locale/hu/functions" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/locale/hu/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/locale/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/locale/it/config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/locale/it/functions" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/locale/it/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/locale/nl/config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/locale/nl/functions" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/locale/nl/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/locale/no/config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/locale/no/functions" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/locale/no/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/locale/pl/config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/locale/pl/functions" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/locale/pl/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/locale/pt/br/config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/locale/pt/br/functions" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/locale/pt/br/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/locale/pt/config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/locale/pt/functions" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/locale/pt/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/locale/ru/config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/locale/ru/functions" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/locale/ru/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/locale/sv/config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/locale/sv/functions" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/locale/sv/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/locale/tr/config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/locale/tr/functions" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/third_party/PHPExcel/locale/tr/index.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/admin.php" afterPath="$PROJECT_DIR$/application/controllers/admin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/info.php" afterPath="$PROJECT_DIR$/application/controllers/info.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/auth.php" afterPath="$PROJECT_DIR$/application/controllers/auth.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/language/english/auth_lang.php" afterPath="$PROJECT_DIR$/application/language/english/auth_lang.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/language/english/general_lang.php" afterPath="$PROJECT_DIR$/application/language/english/general_lang.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/language/vietnamese/auth_lang.php" afterPath="$PROJECT_DIR$/application/language/vietnamese/auth_lang.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/language/vietnamese/general_lang.php" afterPath="$PROJECT_DIR$/application/language/vietnamese/general_lang.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/view_all_users.php" afterPath="$PROJECT_DIR$/application/views/admin/view_all_users.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/auth/email/activate.tpl.php" afterPath="$PROJECT_DIR$/application/views/auth/email/activate.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/auth/email/forgot_password.tpl.php" afterPath="$PROJECT_DIR$/application/views/auth/email/forgot_password.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/auth/email/new_password.tpl.php" afterPath="$PROJECT_DIR$/application/views/auth/email/new_password.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/general/contactus.php" afterPath="$PROJECT_DIR$/application/views/general/contactus.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/general/index.php" afterPath="$PROJECT_DIR$/application/views/general/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/logs/log-2016-08-28.php" afterPath="$PROJECT_DIR$/application/logs/log-2016-08-28.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/content/aboutus.php" afterPath="$PROJECT_DIR$/application/views/admin/content/aboutus.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/content/term.php" afterPath="$PROJECT_DIR$/application/views/admin/content/term.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/auth/register.php" afterPath="$PROJECT_DIR$/application/views/auth/register.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/general/aboutus.php" afterPath="$PROJECT_DIR$/application/views/general/aboutus.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/general/quick_links.php" afterPath="$PROJECT_DIR$/application/views/general/quick_links.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/temp/adminheader.php" afterPath="$PROJECT_DIR$/application/views/temp/adminheader.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/temp/adminleftmenu.php" afterPath="$PROJECT_DIR$/application/views/temp/adminleftmenu.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/temp/footer.php" afterPath="$PROJECT_DIR$/application/views/temp/footer.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/temp/header.php" afterPath="$PROJECT_DIR$/application/views/temp/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/temp/moderatorheader.php" afterPath="$PROJECT_DIR$/application/views/temp/moderatorheader.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/temp/userheader.php" afterPath="$PROJECT_DIR$/application/views/temp/userheader.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/designs/css/front-style.css" afterPath="$PROJECT_DIR$/assets/designs/css/front-style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/install/index.php" afterPath="$PROJECT_DIR$/install/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/mysql/mysql_driver.php" afterPath="$PROJECT_DIR$/system/database/drivers/mysql/mysql_driver.php" />
     </list>
     <ignored path="does.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,107 +328,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="adminleftmenu.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/temp/adminleftmenu.php">
+      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/temp/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="38" column="78" selection-start-line="38" selection-start-column="78" selection-end-line="38" selection-end-column="78" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="testimonials.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/admin/testimonials/testimonials.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="39" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/admin.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.076923">
-              <caret line="2639" column="77" selection-start-line="2639" selection-start-column="77" selection-end-line="2639" selection-end-column="77" />
-              <folding>
-                <marker date="1472361724583" expanded="true" signature="1517:1635" placeholder="SELECT u.* F... users" />
-                <marker date="1472361724583" expanded="true" signature="1753:2050" placeholder="SELECT * FRO... *" />
-                <marker date="1472361724583" expanded="true" signature="1767:2009" placeholder="SELECT qh.*,... ${$this-&gt;db-&gt;dbprefix('user_quiz_results_history')}" />
-                <marker date="1472361724583" expanded="true" signature="2136:2397" placeholder="select qr.*,... ${$this-&gt;db-&gt;dbprefix('user_quiz_results')}" />
-                <marker date="1472361724583" expanded="true" signature="2476:2558" placeholder="select * fro... ${$table}" />
-                <marker date="1472361724583" expanded="true" signature="2620:2702" placeholder="select * fro... ${$table}" />
-                <marker date="1472361724583" expanded="true" signature="2900:3102" placeholder="SELECT q.nam... ${$this-&gt;db-&gt;dbprefix('user_quiz_results')}" />
-                <marker date="1472361724583" expanded="true" signature="3178:3355" placeholder="SELECT s.qui... ${$this-&gt;db-&gt;dbprefix('quizsubscriptions')}" />
-                <marker date="1472361724583" expanded="true" signature="3845:3955" placeholder="SELECT u.* F... users" />
-                <marker date="1472361724583" expanded="true" signature="4943:5039" placeholder="SELECT u.* F... users" />
-                <marker date="1472361724583" expanded="true" signature="17927:18078" placeholder="select qr.*,... ${$this-&gt;db-&gt;dbprefix('user_quiz_results')}" />
-                <marker date="1472361724583" expanded="true" signature="19148:19417" placeholder="select qh.*,... ${$this-&gt;db-&gt;dbprefix('user_quiz_results_history')}" />
-                <marker date="1472361724583" expanded="true" signature="22436:22520" placeholder="select image... ${$this-&gt;db-&gt;dbprefix('users')}" />
-                <marker date="1472361724583" expanded="true" signature="27524:27592" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('categories')}" />
-                <marker date="1472361724583" expanded="true" signature="28726:28870" placeholder="select s.*,c... ${$this-&gt;db-&gt;dbprefix('subcategories')}" />
-                <marker date="1472361724583" expanded="true" signature="30146:30220" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('subcategories')}" />
-                <marker date="1472361724583" expanded="true" signature="32920:32990" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('subjects')}" />
-                <marker date="1472361724583" expanded="true" signature="33935:33949" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('subjects')}" />
-                <marker date="1472361724583" expanded="true" signature="35119:35295" placeholder="select q.*,s... ${$this-&gt;db-&gt;dbprefix('questions')}" />
-                <marker date="1472361724583" expanded="true" signature="35838:35992" placeholder="select q.*,s... ${$this-&gt;db-&gt;dbprefix('questions')}" />
-                <marker date="1472361724583" expanded="true" signature="36081:36233" placeholder="select q.*,s... ${$this-&gt;db-&gt;dbprefix('questions')}" />
-                <marker date="1472361724583" expanded="true" signature="39444:39516" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('questions')}" />
-                <marker date="1472361724583" expanded="true" signature="41919:42147" placeholder="select q.*,c... ${$this-&gt;db-&gt;dbprefix('quiz')}" />
-                <marker date="1472361724583" expanded="true" signature="48114:48357" placeholder="select q.*,c... ${$this-&gt;db-&gt;dbprefix('quiz')}" />
-                <marker date="1472361724583" expanded="true" signature="48459:48637" placeholder="select qq.*,... ${$this-&gt;db-&gt;dbprefix('quizquestions')}" />
-                <marker date="1472361724583" expanded="true" signature="48719:48761" placeholder="SELECT group... quiz_for" />
-                <marker date="1472361724583" expanded="true" signature="51611:51693" placeholder="select subca... ${$this-&gt;db-&gt;dbprefix('subcategories')}" />
-                <marker date="1472361724583" expanded="true" signature="54165:54234" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('notifications')}" />
-                <marker date="1472361724583" expanded="true" signature="56513:56638" placeholder="select autho... ${$this-&gt;db-&gt;dbprefix('testimonials')}" />
-                <marker date="1472361724583" expanded="true" signature="57921:57989" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('testimonials')}" />
-                <marker date="1472361724583" expanded="true" signature="60727:60785" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('general_settings')}" />
-                <marker date="1472361724583" expanded="true" signature="61314:61372" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('general_settings')}" />
-                <marker date="1472361724583" expanded="true" signature="61730:61788" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('general_settings')}" />
-                <marker date="1472361724583" expanded="true" signature="63425:63483" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('general_settings')}" />
-                <marker date="1472361724583" expanded="true" signature="64912:64967" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('email_setting')}" />
-                <marker date="1472361724583" expanded="true" signature="68388:68445" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('aboutus_content')}" />
-                <marker date="1472361724583" expanded="true" signature="69341:69398" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('aboutus_content')}" />
-                <marker date="1472361724583" expanded="true" signature="70309:70366" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('aboutus_content')}" />
-                <marker date="1472361724583" expanded="true" signature="71274:71331" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('aboutus_content')}" />
-                <marker date="1472361724583" expanded="true" signature="72084:72259" placeholder="select count... questions" />
-                <marker date="1472361724583" expanded="true" signature="73720:73820" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix($table)}" />
-                <marker date="1472361724583" expanded="true" signature="74957:75005" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('paypal')}" />
-                <marker date="1472361724583" expanded="true" signature="76012:76324" placeholder="SELECT s.use... ${$this-&gt;db-&gt;dbprefix('quiz')}" />
-                <marker date="1472361724583" expanded="true" signature="79202:79271" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('group_settings')}" />
-                <marker date="1472361724583" expanded="true" signature="83297:83407" placeholder="SELECT u.* F... users" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/views/general/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.9529837">
-              <caret line="137" column="16" selection-start-line="137" selection-start-column="16" selection-end-line="137" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="footer.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/temp/footer.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.6923077">
-              <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="aboutus.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/general/aboutus.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-4.1698112">
+              <caret line="59" column="207" selection-start-line="59" selection-start-column="189" selection-end-line="59" selection-end-column="207" />
               <folding />
             </state>
           </provider>
@@ -154,40 +341,18 @@
       <file leaf-file-name="quick_links.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/general/quick_links.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.346153">
-              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-              <folding>
-                <element signature="n#style#0;n#iframe#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="view_all_users.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/admin/view_all_users.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="53" column="23" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
+            <state vertical-scroll-proportion="-3.2692308">
+              <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PHPExcel.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/excelassets/PHPExcel.php">
+      <file leaf-file-name="quick_links_about.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/general/quick_links_about.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="42" column="6" selection-start-line="42" selection-start-column="6" selection-end-line="42" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="log-2016-08-28.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/logs/log-2016-08-28.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.03074141">
+              <caret line="1" column="53" selection-start-line="1" selection-start-column="53" selection-end-line="1" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -201,21 +366,15 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/application/language/vietnamese/auth_lang.php" />
         <option value="$PROJECT_DIR$/application/config/ion_auth.php" />
-        <option value="$PROJECT_DIR$/application/language/english/auth_lang.php" />
         <option value="$PROJECT_DIR$/application/views/auth/create_user.php" />
-        <option value="$PROJECT_DIR$/application/controllers/auth.php" />
-        <option value="$PROJECT_DIR$/application/views/general/aboutus.php" />
         <option value="$PROJECT_DIR$/application/controllers/images.php" />
         <option value="$PROJECT_DIR$/application/views/general/images.php" />
         <option value="$PROJECT_DIR$/db/image_cat.sql" />
         <option value="$PROJECT_DIR$/db/images.sql" />
         <option value="$PROJECT_DIR$/application/config/config.php" />
         <option value="$PROJECT_DIR$/application/logs/log-2016-08-26.php" />
-        <option value="$PROJECT_DIR$/assets/designs/css/front-style.css" />
         <option value="$PROJECT_DIR$/application/views/general/contactus.php" />
-        <option value="$PROJECT_DIR$/application/controllers/info.php" />
         <option value="$PROJECT_DIR$/application/views/auth/email/activate.tpl.php" />
         <option value="$PROJECT_DIR$/application/views/auth/email/forgot_password.tpl.php" />
         <option value="$PROJECT_DIR$/application/views/auth/email/new_password.tpl.php" />
@@ -223,17 +382,34 @@
         <option value="$PROJECT_DIR$/application/views/temp/adminheader.php" />
         <option value="$PROJECT_DIR$/application/views/temp/moderatorheader.php" />
         <option value="$PROJECT_DIR$/application/views/temp/userheader.php" />
-        <option value="$PROJECT_DIR$/application/language/vietnamese/general_lang.php" />
-        <option value="$PROJECT_DIR$/application/language/english/general_lang.php" />
-        <option value="$PROJECT_DIR$/application/views/temp/header.php" />
         <option value="$PROJECT_DIR$/application/logs/log-2016-08-28.php" />
         <option value="$PROJECT_DIR$/application/third_party/PHPExcel/PHPExcel.php" />
-        <option value="$PROJECT_DIR$/application/views/temp/adminleftmenu.php" />
         <option value="$PROJECT_DIR$/application/views/admin/view_all_users.php" />
-        <option value="$PROJECT_DIR$/application/views/general/quick_links.php" />
-        <option value="$PROJECT_DIR$/application/controllers/admin.php" />
-        <option value="$PROJECT_DIR$/application/views/temp/footer.php" />
         <option value="$PROJECT_DIR$/application/views/general/index.php" />
+        <option value="$PROJECT_DIR$/application/language/english/auth_lang.php" />
+        <option value="$PROJECT_DIR$/application/language/vietnamese/auth_lang.php" />
+        <option value="$PROJECT_DIR$/application/views/auth/register.php" />
+        <option value="$PROJECT_DIR$/application/controllers/auth.php" />
+        <option value="$PROJECT_DIR$/application/models/base_model.php" />
+        <option value="$PROJECT_DIR$/system/database/drivers/mysql/mysql_driver.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/content/term.php" />
+        <option value="$PROJECT_DIR$/application/controllers/info.php" />
+        <option value="$PROJECT_DIR$/application/controllers/about.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/content/aboutus.php" />
+        <option value="$PROJECT_DIR$/application/views/temp/footer.php" />
+        <option value="$PROJECT_DIR$/application/views/general/quick_links.php" />
+        <option value="$PROJECT_DIR$/application/controllers/aboutus.php" />
+        <option value="$PROJECT_DIR$/assets/designs/css/front-style.css" />
+        <option value="$PROJECT_DIR$/application/controllers/admin.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/content/aboutusprogram.php" />
+        <option value="$PROJECT_DIR$/application/views/temp/adminleftmenu.php" />
+        <option value="$PROJECT_DIR$/application/controllers/aboutprogram.php" />
+        <option value="$PROJECT_DIR$/application/views/temp/header.php" />
+        <option value="$PROJECT_DIR$/application/language/english/general_lang.php" />
+        <option value="$PROJECT_DIR$/application/language/vietnamese/general_lang.php" />
+        <option value="$PROJECT_DIR$/application/views/general/aboutprogram.php" />
+        <option value="$PROJECT_DIR$/application/views/general/aboutus.php" />
+        <option value="$PROJECT_DIR$/application/views/general/quick_links_about.php" />
       </list>
     </option>
   </component>
@@ -247,7 +423,7 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
+    <option name="x" value="1358" />
     <option name="y" value="-8" />
     <option name="width" value="1382" />
     <option name="height" value="744" />
@@ -294,6 +470,86 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="doeswil" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="does" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="doeswil" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="system" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="does" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="doeswil" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="system" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="does" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="doeswil" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="system" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drivers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="does" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="doeswil" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="system" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drivers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mysql" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -393,32 +649,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="excelassets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PHPExcel" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Writer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="does" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="doeswil" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="designs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -495,7 +725,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="temp" />
+              <option name="myItemId" value="user" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -517,7 +747,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="moderator" />
+              <option name="myItemId" value="temp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -557,87 +787,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="does" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="doeswil" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="third_party" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="does" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="doeswil" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="third_party" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PHPExcel" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="does" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="doeswil" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="does" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="doeswil" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="libraries" />
+              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -717,6 +867,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="helpers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="does" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="doeswil" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -730,15 +898,15 @@
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\doeswil\application\third_party\PHPExcel" />
-      <recent name="C:\xampp\htdocs\doeswil\application\libraries" />
-      <recent name="C:\xampp\htdocs\doeswil\application\views\admin" />
-      <recent name="C:\xampp\htdocs\doeswil\db" />
-      <recent name="C:\xampp\htdocs\doeswil\application\views\general" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\doeswil\application\third_party" />
+      <recent name="C:\xampp\htdocs\doeswil\application\libraries" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\doeswil\application\views\general" />
+      <recent name="C:\xampp\htdocs\doeswil\application\controllers" />
+      <recent name="C:\xampp\htdocs\doeswil\application\views\admin\content" />
+      <recent name="C:\xampp\htdocs\doeswil\application\third_party\PHPExcel" />
       <recent name="C:\xampp\htdocs\doeswil\application\libraries" />
     </key>
   </component>
@@ -786,20 +954,20 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <frame x="1358" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22547585" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22547585" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33123028" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329429" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -828,12 +996,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/controllers/auth.php</url>
-          <line>654</line>
+          <line>657</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/controllers/auth.php</url>
-          <line>933</line>
+          <line>969</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -857,203 +1025,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/libraries/merchant.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.1982758">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/article_m.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.65384614">
-          <caret line="1" column="32" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/libraries/Bcrypt.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.230769">
-          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/user/exam/examhistory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.230769">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="22" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/images.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0380952">
-          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/image_cat.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.509058">
-          <caret line="49" column="23" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/libraries/paypal.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.8689656">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/core/MY_Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.87931037">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1471864807330" expanded="true" signature="5421:5615" placeholder="..." />
-            <marker date="1471864807330" expanded="true" signature="5465:5599" placeholder="..." />
-            <marker date="1471864807330" expanded="true" signature="5678:5869" placeholder="..." />
-            <marker date="1471864807330" expanded="true" signature="5721:5853" placeholder="..." />
-            <marker date="1471864807330" expanded="true" signature="5932:6120" placeholder="..." />
-            <marker date="1471864807330" expanded="true" signature="5973:6104" placeholder="..." />
-            <marker date="1471864807330" expanded="true" signature="6183:6377" placeholder="..." />
-            <marker date="1471864807330" expanded="true" signature="6227:6361" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/images/import.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.9230769">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/video.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8206897">
-          <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/user/exam/quizzes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="98.07692">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/libraries/SimpleHtmlDom.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.923077">
-          <caret line="85" column="57" selection-start-line="85" selection-start-column="57" selection-end-line="85" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/logs/log-2016-08-26.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.769231">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/auth.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="842" column="51" selection-start-line="842" selection-start-column="43" selection-end-line="842" selection-end-column="51" />
-          <folding>
-            <element signature="n#login#0;n#Auth#0;n#!!top" expanded="false" />
-            <element signature="n#logout#0;n#Auth#0;n#!!top" expanded="false" />
-            <element signature="n#change_password#0;n#Auth#0;n#!!top" expanded="false" />
-            <element signature="n#forgot_password#0;n#Auth#0;n#!!top" expanded="false" />
-            <element signature="n#reset_password#0;n#Auth#0;n#!!top" expanded="false" />
-            <element signature="n#activate#0;n#Auth#0;n#!!top" expanded="false" />
-            <element signature="n#deactivate#0;n#Auth#0;n#!!top" expanded="false" />
-            <element signature="n#_image_check#0;n#Auth#0;n#!!top" expanded="false" />
-            <marker date="1471864807320" expanded="true" signature="3087:3117" placeholder="select * FRO... users" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/general/images.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6448276">
-          <caret line="22" column="48" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="351" column="0" selection-start-line="351" selection-start-column="0" selection-end-line="351" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/auth/register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/language/english/auth_lang.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="54" selection-start-line="48" selection-start-column="54" selection-end-line="48" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/designs/css/front-style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.8846154">
-          <caret line="78" column="1" selection-start-line="78" selection-start-column="1" selection-end-line="78" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/general/contactus.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7041742">
-          <caret line="52" column="82" selection-start-line="52" selection-start-column="72" selection-end-line="52" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/temp/userheader.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7643312">
-          <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/temp/adminheader.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27493262">
-          <caret line="6" column="112" selection-start-line="6" selection-start-column="112" selection-end-line="6" selection-end-column="112" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/images.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27493262">
-          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/install/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35579515">
-          <caret line="51" column="42" selection-start-line="51" selection-start-column="42" selection-end-line="51" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/auth/email/new_password.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3312102">
-          <caret line="48" column="72" selection-start-line="48" selection-start-column="72" selection-end-line="48" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/auth/email/forgot_password.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1687898">
@@ -1068,39 +1039,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/info.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6927224">
-          <caret line="148" column="61" selection-start-line="148" selection-start-column="39" selection-end-line="148" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/language/vietnamese/general_lang.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.153846">
-          <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/language/english/general_lang.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.5">
-          <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/temp/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/excelassets/PHPExcel/NamedRange.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="3.9230769">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1115,6 +1058,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="7.8461537">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1129,6 +1073,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.9793105">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1166,7 +1111,7 @@
     <entry file="file://$PROJECT_DIR$/application/logs/log-2016-08-28.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1185,22 +1130,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/temp/adminleftmenu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="38" column="78" selection-start-line="38" selection-start-column="78" selection-end-line="38" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/testimonials/testimonials.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="39" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin/view_all_users.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1209,7 +1138,173 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/general/aboutus.php">
+    <entry file="file://$PROJECT_DIR$/application/views/general/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.9529837">
+          <caret line="137" column="16" selection-start-line="137" selection-start-column="16" selection-end-line="137" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/testimonials/testimonials.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.029310346">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="39" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/language/english/merchant_lang.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="11.769231">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/language/english/ion_auth_lang.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.2275862">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/helpers/cms_helper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.4">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1471864807336" expanded="true" signature="2993:3100" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/language/english/auth_lang.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.307692">
+          <caret line="126" column="112" selection-start-line="126" selection-start-column="112" selection-end-line="126" selection-end-column="112" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/language/vietnamese/auth_lang.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.730769">
+          <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/helpers/form_helper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.09137931">
+          <caret line="614" column="13" selection-start-line="614" selection-start-column="13" selection-end-line="614" selection-end-column="13" />
+          <folding>
+            <marker date="1471864812519" expanded="true" signature="2175:2187" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/auth/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.6363636">
+          <caret line="324" column="0" selection-start-line="324" selection-start-column="0" selection-end-line="324" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#label#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#span#0;n#label#0;n#div#0;n#div#0;n#div#8;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#span#0;n#label#0;n#div#0;n#div#1;n#div#8;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#span#0;n#label#0;n#div#9;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#span#0;n#label#0;n#div#10;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/auth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.3658535">
+          <caret line="891" column="0" selection-start-line="891" selection-start-column="0" selection-end-line="891" selection-end-column="0" />
+          <folding>
+            <element signature="n#login#0;n#Auth#0;n#!!top" expanded="false" />
+            <element signature="n#logout#0;n#Auth#0;n#!!top" expanded="false" />
+            <element signature="n#change_password#0;n#Auth#0;n#!!top" expanded="false" />
+            <element signature="n#forgot_password#0;n#Auth#0;n#!!top" expanded="false" />
+            <element signature="n#reset_password#0;n#Auth#0;n#!!top" expanded="false" />
+            <element signature="n#activate#0;n#Auth#0;n#!!top" expanded="false" />
+            <element signature="n#deactivate#0;n#Auth#0;n#!!top" expanded="false" />
+            <element signature="n#_image_check#0;n#Auth#0;n#!!top" expanded="false" />
+            <marker date="1472395183484" expanded="true" signature="3087:3117" placeholder="select * FRO... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/edit_user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.87931037">
+          <caret line="54" column="50" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/database/drivers/mysql/mysql_driver.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6981132">
+          <caret line="1246" column="0" selection-start-line="1246" selection-start-column="0" selection-end-line="1246" selection-end-column="0" />
+          <folding>
+            <marker date="1472425693464" expanded="true" signature="5195:5220" placeholder="DELETE FROM " />
+            <marker date="1472425693464" expanded="true" signature="12872:12957" placeholder="INSERT INTO ${$table}... " />
+            <marker date="1472425693464" expanded="true" signature="13866:13923" placeholder="INSERT INTO ${$table}... " />
+            <marker date="1472425693464" expanded="true" signature="17227:17239" placeholder="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.4285715">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/database/DB.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.4743936">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/base_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4651163">
+          <caret line="62" column="36" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/categories/addeditCategories.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1913747">
+          <caret line="74" column="36" selection-start-line="72" selection-start-column="17" selection-end-line="74" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/exam.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.63072777">
+          <caret line="73" column="35" selection-start-line="73" selection-start-column="35" selection-end-line="73" selection-end-column="35" />
+          <folding>
+            <marker date="1471864807321" expanded="true" signature="2854:3029" placeholder="select q.*, ${$this-&gt;db-&gt;dbprefix('quiz')}" />
+            <marker date="1471864807321" expanded="true" signature="3650:3899" placeholder="select q.*,q... ${$this-&gt;db-&gt;dbprefix('quiz')}" />
+            <marker date="1471864807321" expanded="true" signature="4029:4248" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('questions')}" />
+            <marker date="1471864807321" expanded="true" signature="9199:9405" placeholder="select qr.*,... ${$this-&gt;db-&gt;dbprefix('user_quiz_results')}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/general/term.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1217,82 +1312,213 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/general/quick_links.php">
+    <entry file="file://$PROJECT_DIR$/application/views/general/aboutus1.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.346153">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        <state vertical-scroll-proportion="17.653847">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/term.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22911051">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="43" selection-end-column="58" />
           <folding>
-            <element signature="n#style#0;n#iframe#0;n#div#0;n#!!top" expanded="true" />
+            <marker date="1471864807325" expanded="true" signature="1461:1550" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('pages')}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/admin.php">
+    <entry file="file://$PROJECT_DIR$/application/controllers/info.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.076923">
-          <caret line="2639" column="77" selection-start-line="2639" selection-start-column="77" selection-end-line="2639" selection-end-column="77" />
+        <state vertical-scroll-proportion="0.25872093">
+          <caret line="198" column="66" selection-start-line="198" selection-start-column="65" selection-end-line="198" selection-end-column="66" />
           <folding>
-            <marker date="1472361724583" expanded="true" signature="1517:1635" placeholder="SELECT u.* F... users" />
-            <marker date="1472361724583" expanded="true" signature="1753:2050" placeholder="SELECT * FRO... *" />
-            <marker date="1472361724583" expanded="true" signature="1767:2009" placeholder="SELECT qh.*,... ${$this-&gt;db-&gt;dbprefix('user_quiz_results_history')}" />
-            <marker date="1472361724583" expanded="true" signature="2136:2397" placeholder="select qr.*,... ${$this-&gt;db-&gt;dbprefix('user_quiz_results')}" />
-            <marker date="1472361724583" expanded="true" signature="2476:2558" placeholder="select * fro... ${$table}" />
-            <marker date="1472361724583" expanded="true" signature="2620:2702" placeholder="select * fro... ${$table}" />
-            <marker date="1472361724583" expanded="true" signature="2900:3102" placeholder="SELECT q.nam... ${$this-&gt;db-&gt;dbprefix('user_quiz_results')}" />
-            <marker date="1472361724583" expanded="true" signature="3178:3355" placeholder="SELECT s.qui... ${$this-&gt;db-&gt;dbprefix('quizsubscriptions')}" />
-            <marker date="1472361724583" expanded="true" signature="3845:3955" placeholder="SELECT u.* F... users" />
-            <marker date="1472361724583" expanded="true" signature="4943:5039" placeholder="SELECT u.* F... users" />
-            <marker date="1472361724583" expanded="true" signature="17927:18078" placeholder="select qr.*,... ${$this-&gt;db-&gt;dbprefix('user_quiz_results')}" />
-            <marker date="1472361724583" expanded="true" signature="19148:19417" placeholder="select qh.*,... ${$this-&gt;db-&gt;dbprefix('user_quiz_results_history')}" />
-            <marker date="1472361724583" expanded="true" signature="22436:22520" placeholder="select image... ${$this-&gt;db-&gt;dbprefix('users')}" />
-            <marker date="1472361724583" expanded="true" signature="27524:27592" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('categories')}" />
-            <marker date="1472361724583" expanded="true" signature="28726:28870" placeholder="select s.*,c... ${$this-&gt;db-&gt;dbprefix('subcategories')}" />
-            <marker date="1472361724583" expanded="true" signature="30146:30220" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('subcategories')}" />
-            <marker date="1472361724583" expanded="true" signature="32920:32990" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('subjects')}" />
-            <marker date="1472361724583" expanded="true" signature="33935:33949" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('subjects')}" />
-            <marker date="1472361724583" expanded="true" signature="35119:35295" placeholder="select q.*,s... ${$this-&gt;db-&gt;dbprefix('questions')}" />
-            <marker date="1472361724583" expanded="true" signature="35838:35992" placeholder="select q.*,s... ${$this-&gt;db-&gt;dbprefix('questions')}" />
-            <marker date="1472361724583" expanded="true" signature="36081:36233" placeholder="select q.*,s... ${$this-&gt;db-&gt;dbprefix('questions')}" />
-            <marker date="1472361724583" expanded="true" signature="39444:39516" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('questions')}" />
-            <marker date="1472361724583" expanded="true" signature="41919:42147" placeholder="select q.*,c... ${$this-&gt;db-&gt;dbprefix('quiz')}" />
-            <marker date="1472361724583" expanded="true" signature="48114:48357" placeholder="select q.*,c... ${$this-&gt;db-&gt;dbprefix('quiz')}" />
-            <marker date="1472361724583" expanded="true" signature="48459:48637" placeholder="select qq.*,... ${$this-&gt;db-&gt;dbprefix('quizquestions')}" />
-            <marker date="1472361724583" expanded="true" signature="48719:48761" placeholder="SELECT group... quiz_for" />
-            <marker date="1472361724583" expanded="true" signature="51611:51693" placeholder="select subca... ${$this-&gt;db-&gt;dbprefix('subcategories')}" />
-            <marker date="1472361724583" expanded="true" signature="54165:54234" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('notifications')}" />
-            <marker date="1472361724583" expanded="true" signature="56513:56638" placeholder="select autho... ${$this-&gt;db-&gt;dbprefix('testimonials')}" />
-            <marker date="1472361724583" expanded="true" signature="57921:57989" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('testimonials')}" />
-            <marker date="1472361724583" expanded="true" signature="60727:60785" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('general_settings')}" />
-            <marker date="1472361724583" expanded="true" signature="61314:61372" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('general_settings')}" />
-            <marker date="1472361724583" expanded="true" signature="61730:61788" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('general_settings')}" />
-            <marker date="1472361724583" expanded="true" signature="63425:63483" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('general_settings')}" />
-            <marker date="1472361724583" expanded="true" signature="64912:64967" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('email_setting')}" />
-            <marker date="1472361724583" expanded="true" signature="68388:68445" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('aboutus_content')}" />
-            <marker date="1472361724583" expanded="true" signature="69341:69398" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('aboutus_content')}" />
-            <marker date="1472361724583" expanded="true" signature="70309:70366" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('aboutus_content')}" />
-            <marker date="1472361724583" expanded="true" signature="71274:71331" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('aboutus_content')}" />
-            <marker date="1472361724583" expanded="true" signature="72084:72259" placeholder="select count... questions" />
-            <marker date="1472361724583" expanded="true" signature="73720:73820" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix($table)}" />
-            <marker date="1472361724583" expanded="true" signature="74957:75005" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('paypal')}" />
-            <marker date="1472361724583" expanded="true" signature="76012:76324" placeholder="SELECT s.use... ${$this-&gt;db-&gt;dbprefix('quiz')}" />
-            <marker date="1472361724583" expanded="true" signature="79202:79271" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('group_settings')}" />
-            <marker date="1472361724583" expanded="true" signature="83297:83407" placeholder="SELECT u.* F... users" />
+            <marker date="1472426480266" expanded="true" signature="2073:2252" placeholder="select quizi... ${$table}" />
+            <marker date="1472426480266" expanded="true" signature="2390:2506" placeholder="select * fro... ${$table}" />
+            <marker date="1472426480266" expanded="true" signature="2641:2710" placeholder="select * fro... ${$table}" />
+            <marker date="1472426480266" expanded="true" signature="4698:4741" placeholder="select conta... general_settings" />
+            <marker date="1472426480266" expanded="true" signature="7003:7059" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('aboutus_content')}" />
+            <marker date="1472426480266" expanded="true" signature="7003:7060" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('aboutus_content')}" />
+            <marker date="1472426480266" expanded="true" signature="7003:7064" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('aboutus_content')}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/content/term.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="36.615383">
+          <caret line="123" column="29" selection-start-line="0" selection-start-column="0" selection-end-line="369" selection-end-column="2" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/temp/footer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.6923077">
-          <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
+        <state vertical-scroll-proportion="-3.9230769">
+          <caret line="6" column="47" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/general/index.php">
+    <entry file="file://$PROJECT_DIR$/application/controllers/aboutus.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.9529837">
-          <caret line="137" column="16" selection-start-line="137" selection-start-column="16" selection-end-line="137" selection-end-column="16" />
+        <state vertical-scroll-proportion="-5.8846154">
+          <caret line="37" column="75" selection-start-line="37" selection-start-column="75" selection-end-line="37" selection-end-column="75" />
+          <folding>
+            <marker date="1472427700614" expanded="true" signature="1421:1513" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('pages')}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/designs/css/front-style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.3846154">
+          <caret line="212" column="42" selection-start-line="212" selection-start-column="42" selection-end-line="212" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/content/aboutus.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.0722892">
+          <caret line="148" column="18" selection-start-line="44" selection-start-column="12" selection-end-line="148" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.5849056">
+          <caret line="2258" column="57" selection-start-line="2258" selection-start-column="57" selection-end-line="2258" selection-end-column="57" />
+          <folding>
+            <marker date="1472436761231" expanded="true" signature="1517:1635" placeholder="SELECT u.* F... users" />
+            <marker date="1472436761231" expanded="true" signature="1753:2050" placeholder="SELECT * FRO... *" />
+            <marker date="1472436761231" expanded="true" signature="1767:2009" placeholder="SELECT qh.*,... ${$this-&gt;db-&gt;dbprefix('user_quiz_results_history')}" />
+            <marker date="1472436761231" expanded="true" signature="2136:2397" placeholder="select qr.*,... ${$this-&gt;db-&gt;dbprefix('user_quiz_results')}" />
+            <marker date="1472436761231" expanded="true" signature="2476:2558" placeholder="select * fro... ${$table}" />
+            <marker date="1472436761231" expanded="true" signature="2620:2702" placeholder="select * fro... ${$table}" />
+            <marker date="1472436761231" expanded="true" signature="2900:3102" placeholder="SELECT q.nam... ${$this-&gt;db-&gt;dbprefix('user_quiz_results')}" />
+            <marker date="1472436761231" expanded="true" signature="3178:3355" placeholder="SELECT s.qui... ${$this-&gt;db-&gt;dbprefix('quizsubscriptions')}" />
+            <marker date="1472436761231" expanded="true" signature="3845:3955" placeholder="SELECT u.* F... users" />
+            <marker date="1472436761231" expanded="true" signature="4943:5039" placeholder="SELECT u.* F... users" />
+            <marker date="1472436761231" expanded="true" signature="17927:18078" placeholder="select qr.*,... ${$this-&gt;db-&gt;dbprefix('user_quiz_results')}" />
+            <marker date="1472436761231" expanded="true" signature="19148:19417" placeholder="select qh.*,... ${$this-&gt;db-&gt;dbprefix('user_quiz_results_history')}" />
+            <marker date="1472436761231" expanded="true" signature="22436:22520" placeholder="select image... ${$this-&gt;db-&gt;dbprefix('users')}" />
+            <marker date="1472436761231" expanded="true" signature="27524:27592" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('categories')}" />
+            <marker date="1472436761231" expanded="true" signature="28726:28870" placeholder="select s.*,c... ${$this-&gt;db-&gt;dbprefix('subcategories')}" />
+            <marker date="1472436761231" expanded="true" signature="30146:30220" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('subcategories')}" />
+            <marker date="1472436761231" expanded="true" signature="32920:32990" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('subjects')}" />
+            <marker date="1472436761231" expanded="true" signature="33935:33949" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('subjects')}" />
+            <marker date="1472436761231" expanded="true" signature="35119:35295" placeholder="select q.*,s... ${$this-&gt;db-&gt;dbprefix('questions')}" />
+            <marker date="1472436761231" expanded="true" signature="35838:35992" placeholder="select q.*,s... ${$this-&gt;db-&gt;dbprefix('questions')}" />
+            <marker date="1472436761231" expanded="true" signature="36081:36233" placeholder="select q.*,s... ${$this-&gt;db-&gt;dbprefix('questions')}" />
+            <marker date="1472436761231" expanded="true" signature="39444:39516" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('questions')}" />
+            <marker date="1472436761231" expanded="true" signature="41919:42147" placeholder="select q.*,c... ${$this-&gt;db-&gt;dbprefix('quiz')}" />
+            <marker date="1472436761231" expanded="true" signature="48114:48357" placeholder="select q.*,c... ${$this-&gt;db-&gt;dbprefix('quiz')}" />
+            <marker date="1472436761231" expanded="true" signature="48459:48637" placeholder="select qq.*,... ${$this-&gt;db-&gt;dbprefix('quizquestions')}" />
+            <marker date="1472436761231" expanded="true" signature="48719:48761" placeholder="SELECT group... quiz_for" />
+            <marker date="1472436761231" expanded="true" signature="51611:51693" placeholder="select subca... ${$this-&gt;db-&gt;dbprefix('subcategories')}" />
+            <marker date="1472436761231" expanded="true" signature="54165:54234" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('notifications')}" />
+            <marker date="1472436761231" expanded="true" signature="56513:56638" placeholder="select autho... ${$this-&gt;db-&gt;dbprefix('testimonials')}" />
+            <marker date="1472436761231" expanded="true" signature="57921:57989" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('testimonials')}" />
+            <marker date="1472436761231" expanded="true" signature="60727:60785" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('general_settings')}" />
+            <marker date="1472436761231" expanded="true" signature="61314:61372" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('general_settings')}" />
+            <marker date="1472436761231" expanded="true" signature="61730:61788" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('general_settings')}" />
+            <marker date="1472436761231" expanded="true" signature="63425:63483" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('general_settings')}" />
+            <marker date="1472436761231" expanded="true" signature="64912:64967" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('email_setting')}" />
+            <marker date="1472436761231" expanded="true" signature="68998:69089" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('pages')}" />
+            <marker date="1472436761231" expanded="true" signature="69156:69244" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('pages')}" />
+            <marker date="1472436761231" expanded="true" signature="70777:70873" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('pages')}" />
+            <marker date="1472436761231" expanded="true" signature="70940:71033" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('pages')}" />
+            <marker date="1472436761231" expanded="true" signature="72532:72598" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('pages')}" />
+            <marker date="1472436761231" expanded="true" signature="72532:72602" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('pages')}" />
+            <marker date="1472436761231" expanded="true" signature="72532:72620" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('pages')}" />
+            <marker date="1472436761231" expanded="true" signature="72532:72621" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('aboutus_content')}" />
+            <marker date="1472436761231" expanded="true" signature="72686:72771" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('pages')}" />
+            <marker date="1472436761231" expanded="true" signature="73669:73726" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('aboutus_content')}" />
+            <marker date="1472436761231" expanded="true" signature="74634:74691" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('aboutus_content')}" />
+            <marker date="1472436761231" expanded="true" signature="75444:75619" placeholder="select count... questions" />
+            <marker date="1472436761231" expanded="true" signature="77080:77180" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix($table)}" />
+            <marker date="1472436761231" expanded="true" signature="78317:78365" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('paypal')}" />
+            <marker date="1472436761231" expanded="true" signature="79372:79684" placeholder="SELECT s.use... ${$this-&gt;db-&gt;dbprefix('quiz')}" />
+            <marker date="1472436761231" expanded="true" signature="82562:82631" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('group_settings')}" />
+            <marker date="1472436761231" expanded="true" signature="86676:86786" placeholder="SELECT u.* F... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/temp/adminleftmenu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.2075472">
+          <caret line="10" column="80" selection-start-line="10" selection-start-column="80" selection-end-line="10" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/aboutprogram.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.346153">
+          <caret line="40" column="50" selection-start-line="40" selection-start-column="50" selection-end-line="40" selection-end-column="50" />
+          <folding>
+            <marker date="1472437436912" expanded="true" signature="1426:1523" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('pages')}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/general/quick_links.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.2692308">
+          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/general/aboutprogram.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.692307">
+          <caret line="33" column="61" selection-start-line="33" selection-start-column="44" selection-end-line="33" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/general/aboutus.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.807693">
+          <caret line="33" column="61" selection-start-line="33" selection-start-column="61" selection-end-line="33" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/language/vietnamese/general_lang.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-21.0">
+          <caret line="39" column="31" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/language/english/general_lang.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-19.692308">
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/temp/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.1698112">
+          <caret line="59" column="207" selection-start-line="59" selection-start-column="189" selection-end-line="59" selection-end-column="207" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/general/quick_links_about.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.03074141">
+          <caret line="1" column="53" selection-start-line="1" selection-start-column="53" selection-end-line="1" selection-end-column="53" />
           <folding />
         </state>
       </provider>

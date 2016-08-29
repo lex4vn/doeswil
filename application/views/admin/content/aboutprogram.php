@@ -28,7 +28,7 @@
 		<ul>
 			<li><a href="<?php echo base_url();?>admin">Home</a></li>
 			<li><img  src="<?php echo base_url();?>assets/designs/images/arrow.png"></li>
-			<li><a href="#">Update About Content</a></li>
+			<li><a href="#">Update About Program Content</a></li>
 		</ul>
 	</div>
 
@@ -40,7 +40,7 @@
 			echo $this->session->flashdata('message');
 			?>
 		</div>
-		<form method="POST" action="<?php echo base_url();?>admin/aboutus" id="term_form" enctype="multipart/form-data">
+		<form method="POST" action="<?php echo base_url();?>admin/aboutprogram" id="term_form" enctype="multipart/form-data">
 
 			<div id="term" class="container">
 				<ul class="nav nav-tabs">
@@ -92,7 +92,7 @@
 
 							?>
 
-							<textarea class="editors" id="editorvi" name="bodyvi" placeholder="Type Content for Term Page" ><?php echo $val;?></textarea>
+							<textarea class="editors" id="editorvi" name="bodyvi" placeholder="Type Content for about program Page" ><?php echo $val;?></textarea>
 						</div>
 
 						<input type="hidden" name="lang" value="vietnamese">
@@ -140,7 +140,7 @@
 
 							?>
 
-							<textarea class="editors" id="editoren" name="bodyen" placeholder="Type Content for Term Page" ><?php echo $val;?></textarea>
+							<textarea class="editors" id="editoren" name="bodyen" placeholder="Type Content for about program Page" ><?php echo $val;?></textarea>
 						</div>
 						<input type="hidden" name="lang" value="english">
 						<input type="hidden" name="iden" value="<?php if(isset($dataen->id)) echo $dataen->id;?>">

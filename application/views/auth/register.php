@@ -174,6 +174,25 @@
                      <?php echo form_input($temp_address);?>
                  </div>
              </div>
+
+             <div class="row">
+                 <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12">
+                     <div class="form-group paddin-cont">
+                         <label class="col-lg-12 control-label" for="university"><?php echo lang('register_university_label'); ?><span style="color:red;">*</span></label>
+                         <div class="col-lg-12 ">
+                             <?php echo form_dropdown($university['name'],$university['options']);?>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="col-lg-9 col-md-8 col-sm-12 col-xs-12 university-another">
+                     <div class="form-group paddin-cont">
+                         <label class="col-lg-12 control-label" for="university_another"><?php echo lang('register_university_another_label'); ?><span style="color:red;">*</span></label>
+                         <div class="col-lg-12 ">
+                             <?php echo form_input($university_another);?>
+                         </div>
+                     </div>
+                 </div>
+             </div>
              <div class="form-group paddin-cont">
                  <label class="col-lg-12 control-label" for="major"><?php echo lang('register_major_label'); ?><span style="color:red;">*</span></label>
                  <div class="col-lg-12 ">
@@ -182,12 +201,12 @@
              </div>
 
              <div class="form-group paddin-cont">
-                 <label class="col-lg-12 control-label" for="university"><?php echo lang('register_university_label'); ?><span style="color:red;">*</span></label>
+                 <label class="col-lg-12 control-label" for="contest_location"><?php echo lang('register_contest_location_label'); ?><span style="color:red;">*</span></label>
                  <div class="col-lg-12 ">
-                     <?php echo form_input($university);?>
+                     <?php echo form_dropdown($contest_location['name'],$contest_location['options']);?>
                  </div>
              </div>
-             
+
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                      <div class="form-group paddin-cont">
@@ -303,6 +322,16 @@
 <script src="<?php echo base_url();?>assets/designs/js/jquery.validate.min.js"></script>
 <script src="<?php echo base_url();?>assets/designs/js/additional-methods.min.js"></script>
 <script type="text/javascript">
+    $("select[name='university']").on('change', function() {
+        if(this.value == '0'){
+            $('.university-another').show();
+            $('#university_another').val('');
+        }else{
+            $('.university-another').hide();
+            $('#university_another').val( this.value );
+        }
+
+    });
     $(function () {
                 $('.input-group.date').datepicker();
     });
@@ -386,9 +415,15 @@
        				university: {
                             required: true,
                           },
+                      university_another: {
+                            required: true,
+                          },
        				score: {
                             required: true,
                           },
+                    contest_location: {
+                          required: true,
+                      },
        				student_code: {
                             required: true,
                           },

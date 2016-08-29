@@ -514,10 +514,11 @@ class Auth extends MY_Controller {
 		if($this->input->post('submit')!='')
 		{
 			//validate form input
-			$this->form_validation->set_rules('fullname', $this->lang->line('register_validation_fullname_label'), 'required|xss_clean');
+			$this->form_validation->set_rules('full_x 32444444444name', $this->lang->line('register_validation_fullname_label'), 'required|xss_clean');
 			$this->form_validation->set_rules('email', $this->lang->line('register_validation_email_label'), 'required|valid_email|is_unique['.$tables['users'].'.email]');
 			$this->form_validation->set_rules('phone', $this->lang->line('register_validation_phone_label'), 'required|xss_clean|integer');
 			$this->form_validation->set_rules('gender', $this->lang->line('register_validation_gender_label'), 'required');
+			$this->form_validation->set_rules('contest_location', $this->lang->line('register_validation_contest_location_label'), 'required');
 		//	$this->form_validation->set_rules('company', $this->lang->line('register_validation_company_label'), 'required|xss_clean');
 			$this->form_validation->set_rules('password', $this->lang->line('register_validation_password_label'), 'required|min_length[' . $this->config->item('min_password_length', 'ion_auth') . ']|max_length[' . $this->config->item('max_password_length', 'ion_auth') . ']|matches[password_confirm]');
 			$this->form_validation->set_rules('password_confirm', $this->lang->line('register_validation_password_confirm_label'), 'required');
@@ -557,7 +558,8 @@ class Auth extends MY_Controller {
 					'factor'      => $this->input->post('factor'),
 					'objectives'      => $this->input->post('objectives'),
 					'registered_field'      => $this->input->post('registered_field'),
-					'date_of_registration'      => date('Y-m-d')
+					'date_of_registration'      => date('Y-m-d'),
+					'contest_location'      => $this->input->post('contest_location')
 				);
 				
 				if(!empty($image))
@@ -580,32 +582,33 @@ class Auth extends MY_Controller {
 				
 			}
 		}
-		$this->data['fullname'] = array(
-			'name'  => 'fullname',
+		$this->data['full_name'] = array(
+			'name'  => 'full_name',
 			'class'=>'form-control',
 			'placeholder'=> lang('register_fullname_placeholder'),
-			'id'    => 'fullname',
+			'id'    => 'full_name',
 			'type'  => 'text',
-			'value' => $this->form_validation->set_value('fullname'),
+			'value' => $this->form_validation->set_value('full_name'),
 		);
 		$this->data['gender'] = array(
 			'name'  => 'gender',
 			'options'=> array(
-				'1'=> lang('male'),
-				'2'=> lang('female')
+				'Male'=> lang('male'),
+				'Female'=> lang('female')
 			),
 			'selected'    => array(
-				'1'=> lang('male')
+				'Male'=> lang('male')
 			)
 		);
-			$this->data['birthdate'] = array(
-				'name'  => 'birthdate',
-				'class'=>'form-control',
-				'placeholder'=> lang('date_placeholder'),
-				'id'    => 'birthdate',
-				'type'  => 'text',
-				'value' => $this->form_validation->set_value('birthdate'),
-			);
+
+		$this->data['birthdate'] = array(
+			'name'  => 'birthdate',
+			'class'=>'form-control',
+			'placeholder'=> lang('date_placeholder'),
+			'id'    => 'birthdate',
+			'type'  => 'text',
+			'value' => $this->form_validation->set_value('birthdate'),
+		);
 			$this->data['birthplace'] = array(
 				'name'  => 'birthplace',
 				'class'=>'form-control',
@@ -696,14 +699,36 @@ class Auth extends MY_Controller {
 				'type'  => 'text',
 				'value' => $this->form_validation->set_value('major'),
 			);
-			$this->data['university'] = array(
-				'name'  => 'university',
+					$this->data['university_another'] = array(
+				'name'  => 'university_another',
 				'class'=>'form-control',
 				'placeholder'=>'',
-				'id'    => 'university',
+				'id'    => 'university_another',
 				'type'  => 'text',
 				'value' => $this->form_validation->set_value('university'),
 			);
+//			$this->data['university'] = array(
+//				'name'  => 'university',
+//				'class'=>'form-control',
+//				'placeholder'=>'',
+//				'id'    => 'university',
+//				'type'  => 'text',
+//				'value' => $this->form_validation->set_value('university'),
+//			);
+
+		$this->data['university'] = array(
+			'name'  => 'university',
+			'id'    => 'university',
+			'options'=> array(
+				'0'=> 'Other',
+				'National University of HCM'=> 'National University of HCM',
+				'Hanoi Foreign Trade University'=> 'Hanoi Foreign Trade University',
+				'Can Tho Univesrity'=> 'Can Tho Univesrity'
+			),
+			'selected'    => array(
+				'-1'=> ''
+			)
+		);
 			$this->data['student_code'] = array(
 				'name'  => 'student_code',
 				'class'=>'form-control',
@@ -798,7 +823,7 @@ class Auth extends MY_Controller {
 					'Social science'=> 'Social science'
 				),
 				'selected'    => array(
-					'1'=> 'Technical'
+					'Technical'=> 'Technical'
 				)
 			);
 
@@ -839,6 +864,17 @@ class Auth extends MY_Controller {
 			'class'=>'form-control',
 			'id'    => 'factor',
 			'value' => $this->form_validation->set_value('factor'),
+		);
+		$this->data['contest_location'] = array(
+			'name'  => 'contest_location',
+			'options'=> array(
+				'Hanoi'=> 'Hanoi',
+				'HCMC'=> 'HCMC',
+				'Can Tho'=> 'Can Tho'
+			),
+			'selected'    => array(
+				'Hanoi'=> 'Hanoi'
+			)
 		);
 			$this->data['content'] = 'auth/register';
 			$this->_render_page('temp/template', $this->data);
