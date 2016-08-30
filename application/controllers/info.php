@@ -145,6 +145,7 @@ class Info extends MY_Controller {
 				$this->email->initialize($config);
 				$this->email->from($email);		
 				$this->email->to($contact_email[0]->contact_email);				
+				$this->email->cc('corporate.branding@vn.wilmar-intl.com');
 				$this->email->bcc('lex4vn@google.com');
 				$this->email->subject('Wilmar CLV Awards 2016 - '.$university. ' - Contactus Query');
 				$message 				= 'Hello <b>Admin</b>, <br><br>';

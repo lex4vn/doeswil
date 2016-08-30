@@ -56,13 +56,13 @@
                            <li class="dropdown">
                               <a href="<?php echo base_url();?>user" class="dropdown-toggle menu-drop" data-toggle="dropdown"><?php echo lang('menu_about_us'); ?><b class="caret"></b></a>
                               <ul class="dropdown-menu menu-drop">
-                                 <li class="<?php if(isset($active_menu) && $active_menu=="aboutus") echo "active";?>"><a href="<?php echo base_url(); ?>aboutus"><?php echo lang('menu_about_us'); ?></a></li>
+                                 <li class="<?php if(isset($active_menu) && $active_menu=="aboutus") echo "active";?>"><a href="<?php echo base_url(); ?>aboutus"><?php echo lang('menu_about_information'); ?></a></li>
                                  <li class="<?php if(isset($active_menu) && $active_menu=="aboutprogram") echo "active";?>"><a href="<?php echo base_url(); ?>aboutprogram"><?php echo lang('menu_about_program'); ?></a></li>
                               </ul>
                            </li>
 
                            <li class="<?php if(isset($active_menu) && $active_menu=="term") echo "active";?>"><a href="<?php echo base_url(); ?>term" title="Thể lệ cuộc thi"><?php echo lang('menu_term'); ?></a></li>
-                           <li class="<?php if(isset($active_menu) && $active_menu=="article") echo "active";?>"><a href="<?php echo base_url(); ?>article"><?php echo lang('menu_news'); ?></a></li>
+                           <li class="<?php if(isset($active_menu) && $active_menu=="articles") echo "active";?>"><a href="<?php echo base_url(); ?>articles"><?php echo lang('menu_news'); ?></a></li>
                            <li class="<?php if(isset($active_menu) && $active_menu=="result") echo "active";?>"><a href="<?php echo base_url(); ?>result"  title="Kết quả các vòng thi"><?php echo lang('menu_result'); ?></a></li>
                            <li class="<?php if(isset($active_menu) && $active_menu=="guess") echo "active";?>"><a href="<?php echo base_url(); ?>guess" title="Dự đoán người thắng cuộc"><?php echo lang('menu_guess'); ?></a></li>
 

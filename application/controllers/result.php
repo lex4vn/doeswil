@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Images extends MY_Controller {
+class Result extends MY_Controller {
 
 /*
 | -----------------------------------------------------
@@ -26,24 +26,20 @@ class Images extends MY_Controller {
 	function __construct()
     {
         parent::__construct();
-		include APPPATH . 'third_party/Dropbox/autoload.php';
+		$this->load->library('form_validation');
 		$this->load->helper('url');
-	
     } 
 	
 	//Home Page (Default Function. If no function is called, this function will be called).
 	public function index()
 	{
+		$language = $this->session->userdata('site_lang');
+		$language = $language == ''? 'english' : $language;
+		$results  = [];
 
-		//Latest Quizzes
-		$table 							= $this->db->dbprefix('images');
-		$images 				= $this->base_model->run_query(
-		"select * from ".$table." LIMIT 12"
-		);
-
-		$this->data['images'] 	= $images;
-		$this->data['active_menu'] 		= 'images';
-		$this->data['content'] 			= 'general/images';
+		$this->data['result'] 	= $results;
+		$this->data['active_menu'] 		= 'result';
+		$this->data['content'] 			= 'general/result';
 		$this->_render_page('temp/template', $this->data);
 	}
  }

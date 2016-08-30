@@ -1,6 +1,6 @@
 <!-- Slider-->
 <div data-ride="carousel" class="carousel slide banner" id="myCarousel">
-   <div class="container-fluid padding">
+   <div class="container padding">
       <img src="<?php echo base_url(); ?>assets/designs/images/wilmar.jpg" width="100%">
    </div>
 </div>
@@ -14,7 +14,7 @@
             <ul>
                <li><a href="<?php echo base_url(); ?>"><?php echo lang('home'); ?></a></li>
                <li><img src="<?php echo base_url(); ?>assets/designs/images/arrow1.png" width="7" height="6"></li>
-               <li><a href="#"><?php echo lang('menu_about_us'); ?></a></li>
+               <li><a href="#"><?php echo lang('menu_about_information'); ?></a></li>
             </ul>
          </div>
       </div>

@@ -14,15 +14,19 @@
 	 
    </div>
    <div class="container inner-content padding">
+       <h1>2015</h1>
        <?php if (count($images)) {
            foreach ($images as $image) {
+
                $image_src = str_replace('www.dropbox.com','dl.dropboxusercontent.com',$image->image);
                $image_src = str_replace('?dl=0','?size_mode=01&size=0392x392.1',$image_src);
                ?>
+                <div class="col-md-3 col-xs-3 padding">
                <a href="<?php echo $image_src; ?>">
                    <img src="<?php echo $image->thumbnail; ?>">
                </a>
-
+                    <div class="spacer"></div>
+                </div>
                <?php
            }
        }

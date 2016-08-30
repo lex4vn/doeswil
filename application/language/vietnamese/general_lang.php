@@ -34,7 +34,16 @@ $lang['menu_exam'] = 'Thi online';
 $lang['menu_video'] = 'Video';
 $lang['menu_contact_us'] = 'Liên hệ';
 $lang['menu_register'] = 'Đăng ký';
+$lang['menu_login'] = 'Đăng nhập';
 $lang['menu_about_program'] = 'Thông tin chương trình';
 
 // Quick link
 $lang['quick_link'] = 'Liên kết';
+$lang['menu_about_information'] = 'Giới thiệu chương trình';
+
+// Video
+$lang['camping_day'] = 'Hội trại';
+$lang['program_introduction'] = 'Giới thiệu chương trình';
+$lang['organizing_committee'] = 'Ban Tổ chức';
+$lang['local_final'] = 'Chung kết khu vực';
+$lang['national_final'] = 'Chung kết toàn quốc';

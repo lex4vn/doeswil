@@ -19,8 +19,8 @@
 		  <a href="<?php echo base_url();?>admin/guess">Guess</a></li>		  
 	  </ul>
 	  </li>      
-      <li class="dropdown-submenu <?php if(isset($active_menu) && $active_menu=="article") echo "active";?>"> 
-	  <a href="<?php echo base_url();?>admin/article">Tin tức sự kiện</a> </li>
+      <li class="dropdown-submenu <?php if(isset($active_menu) && $active_menu=="articles") echo "active";?>">
+	  <a href="<?php echo base_url();?>admin/articles">Tin tức sự kiện</a> </li>
 	  
 	  </li>      
       <li class="dropdown-submenu <?php if(isset($active_menu) && $active_menu=="categories") echo "active";?>"> 

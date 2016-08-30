@@ -24,24 +24,25 @@
       <div class="col-md-12 col-xs-12">
 
          <div class="col-md-12 formgro">
-            <!--  <div id="infoMessage"><?php  echo $message;?></div>	-->
+            <div id="infoMessage"><?php  echo $message;?></div>
             <?php echo $this->session->flashdata('message'); ?>
-            <?php echo form_open("auth/register",'class="form-signin" id="user_creation_form" enctype="multipart/form-data"');?>
+            <?php echo form_open("auth/registertest",'class="form-signin" id="user_creation_form" enctype="multipart/form-data"');?>
             
             <!--  A	-->
              <h1 class="inner-hed">A. <?php echo lang('register_subheading'); ?></h1>
              <!--  fullname	-->
              <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
                      <div class="form-group paddin-cont">
-                         <label class="col-lg-12 control-label" for="fullname"><?php echo lang('register_fullname_label'); ?> <span style="color:red;">*</span></label>
+                         <label class="col-lg-12 control-label" for="full_name"><?php echo lang('register_fullname_label'); ?> <span style="color:red;">*</span></label>
                          <div class="col-lg-12 ">
-                             <?php echo form_input($fullname);?>
+                             <?php echo form_input($full_name);?>
+                             <em>Full name should be displayed in Vietnamese name, with full tone. For example: NGUYỄN THỊ LAN</em>
                          </div>
                      </div>
                 </div>
             
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <div class="form-group paddin-cont">
                        <label class="col-lg-12 control-label" for="gender"><?php echo lang('register_gender_label'); ?><span style="color:red;">*</span></label>
                        <div class="col-lg-12 ">
@@ -196,7 +197,7 @@
              <div class="form-group paddin-cont">
                  <label class="col-lg-12 control-label" for="major"><?php echo lang('register_major_label'); ?><span style="color:red;">*</span></label>
                  <div class="col-lg-12 ">
-                     <?php echo form_input($major);?>
+                     <?php echo form_dropdown($major['name'],$major['options']);?>
                  </div>
              </div>
 

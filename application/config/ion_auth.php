@@ -103,7 +103,7 @@ $config['max_rounds']     = 9;
  | appropriately. If this variable set to 0, there is no maximum.
  */
 $config['site_title']                 = "Online Examination";       // Site Title, example.com
-$config['admin_email']                = "smartexam4u@gmail.com"; // Admin Email, admin@example.com
+$config['admin_email']                = "smartkids211@gmail.com"; // Admin Email, admin@example.com
 $config['default_group']              = 'members';           // Default group, use name
 $config['admin_group']                = 'superadmin';             // Default administrators group, use name
 $config['moderator_group']            = 'moderator';             // Default Moderator group, use name
@@ -134,7 +134,7 @@ $config['use_ci_email'] = TRUE; // Send Email using the built in CI email class,
 $config['email_config'] = array(
 	'mailtype' 		=> 'html',
 	  'smtp_host' 	=> 'ssl://smtp.googlemail.com',
-	  'smtp_user' 	=> 'smartkid211@gmail.com',
+	  'smtp_user' 	=> 'smartkids211@gmail.com',
 	  'smtp_pass' 	=> 'asdfjkl;.123',
 	  'smtp_port' 	=> '465',
 	  'charset' 	=> 'utf-8',

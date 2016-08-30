@@ -116,8 +116,10 @@ $lang['register_validation_phone3_label']           = 'Third Part of Phone';
 $lang['register_validation_company_label']          = 'Company Name';
 
 $lang['register_validation_gender_label']          = 'Gender';
-
-
+$lang['register_validation_fullname_label']          = 'Please enter fullname';
+$lang['register_validation_phone_label']          = 'Please enter phone';
+$lang['register_validation_contest_location_label']          = 'Please enter contest location';
+$lang['register_issued_police_placeholder']          = 'Please enter issued police';
 
 $lang['register_validation_password_label']         = 'Password';
 $lang['register_validation_password_confirm_label'] = 'Password Confirmation';

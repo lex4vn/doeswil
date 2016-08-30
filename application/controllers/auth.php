@@ -505,24 +505,25 @@ class Auth extends MY_Controller {
 	//create a new user
 	function register()
 	{
+		redirect('https://docs.google.com/forms/d/e/1FAIpQLSegDvQ6D8-it6kEzqPYErIigLxs32kaO9fmAKhPM5X_p495EA/viewform');
+	}
+	function registertest()
+	{
 		$this->data['title'] = "Register";
-	
-		//$this->load->config('ion_auth');
-		$this->config->load('ion_auth', TRUE);
+			$this->config->load('ion_auth', TRUE);
 		$tables = $this->config->item('tables','ion_auth');
 		
 		if($this->input->post('submit')!='')
 		{
 			//validate form input
-			$this->form_validation->set_rules('full_x 32444444444name', $this->lang->line('register_validation_fullname_label'), 'required|xss_clean');
+			$this->form_validation->set_rules('full_name', $this->lang->line('register_validation_fullname_label'), 'required|xss_clean');
 			$this->form_validation->set_rules('email', $this->lang->line('register_validation_email_label'), 'required|valid_email|is_unique['.$tables['users'].'.email]');
 			$this->form_validation->set_rules('phone', $this->lang->line('register_validation_phone_label'), 'required|xss_clean|integer');
 			$this->form_validation->set_rules('gender', $this->lang->line('register_validation_gender_label'), 'required');
 			$this->form_validation->set_rules('contest_location', $this->lang->line('register_validation_contest_location_label'), 'required');
-		//	$this->form_validation->set_rules('company', $this->lang->line('register_validation_company_label'), 'required|xss_clean');
 			$this->form_validation->set_rules('password', $this->lang->line('register_validation_password_label'), 'required|min_length[' . $this->config->item('min_password_length', 'ion_auth') . ']|max_length[' . $this->config->item('max_password_length', 'ion_auth') . ']|matches[password_confirm]');
 			$this->form_validation->set_rules('password_confirm', $this->lang->line('register_validation_password_confirm_label'), 'required');
-			
+
 			if(!empty($_FILES['image']['name'])) {
 				$this->form_validation->set_rules('image',"Image", 'callback__image_check['.$_FILES['image']['name'].']');			
 			}
@@ -533,15 +534,14 @@ class Auth extends MY_Controller {
 				$email    = strtolower($this->input->post('email'));
 				$password = $this->input->post('password');
 				$image = $_FILES['image']['name'];
-
 				$additional_data = array(
 					'full_name' => $this->input->post('full_name'),
 					'phone'      => $this->input->post('phone'),
 					'gender'      => $this->input->post('gender'),
-					'birthdate'      => $this->input->post('birthdate'),
+					'birthdate'      => date('Y-m-d',strtotime($this->input->post('birthdate'))),
 					'birthplace'      => $this->input->post('birthplace'),
 					'card_id_no'      => $this->input->post('card_id_no'),
-					'date_of_issue'      => $this->input->post('date_of_issue'),
+					'date_of_issue'      => date('Y-m-d',strtotime($this->input->post('date_of_issue'))),
 					'issued_police'      => $this->input->post('issued_police'),
 					'permanent_address'      => $this->input->post('permanent_address'),
 					'temp_address'      => $this->input->post('temp_address'),
@@ -549,7 +549,7 @@ class Auth extends MY_Controller {
 					'university'      => $this->input->post('university'),
 					'student_code'      => $this->input->post('student_code'),
 					'score'      => $this->input->post('score'),
-					'date_graduation'      => $this->input->post('date_graduation'),
+					'date_graduation'      =>  date('Y-m-d',strtotime($this->input->post('date_graduation'))),
 					'english_proficiency'      => $this->input->post('english_proficiency'),
 					'extracurricular_activities'      => $this->input->post('extracurricular_activities'),
 					'achievements'      => $this->input->post('achievements'),
@@ -571,17 +571,20 @@ class Auth extends MY_Controller {
 				//check to see if we are creating the user
 				//redirect them back to the admin page
 				$this->prepare_flashmessage($this->ion_auth->messages(),2);
-				redirect("auth/login", 'refresh');
+				redirect("auth/login", '');
 			}
 			else
 			{
 				//display the create user form
 				//set the flash data error message if there is one
 				$this->prepare_flashmessage((validation_errors() ? validation_errors() : ($this->ion_auth->errors() ? $this->ion_auth->errors() : $this->session->flashdata('message'))),1);
-			//	redirect("auth/register", 'refresh');
+				redirect("auth/registertest", 'refresh');
 				
 			}
 		}
+
+		//set the flash data error message if there is one
+		$this->data['message'] = (validation_errors() ? validation_errors() : ($this->ion_auth->errors() ? $this->ion_auth->errors() : $this->session->flashdata('message')));
 		$this->data['full_name'] = array(
 			'name'  => 'full_name',
 			'class'=>'form-control',
@@ -691,15 +694,27 @@ class Auth extends MY_Controller {
 				'type'  => 'text',
 				'value' => $this->form_validation->set_value('temp_address'),
 			);
-			$this->data['major'] = array(
-				'name'  => 'major',
-				'class'=>'form-control',
-				'placeholder'=>'',
-				'id'    => 'major',
-				'type'  => 'text',
-				'value' => $this->form_validation->set_value('major'),
-			);
-					$this->data['university_another'] = array(
+		$this->data['major'] = array(
+			'name'  => 'major',
+			'id'    => 'major',
+			'options'=> array(
+				'Social'=> 'Social',
+				'Economics'=> 'Economics',
+				'Techniques'=> 'Techniques'
+			),
+			'selected'    => array(
+				'Social'=> 'Social'
+			)
+		);
+//			$this->data['major'] = array(
+//				'name'  => 'major',
+//				'class'=>'form-control',
+//				'placeholder'=>'',
+//				'id'    => 'major',
+//				'type'  => 'text',
+//				'value' => $this->form_validation->set_value('major'),
+//			);
+			$this->data['university_another'] = array(
 				'name'  => 'university_another',
 				'class'=>'form-control',
 				'placeholder'=>'',
@@ -707,6 +722,7 @@ class Auth extends MY_Controller {
 				'type'  => 'text',
 				'value' => $this->form_validation->set_value('university'),
 			);
+
 //			$this->data['university'] = array(
 //				'name'  => 'university',
 //				'class'=>'form-control',

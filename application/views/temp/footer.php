@@ -36,6 +36,9 @@
 <script src="<?php echo base_url();?>assets/designs/js/bootstrap-datepicker.min.js"></script>
 
 <script src="<?php echo base_url();?>assets/designs/js/html5placeholder.jquery.js"></script>
+<script>
+   $('.inner-content table').addClass('table table-bordered');
+</script>
 </body>
 
 </html>

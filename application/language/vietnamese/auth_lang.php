@@ -105,6 +105,12 @@ $lang['register_join_work_label'] = 'Mảng công việc đăng ký tham gia';
 $lang['register_validation_wrong_confirm_password_label'] = 'Mật khẩu không khớp nhau. Vui lòng thử lại';
 $lang['register_contest_location_label']           = 'Contest location';
 $lang['register_university_another_label']           = 'If your university is not listed above, please specify';
+$lang['register_validation_gender_label']          = 'Gender';
+$lang['register_validation_fullname_label']          = 'Please enter fullname';
+$lang['register_validation_phone_label']          = 'Please enter phone';
+$lang['register_validation_contest_location_label']          = 'Please enter contest location';
+$lang['register_issued_police_placeholder']          = 'Please enter issued police';
+
 // Edit User
 $lang['edit_user_heading']                           = 'Cập nhật thông tin';
 $lang['edit_user_subheading']                        = 'Please enter the user\'s information below.';

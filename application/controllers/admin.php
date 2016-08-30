@@ -2710,7 +2710,7 @@ class Admin extends MY_Controller {
 		$this->_render_page('temp/admintemplate', $this->data);
 	}
 	public function export(){
-		$heading=array('Dấu thời gian','Full Name:','Gender:','Date of birth:','Place of birth:','ID Card No.:','Date of issue:','Issued by Police of:','Hand phone No.:','Email:','Permanent Address:','Temporary Address:','Major:','University:','Student code:','Average GPA for all previous years:','Expected Graduation date:','English proficiency:','1.Please list down your most important extracurricular activities (if any) (school, union, community service, etc. Describe the activity:','2.Please list down your most significant academic or scholarship achievements (if any). Please specify the company/ university/ organization granted the scholarship or award.','1.Please list down your work experiences (if any). Please describe.','2.What is the plan for your career pursuit in the next three to five years? ','3.What is the most important factor that interests you to work for a company?','4.Tell us about your objectives in life. And how are you going to achieve these objectives? ','Registered field in the contest:','Contest location','Câu hỏi không có tiêu đề');
+		$heading=array('Dấu thời gian','Full Name:','Gender:','Date of birth:','Place of birth:','ID Card No.:','Date of issue:','Issued by Police of:','Hand phone No.:','Email:','Permanent Address:','Temporary Address:','Major:','University:','Student code:','Average GPA for all previous years:','Expected Graduation date:','English proficiency:','1.Please list down your most important extracurricular activities (if any) (school, union, community service, etc. Describe the activity:','2.Please list down your most significant academic or scholarship achievements (if any). Please specify the company/ university/ organization granted the scholarship or award.','1.Please list down your work experiences (if any). Please describe.','2.What is the plan for your career pursuit in the next three to five years? ','3.What is the most important factor that interests you to work for a company?','4.Tell us about your objectives in life. And how are you going to achieve these objectives? ','Registered field in the contest:','If your university is not listed above, please specify','Contest location','Câu hỏi không có tiêu đề');
 		include(FCPATH.'/assets/excelassets/PHPExcel/IOFactory.php');
 		//Create a new Object
 		$objPHPExcel = new PHPExcel();
@@ -2757,8 +2757,14 @@ class Admin extends MY_Controller {
 			$objPHPExcel->getActiveSheet()->setCellValue('W'.$i,$n->career_pursuit);
 			$objPHPExcel->getActiveSheet()->setCellValue('X'.$i,$n->factor);
 			$objPHPExcel->getActiveSheet()->setCellValue('Y'.$i,$n->objectives);
-			$objPHPExcel->getActiveSheet()->setCellValue('Z'.$i,$n->company);
+			if($n->university != 'National University of HCM' || $n->university != 'Hanoi Foreign Trade University' || $n->university != 'Can Tho Univesrity'){
+				$another = '';
+			}else{
+				$another = $n->university;
+			}
+			$objPHPExcel->getActiveSheet()->setCellValue('Z'.$i,$n->$another);
 			$objPHPExcel->getActiveSheet()->setCellValue('AA'.$i,$n->contest_location);
+			$objPHPExcel->getActiveSheet()->setCellValue('AB'.$i,$n->company);
 			$i++;$no++;
 		endforeach;
 
@@ -2774,6 +2780,229 @@ class Admin extends MY_Controller {
 
 		$objWriter->save('php://output');
 		exit();
+	}
+
+
+
+	function articles()
+	{
+		$this->validate_admin();
+
+		$articles 	= $this->base_model->run_query(
+			"SELECT * FROM articles ORDER BY id desc "
+		);
+		$this->data['allUsers'] 	= $articles;
+		$this->data['title'] 		= 'Tin tức và sự kiện';
+		$this->data['active_menu'] 	= 'articles';
+		$this->data['content'] 		= 'admin/articles/index';
+		$this->_render_page('temp/admintemplate', $this->data);
+
+	}
+
+	function editArticle ($id = NULL)
+	{
+		// Fetch a page or set a new one
+		if ($id) {
+			$this->data['page'] = $this->page_m->get($id);
+			count($this->data['page']) || $this->data['errors'][] = 'page could not be found';
+		}
+		else {
+			die(1);
+			$this->data['page'] = $this->page_m->get_new();
+		}
+
+		// Pages for dropdown
+		$this->data['pages_no_parents'] = $this->page_m->get_no_parents();
+
+		// Set up the form
+		$rules = $this->page_m->rules;
+		$this->form_validation->set_rules($rules);
+
+		// Process the form
+		if ($this->form_validation->run() == TRUE) {
+			$data = $this->page_m->array_from_post(array(
+				'title',
+				'slug',
+				'body',
+				'template',
+				'parent_id'
+			));
+			$this->page_m->save($data, $id);
+			redirect('admin/pages');
+		}
+
+		// Load the view
+		$this->data['content'] = 'admin/page/edit';
+		$this->_render_page('temp/admintemplate', $this->data);
+	}
+
+	function addArticle()
+	{
+		if(!$this->ion_auth->logged_in() || !($this->ion_auth->is_admin() || $this->ion_auth->is_moderator()))
+		{
+			$this->prepare_flashmessage("You have no access to this module",1);
+			redirect('user', 'refresh');
+		}
+
+		$this->load->library('form_validation');
+//		$this->form_validation->set_rules('name', 'Name', 'trim|required|xss_clean');
+//		$this->form_validation->set_rules('catid', 'Category', 'trim|required|xss_clean');
+//		$this->form_validation->set_rules('subcatid', 'Sub Category', 'trim|required|xss_clean');
+//		$this->form_validation->set_rules('validityvalue', 'Validity Value', 'trim|required|xss_clean');
+//		$this->form_validation->set_rules('quizcost', 'Price ', 'trim|required|xss_clean');
+		if ($this->input->post()) {
+			if ($this->form_validation->run() == true) {
+
+				$inputdata['quiztype'] 			= $this->input->post('quiztype');
+
+				$quiz_grp = array();
+				if($this->input->post('for_all') == ""){
+					$quizgrp = implode(',',$this->input->post('quizfor'));
+					$quiz_grp = explode(',',$quizgrp);
+					$inputdata['quiz_for'] = "*";
+				} else {
+					$inputdata['quiz_for'] = 0;
+				}
+
+				$inputdata['name'] 				= $this->input->post('name');
+				$inputdata['catid'] 			= $this->input->post('catid');
+				$inputdata['subcatid'] 			= $this->input->post('subcatid');
+				$inputdata['negativemarkstatus'] = $this->input->post('negativemarkstatus');
+				$inputdata['negativemark'] 		= "";
+
+				if ($this->input->post('negativemarkstatus') == "Active")
+					$inputdata['negativemark'] 	= $this->input->post('negativemark');
+
+				$inputdata['difficultylevel'] 	= $this->input->post('difficultylevel');
+				$inputdata['hint'] 				= "Inactive";
+				$inputdata['startdate'] 		= date(
+					'Y-m-d',
+					strtotime($this->input->post('startdate'))
+				);
+				$inputdata['enddate'] 			= date('Y-m-d',
+					strtotime($this->input->post('enddate'))
+				);
+				$inputdata['deauration'] 		= $this->input->post('deauration');
+				$inputdata['quiztype'] 			= $this->input->post('quiztype');
+				$inputdata['validitytype'] 		= $this->input->post('validitytype');
+				$inputdata['validityvalue'] 	= $this->input->post('validityvalue');
+				$inputdata['quizcost'] 	= $this->input->post('quizcost');
+				$inputdata['status'] 		= $this->input->post('status');
+
+				if ($this->input->post('id') == '' ) {
+
+					$insertid 					= $this->base_model->insert_operation_id(
+						$inputdata,$this->db->dbprefix('quiz')
+					);
+
+					for($i=0;$i<count($quiz_grp);$i++)
+					{
+						$quiz_for['quizid'] = $insertid;
+						$quiz_for['groupid'] = $quiz_grp[$i];
+						$this->base_model->insert_operation($quiz_for,$this->db->dbprefix('quiz_for'));
+
+					}
+
+					$qq 						= $this->input->post('qq');
+					$values 					= explode("^", $qq);
+					$len 						= count($values);
+					$result 					= array_filter($values,
+						create_function('$a','return preg_match("#\S#", $a);')
+					);
+					$i = 0;
+					foreach ($result as $v) {
+						if ($i++ < $len) {
+							$values1 				= explode(",",$v);
+							$data['subjectid'] 		= $values1[0];
+							$data['totalquestion'] 	= $values1[1];
+							$data['quizid'] 		= $insertid;
+							$this->base_model->insert_operation(
+								$data,
+								$this->db->dbprefix('quizquestions')
+							);
+						}
+					}
+					$msg = "Record Added Successfully.";
+				}
+				else {
+
+					$where['quizid'] 			= $this->input->post('id');
+
+
+					$updateid = $this->input->post('id');
+
+					//step 1
+					$this->base_model->delete_record(
+						$this->db->dbprefix('quiz_for'),
+						$where);
+
+					//step 2
+					for($i=0;$i<count($quiz_grp);$i++)
+					{
+						$quiz_for['quizid'] = $updateid;
+						$quiz_for['groupid'] = $quiz_grp[$i];
+						$this->base_model->insert_operation($quiz_for,$this->db->dbprefix('quiz_for'));
+
+					}
+
+					//step 3
+					$this->base_model->update_operation(
+						$inputdata,
+						$this->db->dbprefix('quiz'),
+						$where
+					);
+
+
+
+					if (
+					$this->base_model->delete_record(
+						$this->db->dbprefix('quizquestions'),
+						$where
+					)
+					) {
+						$qq 				= $this->input->post('qq');
+						$values 			= explode("^", $qq);
+						$len 				= count($values);
+						$result 			= array_filter(
+							$values,
+							create_function('$a','return preg_match("#\S#", $a);')
+						);
+
+						$i = 0;
+						foreach ($result as $v) {
+							if ($i++ < $len) {
+								$values1 				= explode(",", $v);
+								$data['subjectid'] 		= $values1[0];
+								$data['totalquestion'] 	= $values1[1];
+								$data['quizid'] 		= $where['quizid'];
+								$this->base_model->insert_operation(
+									$data,
+									$this->db->dbprefix('quizquestions')
+								);
+							}
+						}
+						$msg = "Record Updated Successfully.";
+					}
+				}
+				$this->prepare_flashmessage($msg, 0);
+				redirect('admin/articles/index','refresh');
+			}
+			else {
+
+				$this->prepare_flashmessage(validation_errors(), 1);
+				redirect('admin/articles/addArticle','refresh');
+			}
+		}
+
+		//$this->data['article'] 		= $article;
+		$this->data['active_menu'] 		= 'addArticle';
+		$this->data['content'] 			= 'admin/articles/addArticle';
+		if($this->ion_auth->is_moderator())
+			$template = "moderatortemplate";
+		else
+			$template = "admintemplate";
+
+		$this->_render_page('temp/'.$template, $this->data);
 	}
 }
 

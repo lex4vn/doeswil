@@ -25,7 +25,7 @@ $lang['exam'] = 'Exam Online';
 $lang['language'] = 'Language';
 
 // Menu
-$lang['menu_term'] = 'Term';
+$lang['menu_term'] = 'Rules';
 $lang['menu_news'] = 'News';
 $lang['menu_about_us'] = 'About us';
 $lang['menu_result'] = 'Result';
@@ -35,7 +35,16 @@ $lang['menu_exam'] = 'Exam online';
 $lang['menu_video'] = 'Video';
 $lang['menu_contact_us'] = 'Contact us';
 $lang['menu_register'] = 'Register';
+$lang['menu_login'] = 'Login';
 $lang['menu_about_program'] = 'Program information';
 
 // Quick link
 $lang['quick_link'] = 'Quick link';
+$lang['menu_about_information'] = 'Introduction';
+
+// Video
+$lang['camping_day'] = 'Camping Day';
+$lang['program_introduction'] = 'Program Introduction';
+$lang['organizing_committee'] = 'Organizing Committee';
+$lang['local_final'] = 'Local Final';
+$lang['national_final'] = 'National Final';
