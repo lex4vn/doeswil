@@ -1267,19 +1267,22 @@ class Admin extends MY_Controller {
 		$this->data['element'] 			= $Options;
 		
 		//Options for Total Answers
+		$ans['1'] 						= '1';
 		$ans['4'] 						= '4';
 		$ans['5'] 						= '5';
 		$this->data['totans'] 			= $ans;
 		
 		//Options for Question Types
 		$qtype['SingleAnswer'] 			= 'Single Answer';
+		$qtype['WriteAnswer'] 			= 'Write Answer';
+		$qtype['Write'] 			= 'Write';
 		//$qtype['MultiAnswer'] 			= 'Multi Answer';
 		$this->data['questtypes'] 		= $qtype;
 		
 		//Options for Difficulty Level
 		$dlevel['Easy'] 				= 'Easy';
-		$dlevel['Medium'] 				= 'Medium';
-		$dlevel['High'] 				= 'High';
+		//$dlevel['Medium'] 				= 'Medium';
+		//$dlevel['High'] 				= 'High';
 		$this->data['difficultylevels'] = $dlevel;
 		
 		//Options for Subjects
@@ -2395,8 +2398,7 @@ class Admin extends MY_Controller {
 		$difficultylevel 				= $this->input->post('difficultylevel');		
 		$available_questions_cnt 		= $this->base_model->run_query(
 		"select count(*) as cnt from questions where subjectid="
-		.$subjectid." and difficultylevel = '".$difficultylevel."' 
-		and answer1!='' and answer2 != '' and correctanswer!='' "
+		.$subjectid." and answer1!='' and answer2 != '' and correctanswer!='' "
 		);
 		echo $available_questions_cnt[0]->cnt;
 	}
@@ -2733,7 +2735,7 @@ class Admin extends MY_Controller {
 		$i=2;$no = 1;
 		foreach($allUsers as $n):
 			$objPHPExcel->getActiveSheet()->setCellValue('A'.$i,$n->date_of_registration);
-			$objPHPExcel->getActiveSheet()->setCellValue('B'.$i,$n->ussername);
+			$objPHPExcel->getActiveSheet()->setCellValue('B'.$i,$n->username);
 			$objPHPExcel->getActiveSheet()->setCellValue('C'.$i,$n->gender);
 			$objPHPExcel->getActiveSheet()->setCellValue('D'.$i,$n->birthdate);
 			$objPHPExcel->getActiveSheet()->setCellValue('E'.$i,$n->birthplace);
@@ -2745,24 +2747,25 @@ class Admin extends MY_Controller {
 			$objPHPExcel->getActiveSheet()->setCellValue('K'.$i,$n->permanent_address);
 			$objPHPExcel->getActiveSheet()->setCellValue('L'.$i,$n->temp_address);
 			$objPHPExcel->getActiveSheet()->setCellValue('M'.$i,$n->major);
-			$objPHPExcel->getActiveSheet()->setCellValue('N'.$i,$n->university);
-			$objPHPExcel->getActiveSheet()->setCellValue('O'.$i,$n->student_code);
-			$objPHPExcel->getActiveSheet()->setCellValue('P'.$i,$n->registered_field);
-			$objPHPExcel->getActiveSheet()->setCellValue('Q'.$i,$n->score);
-			$objPHPExcel->getActiveSheet()->setCellValue('R'.$i,$n->date_graduation);
-			$objPHPExcel->getActiveSheet()->setCellValue('S'.$i,$n->english_proficiency);
-			$objPHPExcel->getActiveSheet()->setCellValue('T'.$i,$n->extracurricular_activities);
-			$objPHPExcel->getActiveSheet()->setCellValue('U'.$i,$n->achievements);
-			$objPHPExcel->getActiveSheet()->setCellValue('V'.$i,$n->experiences);
-			$objPHPExcel->getActiveSheet()->setCellValue('W'.$i,$n->career_pursuit);
-			$objPHPExcel->getActiveSheet()->setCellValue('X'.$i,$n->factor);
-			$objPHPExcel->getActiveSheet()->setCellValue('Y'.$i,$n->objectives);
-			if($n->university != 'National University of HCM' || $n->university != 'Hanoi Foreign Trade University' || $n->university != 'Can Tho Univesrity'){
-				$another = '';
+			if($n->university == 'National University of HCM' || $n->university == 'Hanoi Foreign Trade University' || $n->university == 'Can Tho Univesrity'){
+				$university = $n->university;$another = '';
 			}else{
+				$university = '';
 				$another = $n->university;
 			}
-			$objPHPExcel->getActiveSheet()->setCellValue('Z'.$i,$n->$another);
+			$objPHPExcel->getActiveSheet()->setCellValue('N'.$i,$university);
+			$objPHPExcel->getActiveSheet()->setCellValue('O'.$i,$n->student_code);
+			$objPHPExcel->getActiveSheet()->setCellValue('P'.$i,$n->score);
+			$objPHPExcel->getActiveSheet()->setCellValue('Q'.$i,$n->date_graduation);
+			$objPHPExcel->getActiveSheet()->setCellValue('R'.$i,$n->english_proficiency);
+			$objPHPExcel->getActiveSheet()->setCellValue('S'.$i,$n->extracurricular_activities);
+			$objPHPExcel->getActiveSheet()->setCellValue('T'.$i,$n->achievements);
+			$objPHPExcel->getActiveSheet()->setCellValue('U'.$i,$n->experiences);
+			$objPHPExcel->getActiveSheet()->setCellValue('V'.$i,$n->career_pursuit);
+			$objPHPExcel->getActiveSheet()->setCellValue('W'.$i,$n->factor);
+			$objPHPExcel->getActiveSheet()->setCellValue('X'.$i,$n->objectives);
+			$objPHPExcel->getActiveSheet()->setCellValue('Y'.$i,$n->registered_field);
+			$objPHPExcel->getActiveSheet()->setCellValue('Z'.$i,$another);
 			$objPHPExcel->getActiveSheet()->setCellValue('AA'.$i,$n->contest_location);
 			$objPHPExcel->getActiveSheet()->setCellValue('AB'.$i,$n->company);
 			$i++;$no++;
@@ -2789,9 +2792,9 @@ class Admin extends MY_Controller {
 		$this->validate_admin();
 
 		$articles 	= $this->base_model->run_query(
-			"SELECT * FROM articles ORDER BY id desc "
+			"SELECT * FROM articles"
 		);
-		$this->data['allUsers'] 	= $articles;
+		$this->data['articles'] 	= $articles;
 		$this->data['title'] 		= 'Tin tức và sự kiện';
 		$this->data['active_menu'] 	= 'articles';
 		$this->data['content'] 		= 'admin/articles/index';
@@ -2835,174 +2838,110 @@ class Admin extends MY_Controller {
 		$this->data['content'] = 'admin/page/edit';
 		$this->_render_page('temp/admintemplate', $this->data);
 	}
+	function deleteArticle ($id = NULL)
+	{
+		// Fetch a page or set a new one
+		if ($id) {
+			$this->data['page'] = $this->page_m->get($id);
+			count($this->data['page']) || $this->data['errors'][] = 'page could not be found';
+		}
+		else {
+			die(1);
+			$this->data['page'] = $this->page_m->get_new();
+		}
+
+		// Pages for dropdown
+		$this->data['pages_no_parents'] = $this->page_m->get_no_parents();
+
+		// Set up the form
+		$rules = $this->page_m->rules;
+		$this->form_validation->set_rules($rules);
+
+		// Process the form
+		if ($this->form_validation->run() == TRUE) {
+			$data = $this->page_m->array_from_post(array(
+				'title',
+				'slug',
+				'body',
+				'template',
+				'parent_id'
+			));
+			$this->page_m->save($data, $id);
+			redirect('admin/pages');
+		}
+
+		// Load the view
+		$this->data['content'] = 'admin/page/edit';
+		$this->_render_page('temp/admintemplate', $this->data);
+	}
 
 	function addArticle()
 	{
-		if(!$this->ion_auth->logged_in() || !($this->ion_auth->is_admin() || $this->ion_auth->is_moderator()))
-		{
-			$this->prepare_flashmessage("You have no access to this module",1);
-			redirect('user', 'refresh');
-		}
-
+		$this->validate_admin();
 		$this->load->library('form_validation');
-//		$this->form_validation->set_rules('name', 'Name', 'trim|required|xss_clean');
-//		$this->form_validation->set_rules('catid', 'Category', 'trim|required|xss_clean');
-//		$this->form_validation->set_rules('subcatid', 'Sub Category', 'trim|required|xss_clean');
-//		$this->form_validation->set_rules('validityvalue', 'Validity Value', 'trim|required|xss_clean');
-//		$this->form_validation->set_rules('quizcost', 'Price ', 'trim|required|xss_clean');
-		if ($this->input->post()) {
-			if ($this->form_validation->run() == true) {
+		$this->form_validation->set_rules(
+			'bodyvi',
+			'Nội dung tiết Việt',
+			'trim|required'
+		);
+		$this->form_validation->set_rules(
+			'bodyen',
+			'Content for about program',
+			'trim|required'
+		);
 
-				$inputdata['quiztype'] 			= $this->input->post('quiztype');
+		if ($this->form_validation->run() == true) {
 
-				$quiz_grp = array();
-				if($this->input->post('for_all') == ""){
-					$quizgrp = implode(',',$this->input->post('quizfor'));
-					$quiz_grp = explode(',',$quizgrp);
-					$inputdata['quiz_for'] = "*";
-				} else {
-					$inputdata['quiz_for'] = 0;
-				}
+			$inputdata['cat_id'] = 1;
+			$inputdata['slug'] =  trim($this->input->post('slug'));
 
-				$inputdata['name'] 				= $this->input->post('name');
-				$inputdata['catid'] 			= $this->input->post('catid');
-				$inputdata['subcatid'] 			= $this->input->post('subcatid');
-				$inputdata['negativemarkstatus'] = $this->input->post('negativemarkstatus');
-				$inputdata['negativemark'] 		= "";
-
-				if ($this->input->post('negativemarkstatus') == "Active")
-					$inputdata['negativemark'] 	= $this->input->post('negativemark');
-
-				$inputdata['difficultylevel'] 	= $this->input->post('difficultylevel');
-				$inputdata['hint'] 				= "Inactive";
-				$inputdata['startdate'] 		= date(
-					'Y-m-d',
-					strtotime($this->input->post('startdate'))
-				);
-				$inputdata['enddate'] 			= date('Y-m-d',
-					strtotime($this->input->post('enddate'))
-				);
-				$inputdata['deauration'] 		= $this->input->post('deauration');
-				$inputdata['quiztype'] 			= $this->input->post('quiztype');
-				$inputdata['validitytype'] 		= $this->input->post('validitytype');
-				$inputdata['validityvalue'] 	= $this->input->post('validityvalue');
-				$inputdata['quizcost'] 	= $this->input->post('quizcost');
-				$inputdata['status'] 		= $this->input->post('status');
-
-				if ($this->input->post('id') == '' ) {
-
-					$insertid 					= $this->base_model->insert_operation_id(
-						$inputdata,$this->db->dbprefix('quiz')
-					);
-
-					for($i=0;$i<count($quiz_grp);$i++)
-					{
-						$quiz_for['quizid'] = $insertid;
-						$quiz_for['groupid'] = $quiz_grp[$i];
-						$this->base_model->insert_operation($quiz_for,$this->db->dbprefix('quiz_for'));
-
-					}
-
-					$qq 						= $this->input->post('qq');
-					$values 					= explode("^", $qq);
-					$len 						= count($values);
-					$result 					= array_filter($values,
-						create_function('$a','return preg_match("#\S#", $a);')
-					);
-					$i = 0;
-					foreach ($result as $v) {
-						if ($i++ < $len) {
-							$values1 				= explode(",",$v);
-							$data['subjectid'] 		= $values1[0];
-							$data['totalquestion'] 	= $values1[1];
-							$data['quizid'] 		= $insertid;
-							$this->base_model->insert_operation(
-								$data,
-								$this->db->dbprefix('quizquestions')
-							);
-						}
-					}
-					$msg = "Record Added Successfully.";
-				}
-				else {
-
-					$where['quizid'] 			= $this->input->post('id');
-
-
-					$updateid = $this->input->post('id');
-
-					//step 1
-					$this->base_model->delete_record(
-						$this->db->dbprefix('quiz_for'),
-						$where);
-
-					//step 2
-					for($i=0;$i<count($quiz_grp);$i++)
-					{
-						$quiz_for['quizid'] = $updateid;
-						$quiz_for['groupid'] = $quiz_grp[$i];
-						$this->base_model->insert_operation($quiz_for,$this->db->dbprefix('quiz_for'));
-
-					}
-
-					//step 3
-					$this->base_model->update_operation(
-						$inputdata,
-						$this->db->dbprefix('quiz'),
-						$where
-					);
-
-
-
-					if (
-					$this->base_model->delete_record(
-						$this->db->dbprefix('quizquestions'),
-						$where
-					)
-					) {
-						$qq 				= $this->input->post('qq');
-						$values 			= explode("^", $qq);
-						$len 				= count($values);
-						$result 			= array_filter(
-							$values,
-							create_function('$a','return preg_match("#\S#", $a);')
-						);
-
-						$i = 0;
-						foreach ($result as $v) {
-							if ($i++ < $len) {
-								$values1 				= explode(",", $v);
-								$data['subjectid'] 		= $values1[0];
-								$data['totalquestion'] 	= $values1[1];
-								$data['quizid'] 		= $where['quizid'];
-								$this->base_model->insert_operation(
-									$data,
-									$this->db->dbprefix('quizquestions')
-								);
-							}
-						}
-						$msg = "Record Updated Successfully.";
-					}
-				}
-				$this->prepare_flashmessage($msg, 0);
-				redirect('admin/articles/index','refresh');
+			$inputdata['created'] = date('Y-m-d');
+			$inputdata['pubdate'] = date('Y-m-d');
+			if(!empty($_FILES['image']['name'])) {
+				$this->form_validation->set_rules('image',"Image", 'callback__image_check['.$_FILES['image']['name'].']');
+				$inputdata['image'] = $_FILES['image']['name'];
 			}
-			else {
 
-				$this->prepare_flashmessage(validation_errors(), 1);
-				redirect('admin/articles/addArticle','refresh');
-			}
+			$id = $this->base_model->insert_operation_id(
+				$inputdata,
+				$this->db->dbprefix('articles')
+			);
+
+			//log_message('error',$id);
+			$inputdatavi['article_id'] = $id;
+			$inputdatavi['lang'] = 2;
+			$inputdatavi['title'] = trim($this->input->post('titlevi'));
+			$inputdatavi['short'] = trim($this->input->post('shortvi'));
+			$inputdatavi['body'] = trim($this->input->post('bodyvi'));
+
+			$this->base_model->insert_operation($inputdatavi,
+				$this->db->dbprefix('articles_description')
+			);
+
+			$inputdataen['article_id'] = $id;
+			$inputdataen['lang'] = 1;
+			$inputdataen['title'] = trim($this->input->post('titleen'));
+			$inputdataen['short'] = trim($this->input->post('shorten'));
+			$inputdataen['body'] = trim($this->input->post('bodyen'));
+			$this->base_model->insert_operation($inputdataen,
+				$this->db->dbprefix('articles_description')
+			);
+			log_message('error',$id);
+			$this->prepare_flashmessage("Thêm tin tức thành công", 0);
+			//redirect('admin/articles');
 		}
 
-		//$this->data['article'] 		= $article;
-		$this->data['active_menu'] 		= 'addArticle';
-		$this->data['content'] 			= 'admin/articles/addArticle';
-		if($this->ion_auth->is_moderator())
-			$template = "moderatortemplate";
-		else
-			$template = "admintemplate";
+//		$this->data['datavi'] = $this->base_model->run_query(
+//			"select * from ".$this->db->dbprefix('pages')." where slug = 'aboutprogram' and lang='vietnamese'"
+//		);
+//		$this->data['dataen'] = $this->base_model->run_query(
+//			"select * from ".$this->db->dbprefix('pages')." where slug = 'aboutprogram' and lang='english'"
+//		);
 
-		$this->_render_page('temp/'.$template, $this->data);
+		$this->data['title'] 			= 'Thêm tin tức';
+		$this->data['active_menu'] 		= 'news';
+		$this->data['content'] 			= 'admin/articles/addArticle';
+		$this->_render_page('temp/admintemplate', $this->data);
 	}
 }
 
