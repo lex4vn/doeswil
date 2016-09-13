@@ -234,6 +234,8 @@
                echo form_dropdown('catid', $categories, $val,'onchange="get_quizzes(this.id);" id="catid"');
                ?>
          </div>
+      </div>
+       <div class="col-md-5" style="">
          <div class="form-group">
             Sub Category
             <?php 
@@ -253,7 +255,7 @@
             </select>
          </div>
       </div>
-      <div class="col-md-5" style="">
+      <div class="col-md-5 hidden" style="">
          Quiz Type
          <div class="form-group">
             <?php 
@@ -267,7 +269,7 @@
                echo form_dropdown('quiztype', $quiztypes, $val,'id="quiztype" onchange="get_quizzes(this.id);"');
                ?>
          </div>
-         <div class="form-group">
+         <div class="form-group hidden">
             Difficulty Level
             <?php 
                $val = '';
@@ -295,11 +297,7 @@
                <th>Quiz Name</th>
                <th>Category</th>
                <th>Sub Category</th>
-               <th>Difficulty Level</th>
-               <th>Quiz Type</th>
-               <th>Price</th>
-			   <th>Validity</th>
-               <th>Duration</th>
+               <th>Duration (Minute)</th>
                <th>Action</th>
             </tr>
          </thead>
@@ -309,11 +307,7 @@
                <th>Quiz Name</th>
                <th>Category</th>
                <th>Sub Category</th>
-               <th>Difficulty Level</th>
-				<th>Quiz Type</th>
-               <th>Price</th>
-			   <th>Validity</th>
-               <th>Duration</th>
+               <th>Duration (Minute)</th>
                <th>Action</th>
             </tr>
          </tfoot>
@@ -327,10 +321,6 @@
                <td><?php echo $r->name;?></td>
                <td><?php echo $r->catname;?></td>
                <td><?php echo $r->subcatname;?></td>
-               <td><?php echo $r->difficultylevel;?></td>
-               <td><?php echo $r->quiztype; ?></td>
-               <td><?php if($r->quiztype=="Free")echo "NA"; else echo $r->quizcost;?></td>
-			   <td><?php if($r->quiztype=="Free")echo "NA"; else echo $r->validityvalue. "  ".$r->validitytype;?></td>
                <td><?php echo $r->deauration;?></td>
                <td>
                   <a href="<?php echo base_url();?>user/instructions/<?php echo $r->quizid;?>/<?php echo $r->name;?>" class="btn bg-primary wnm-user"> <i class="fa fa-puzzle-piece"></i> Take Exam</a>
@@ -349,10 +339,6 @@
                <td><?php echo $r->name;?></td>
                <td><?php echo $r->catname;?></td>
                <td><?php echo $r->subcatname;?></td>
-               <td><?php echo $r->difficultylevel;?></td>
-               <td><?php echo $r->quiztype; ?></td>
-               <td><?php if($r->quiztype=="Free")echo "NA"; else echo $r->quizcost;?></td>
-			   <td><?php if($r->quiztype=="Free")echo "NA"; else echo $r->validityvalue. "  ".$r->validitytype;?></td>
                <td><?php echo $r->deauration;?></td>
                <td>
                   <a href="<?php echo base_url();?>user/instructions/<?php echo $r->quizid;?>/<?php echo $r->name;?>" class="btn bg-primary wnm-user"> <i class="fa fa-puzzle-piece"></i> Take Exam</a>

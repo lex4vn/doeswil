@@ -53,11 +53,13 @@
             General Instructions: 
          </div>
       </div>
+       <?php if ($is_authorized){ ?>
+       <?php if($record->quiztype == 'Free') {?>
       <ol>
          <li>Total of <?php echo $record->deauration;?> minutes duration will be given to attempt all the questions. <?php if($record->negativemarkstatus == "Active") echo "And there a penalty of minus ".$record->negativemark." marks for each wrong answer."; ?></li>
          <li>The clock has been set at the server and the countdown timer at the top right corner of your screen will display the time remaining for you to complete the exam. When the clock runs out the exam ends by default - you are not required to end or submit your exam. </li>
          <li>
-            The question palette at the right of screen shows one of the following statuses of each of the questions numbered: 
+            The question palette at the right of screen shows one of the following statuses of each of the questions numbered:
             <br><br>
             <table width="100%" border="0">
                <tr>
@@ -119,72 +121,65 @@
             </table>
          </li>
       </ol>
-	  
-	<div class="infor-mation"> 
-	<?php if ($is_authorized){
-			if ($record->quiztype == 'Paid') { 
-					$cnt='';
-					if($record->validitytype=='Days') {
-						$date1 = new DateTime(date('Y-m-d'));
-						$date2 = new DateTime($payment_info[0]->expirydate);
-						$cnt = $date2->diff($date1)->format("%a");
-					}
-					else {
-						$cnt=$payment_info[0]->remainingattempts;
-					}
-			?>
-			<strong>	You have <?php echo $cnt ." ". $record->validitytype;  ?> remaining to use this quiz</strong>
-	<?php	}
-	?> 
-	
-	<?php } 
-		  elseif ($record->quiztype == 'Paid') { 
-		  $currency = $this->base_model->fetch_single_column_value('paypal','currency_code');
-		 
-		  ?>
-				<strong>Please Buy this quiz at <?php echo $record->quizcost." ".$currency; ?>  for <?php echo $record->validityvalue ." ". $record->validitytype; ?> </strong>
-		  
-		  <?php } ?>
-	 <div class="row">
-         <div class="col-md-12">
-            <br>
-            <table width="100%" border="0">
-			<?php if ($is_authorized) { ?>
-               <tr>
-                  <td width="4%">
-                     <form name="form1" method="post" action="">
-                        <input type="checkbox" name="checkbox" id="exam_chkbox" >
-                        <label for="checkbox"></label>
-                     </form>
-                  </td>
-                  <td colspan="2">The computer provided to me is in proper working condition. I have read and understood the instructions given above.</td>
-               </tr>
-			   <?php } ?>
-               <tr>
-                  <td>&nbsp;</td>
-                  <td colspan="2">
-				  <?php if ($is_authorized) { ?>
-                     <a style="cursor:pointer;" onclick="isChecked(); return false;">
-                        <div class="btn bg-primary wnm-user rig-ht"> <i class="fa fa-sign-in"></i> Start Exam</div>
-                     </a>
-				 <?php } 
-						else { ?>
-						<a style="cursor:pointer;" target="_blank" href="<?php echo base_url();?>user/payment/paypal/<?php echo $record->quizid."/".$record->quizcost;?>">
-                        <div class="btn bg-primary wnm-user rig-ht"> <i class="fa fa-sign-in"></i> Go for Payment</div>
-                     </a>
-					 
-										
-						<?php }?>
-					 
-                  </td>
-                  
-               </tr>
-            </table>
-         </div>
-      </div>
-	
-	
-	</div>
-     
+       <div class="infor-mation">
+           <div class="row">
+               <div class="col-md-12">
+                   <br>
+                   <table width="100%" border="0">
+                       <?php if ($is_authorized) { ?>
+                           <tr>
+                               <td width="4%">
+                                   <form name="form1" method="post" action="">
+                                       <input type="checkbox" name="checkbox" id="exam_chkbox" >
+                                       <label for="checkbox"></label>
+                                   </form>
+                               </td>
+                               <td colspan="2">The computer provided to me is in proper working condition. I have read and understood the instructions given above.</td>
+                           </tr>
+                       <?php } ?>
+                       <tr>
+                           <td>&nbsp;</td>
+                           <td colspan="2">
+                               <a style="cursor:pointer;" onclick="isChecked(); return false;">
+                                   <div class="btn bg-primary wnm-user rig-ht"> <i class="fa fa-sign-in"></i> Start Exam</div>
+                               </a>
+                           </td>
+
+                       </tr>
+                   </table>
+               </div>
+           </div></div>
+	<?php }   elseif($record->quiztype == 'Write') {?>
+        <ol>
+            <li>Total of <?php echo $record->deauration;?> minutes duration will be given to attempt all the questions. <?php if($record->negativemarkstatus == "Active") echo "And there a penalty of minus ".$record->negativemark." marks for each wrong answer."; ?></li>
+            <li>The clock has been set at the server and the countdown timer at the top right corner of your screen will display the time remaining for you to complete the exam. When the clock runs out the exam ends by default - you are not required to end or submit your exam. </li>
+            <li>
+                The question palette at the right of screen shows one of the following statuses of each of the questions numbered:
+                <br><br>
+            </li>
+        </ol>
+           <div class="infor-mation">
+        <div class="row">
+            <div class="col-md-12">
+                <br>
+                <table width="100%" border="0">
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td colspan="2">
+                                <a style="cursor:pointer;" target="_self" href="<?php echo base_url();?>exam/startexam/<?php echo $exams[0]->quizid;?>">
+                                    <div class="btn bg-primary wnm-user rig-ht"> <i class="fa fa-sign-in"></i> Go for writing</div>
+                                </a>
+                        </td>
+
+                    </tr>
+                </table>
+            </div>
+        </div>
+           </div>
+    <?php } else{ ?>
+        Go for payment
+    <?php  } ?>
+
+<?php  } ?>
    </div>
 </div>

@@ -39,9 +39,7 @@ class Exam extends MY_Controller {
 	//Get the subjects that are set for the selected Quiz/Exam, and prepare the questions.
 	public function startexam()
 	{
-	
 		$id = $this->uri->segment(3);
-		
 		if ($id == '') {
 		    $this->prepare_flashmessage("Invalid attempt to take exam**id prob...", 1);
 			redirect('user/index', 'refresh');
@@ -52,7 +50,8 @@ class Exam extends MY_Controller {
 		//VALIDATE FOR PAID TEST
 		//IF DIRECTLY COMES TO THE LINK
 		$account_validation = $this->session->userdata('account_validation');
-		$is_user_account_modified = $this->session->set_userdata('is_user_account_modified');
+	//	var_dump($account_validation);die(1);
+		$is_user_account_modified = $this->session->userdata('is_user_account_modified');
 		if(!isset($account_validation)) {
 			$this->prepare_flashmessage("Invalid attempt to take exam**not set...", 1);
 			redirect('user/index', 'refresh');
@@ -66,7 +65,7 @@ class Exam extends MY_Controller {
 		
 		//IF IS QUIZ TYPE IS PAID AND VALIDITY TYPE IS ATTEMPTS
 		// DECREMENT THE ATTEMPTS COUNT, UPDATE TO DATABASE AND MAINTAIN SESSION STATUS
-		if ($account_validation['quiz_type'] == 'Paid' && 
+		if ($account_validation['quiz_type'] == 'Paid' &&
 			$account_validation['validitytype'] == 'Attempts') {
 			if($account_validation['validityvalue'] != '' && $is_user_account_modified == 0) {
 				$data['remainingattempts'] = $account_validation['validityvalue'] - 1;
@@ -76,7 +75,7 @@ class Exam extends MY_Controller {
 			}
 			
 		}
-		
+
 		//QUIZ INFO
 		$quizinfo 						= $this->base_model->run_query(
 		"select q.*, sum(totalquestion) as totalquestion from "
@@ -109,26 +108,41 @@ class Exam extends MY_Controller {
 			$subjectwiseQuestions = $this->base_model->run_query(
 			"select * from ".$this->db->dbprefix('questions')
 			." where subjectid=".$r->subjectid." and difficultylevel='"
-			.$r->difficultylevel."' and answer1!='' and answer2!='' 
+			.$r->difficultylevel."' and answer1!='' and answer2!=''
 			and correctanswer!='' ORDER by rand() LIMIT ".$r->totalquestion
 			);
-			array_push($questArray, $subjectwiseQuestions);			
+			array_push($questArray, $subjectwiseQuestions);
 		}
 		$this->data['quiz_info'] = $quizRecords;
-		
+
 		if ($this->session->userdata('isExamStarted') == 1) {
-			$this->session->set_userdata('questions', $questArray);
+			//$this->session->set_userdata('questions', $questArray);
 			$answers = '';
-			foreach ($this->session->userdata('questions') as $row) {
+			foreach ($questArray as $row) {
 				foreach ($row as $q) {
 					$answers[$q->questionid] = $q->correctanswer;
 				}
 			}
-			$this->session->set_userdata('answers', $answers);
-			$this->session->set_userdata('quiz_info', $quizinfo);
+			$this->data['questions'] = $questArray;
+			$data['questions'] 			= serialize($questArray);
+			$data['answers'] 				= serialize($answers);
+			$data['username'] 			= $this->session->userdata('username');
+			$data['quiz_info'] 			= serialize($quizinfo);
+			$data['quizRecords'] 				= serialize($quizRecords);
+			$data['totalQuestions'] 	= $totalQuestions;
+			$id = $this->base_model->insert_operation_id(
+				$data,
+				$this->db->dbprefix('session')
+			);
+			//var_dump($id);die(1);
+			$this->session->set_userdata('session_quiz_id', $id);
+			//var_dump($id);
+		//	$this->session->set_userdata('answers', $answers);
+			//$this->session->set_userdata('quiz_info', $quizinfo);
 			//INCLUDES SUBJECTS
-			$this->session->set_userdata('quizRecords', $quizRecords);
-			$this->session->set_userdata('totalQuestions', $totalQuestions);
+
+		//	$this->session->set_userdata('quizRecords', $quizRecords);
+		//	$this->session->set_userdata('totalQuestions', $totalQuestions);
 		}
 		$this->_render_page('temp/usertemplate', $this->data);
 	}
@@ -136,19 +150,27 @@ class Exam extends MY_Controller {
 	//Validate the User Exam by comparing answers of users with correct answers and Display the Result Page.
 	function validateexam()
 	{
+		//var_dump($this->session->userdata('session_quiz_id'));die(1);
 		$answers 						= '';
-		$quizinfo 						= $this->session->userdata('quiz_info');
-		$totalQuestions 				= $this->session->userdata('totalQuestions');
-		$quizRecords 					= $this->session->userdata('quizRecords');
-		$questions 						= $this->session->userdata('questions');
-		$answers 						= $this->session->userdata('answers');
+		$id						= $this->session->userdata('session_quiz_id');
+		$session_quizes = $this->base_model->run_query("select * from ".$this->db->dbprefix('session')." where id=".$id);
+		//var_dump($session_quizes);die(1);
+		$session_quiz = $session_quizes[0];
+	//	echo 'a';
+	//	var_dump($this->session->userdata);die(1);
+		$quizinfo 						=  unserialize($session_quiz->quiz_info);
+		$totalQuestions 				=  $session_quiz->totalQuestions;
+		$quizRecords 					=  unserialize($session_quiz->quizRecords);
+		$questions 						= unserialize($session_quiz->questions);
+		$answers 						= unserialize($session_quiz->answers);
 		$score 							= 0;
 		$useroptions 					= '';
 		$not_attempted 					= 0;
+		$content = '';
+		$isWriteExam = fasle;
 		if ($this->input->post('Finish') == 'Finish') {
 			foreach ($this->input->post() as $key=>$value) {
 				$useroptions[$key] 		= $value;	
-			
 				if ($key != 'Finish') {
 					if (intval($value) == 0) {
 						$not_attempted++;
@@ -157,6 +179,10 @@ class Exam extends MY_Controller {
 					if($answers[$key] == intval($value)){
 						$score++;
 					}
+				}
+				if ($key == 'content') {
+					$content = trim($value);
+					$isWriteExam = true;
 				}
 			}
 			$this->data['quiz_info'] 		= $quizinfo;
@@ -178,9 +204,11 @@ class Exam extends MY_Controller {
 				$totalNegativeMark 		= $wrongAnswers*$negativeMark;
 				$score 					-= $totalNegativeMark;
 				$this->data['negativeMark'] = $negativeMark;
-			}						
+			}
+			//var_dump($content);die(1);
+			$this->data['content_exam'] 	= $content;
 			$this->data['attempted'] 	= $attempted;
-			$this->data['score'] 		= $score; 
+			$this->data['score'] 		= $score;
 			$this->data['attempted_percentage'] = 0;
 			if ($attempted != 0) {
 				$this->data['attempted_percentage'] = number_format(
@@ -206,6 +234,7 @@ class Exam extends MY_Controller {
 				$userid = $this->session->userdata('user_id');
 				unset($where);
 				unset($records);
+				$data['content_exam'] 	= $content;
 				$data['userid'] 			= $userid;
 				$data['email'] 				= $this->session->userdata('email');
 				$data['username'] 			= $this->session->userdata('username');
@@ -214,13 +243,12 @@ class Exam extends MY_Controller {
 				$data['total_questions'] 	= $totalQuestions;
 				$data['dateoftest'] 		= date('y-m-d');
 				$data['timeoftest'] 		= date('H:i');
-				
+			//	var_dump($data);die(1);
 				//INSERT DATA INTO USER QUIZ RESULTS HISTORY
 				$this->base_model->insert_operation(
 				$data, 
 				$this->db->dbprefix('user_quiz_results_history')
 				);
-				
 				$where['userid'] 			= $userid;
 				$where['quiz_id'] 			= $quizinfo->quizid;
 				$records = $this->base_model->fetch_records_from(
@@ -285,7 +313,6 @@ class Exam extends MY_Controller {
 			);
 			redirect('user', 'refresh');
 		}
-		
 		//UNSET ALL SESSION DATA PREPARED FOR EXAM ATTEMPTION
 		$this->session->unset_userdata('account_validation');
 		$this->session->unset_userdata('is_user_account_modified');

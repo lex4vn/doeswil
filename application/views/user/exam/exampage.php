@@ -6,7 +6,7 @@
       <ul>
          <li><a href="<?php echo base_url();?>user">Home</a></li>
          <li><img  src="<?php echo base_url();?>assets/designs/images/arrow.png"></li>
-         <li><a href="#"> Online Assessment Mock Test <?php if(isset($quizName)) echo "(".$quizName.")";?></a></li>
+         <li><a href="#"> Online Assessment Test <?php if(isset($quizName)) echo "(".$quizName.")";?></a></li>
       </ul>
    </div>
 </div>
@@ -49,10 +49,10 @@
             <div id="divs">
                <?php 
                   $question_slno=1; 
-                  if(count($this->session->userdata('questions'))) {
+                  if(count($questions)) {
                   
                   $totRowCount = 0;
-                  foreach($this->session->userdata('questions') as $row) {
+                  foreach($questions as $row) {
                   	
                   	$totRowCount = $totRowCount + count($row);
                   	$i=0;
@@ -171,7 +171,7 @@
                   <div class="number-plate">
                      <?php 
                         $cnt=1;
-                        foreach ($this->session->userdata('questions') as $row) {
+                        foreach ($questions as $row) {
                         $i=1;
                         	foreach($row as $q) {		?>
                      <li id="<?php echo "number-". $q->subjectid."_".$i;?>" onclick="showQuestion('<?php echo "#".$q->subjectid."_".$i;?>');" class="btn bg-primary numbers z-answered"  >

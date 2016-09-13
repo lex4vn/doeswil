@@ -31,6 +31,9 @@
                         ?>
                      <div class="col-md-12 padd border" id="<?php echo $q->subjectid."_".$i++;?>">
                         <h4 class="quction"><?php echo $sno++.". ".$q->question;?></h4>
+                           <?php if($q->questiontype == 'Write'){ ?>
+                              <textarea class="editors" id="editorWrite" name="content" value="" placeholder="Enter Answer"><?php echo $content_exam; ?></textarea>
+                           <?php }else{ ?>
                         <table width="100%" border="0" class="answeers">
                            <input type="radio" name="<?php echo $q->questionid;?>" value="0" id="" style="display:none;" <?php if(isset($user_options[$q->questionid])) if($user_options[$q->questionid]==0) echo "checked";?> >
                            <?php 
@@ -92,6 +95,7 @@
                               </td>
                            </tr>
                         </table>
+                           <?php } ?>
                      </div>
                      <?php } } ?>
                   </div>

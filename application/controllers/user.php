@@ -366,7 +366,7 @@ class User extends MY_Controller {
 			$this->data['exams'] = $records;
 			$payment_info = $this->base_model->run_query("select * from quizsubscriptions where quizid = ".$id." and user_id=".$this->ion_auth->user()->row()->id." and status='Active' and (remainingattempts > 0 or expirydate > '".date('Y-m-d')."')");
 			$this->data['is_authorized'] = FALSE;
-			if ((isset($payment_info) && count($payment_info)>0) || $records[0]->quiztype=='Free') {
+			if ((isset($payment_info) && count($payment_info)>0) || $records[0]->quiztype=='Free'|| $records[0]->quiztype=='Write') {
 					$this->data['is_authorized'] = TRUE;
 					$this->data['payment_info'] = $payment_info;
 			
