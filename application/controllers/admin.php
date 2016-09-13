@@ -2791,91 +2791,28 @@ class Admin extends MY_Controller {
 	{
 		$this->validate_admin();
 
+		if ($this->uri->segment(3) != '' && is_numeric($this->uri->segment(3))) {
+			$where['id'] 			= $this->uri->segment(3);
+			if ($this->base_model->delete_record(
+				$this->db->dbprefix('articles'),
+				$where)
+			)
+			$this->prepare_flashmessage("Record Deleted Successfully", 0);
+			redirect('admin/articles');
+
+		}
 		$articles 	= $this->base_model->run_query(
 			"SELECT * FROM articles"
 		);
 		$this->data['articles'] 	= $articles;
 		$this->data['title'] 		= 'Tin tức và sự kiện';
 		$this->data['active_menu'] 	= 'articles';
-		$this->data['content'] 		= 'admin/articles/index';
+		$this->data['content'] 		= 'admin/articles/article';
 		$this->_render_page('temp/admintemplate', $this->data);
 
 	}
 
-	function editArticle ($id = NULL)
-	{
-		// Fetch a page or set a new one
-		if ($id) {
-			$this->data['page'] = $this->page_m->get($id);
-			count($this->data['page']) || $this->data['errors'][] = 'page could not be found';
-		}
-		else {
-			die(1);
-			$this->data['page'] = $this->page_m->get_new();
-		}
-
-		// Pages for dropdown
-		$this->data['pages_no_parents'] = $this->page_m->get_no_parents();
-
-		// Set up the form
-		$rules = $this->page_m->rules;
-		$this->form_validation->set_rules($rules);
-
-		// Process the form
-		if ($this->form_validation->run() == TRUE) {
-			$data = $this->page_m->array_from_post(array(
-				'title',
-				'slug',
-				'body',
-				'template',
-				'parent_id'
-			));
-			$this->page_m->save($data, $id);
-			redirect('admin/pages');
-		}
-
-		// Load the view
-		$this->data['content'] = 'admin/page/edit';
-		$this->_render_page('temp/admintemplate', $this->data);
-	}
-	function deleteArticle ($id = NULL)
-	{
-		// Fetch a page or set a new one
-		if ($id) {
-			$this->data['page'] = $this->page_m->get($id);
-			count($this->data['page']) || $this->data['errors'][] = 'page could not be found';
-		}
-		else {
-			die(1);
-			$this->data['page'] = $this->page_m->get_new();
-		}
-
-		// Pages for dropdown
-		$this->data['pages_no_parents'] = $this->page_m->get_no_parents();
-
-		// Set up the form
-		$rules = $this->page_m->rules;
-		$this->form_validation->set_rules($rules);
-
-		// Process the form
-		if ($this->form_validation->run() == TRUE) {
-			$data = $this->page_m->array_from_post(array(
-				'title',
-				'slug',
-				'body',
-				'template',
-				'parent_id'
-			));
-			$this->page_m->save($data, $id);
-			redirect('admin/pages');
-		}
-
-		// Load the view
-		$this->data['content'] = 'admin/page/edit';
-		$this->_render_page('temp/admintemplate', $this->data);
-	}
-
-	function addArticle()
+	function addeditArticle()
 	{
 		$this->validate_admin();
 		$this->load->library('form_validation');
@@ -2895,52 +2832,101 @@ class Admin extends MY_Controller {
 			$inputdata['cat_id'] = 1;
 			$inputdata['slug'] =  trim($this->input->post('slug'));
 
-			$inputdata['created'] = date('Y-m-d');
-			$inputdata['pubdate'] = date('Y-m-d');
 			if(!empty($_FILES['image']['name'])) {
-				$this->form_validation->set_rules('image',"Image", 'callback__image_check['.$_FILES['image']['name'].']');
-				$inputdata['image'] = $_FILES['image']['name'];
+				log_message('error',$_FILES['image']['name']);
+				//$this->form_validation->set_rules('image',"Image", 'callback__image_check['.$_FILES['image']['name'].']');
+				$image = $_FILES['image']['name'];
+				//$ext = explode('.', $_FILES['image']['name']);
+				$inputdata['image'] = $image;
+				move_uploaded_file(
+					$_FILES['image']['tmp_name'],
+					'assets/uploads/images/news/'.$image
+				);
+				log_message('error','ok');
 			}
 
-			$id = $this->base_model->insert_operation_id(
-				$inputdata,
-				$this->db->dbprefix('articles')
-			);
-
 			//log_message('error',$id);
-			$inputdatavi['article_id'] = $id;
+
 			$inputdatavi['lang'] = 2;
 			$inputdatavi['title'] = trim($this->input->post('titlevi'));
 			$inputdatavi['short'] = trim($this->input->post('shortvi'));
 			$inputdatavi['body'] = trim($this->input->post('bodyvi'));
 
-			$this->base_model->insert_operation($inputdatavi,
-				$this->db->dbprefix('articles_description')
-			);
 
-			$inputdataen['article_id'] = $id;
 			$inputdataen['lang'] = 1;
 			$inputdataen['title'] = trim($this->input->post('titleen'));
 			$inputdataen['short'] = trim($this->input->post('shorten'));
 			$inputdataen['body'] = trim($this->input->post('bodyen'));
-			$this->base_model->insert_operation($inputdataen,
-				$this->db->dbprefix('articles_description')
-			);
-			log_message('error',$id);
-			$this->prepare_flashmessage("Thêm tin tức thành công", 0);
-			//redirect('admin/articles');
+
+			if ($this->input->post('id') == '' ) {
+				$inputdata['created'] = date('Y-m-d h:m:s');
+				$inputdata['pubdate'] = date('Y-m-d h:m:s');
+				$id = $this->base_model->insert_operation_id(
+					$inputdata,
+					$this->db->dbprefix('articles')
+				);
+
+				$inputdatavi['article_id'] = $id;
+				$inputdataen['article_id'] = $id;
+				$this->base_model->insert_operation($inputdatavi,
+					$this->db->dbprefix('articles_description')
+				);
+
+
+				$this->base_model->insert_operation($inputdataen,
+					$this->db->dbprefix('articles_description')
+				);
+				$this->prepare_flashmessage("Thêm tin tức thành công", 0);
+			}else{
+				$where['id'] = $this->input->post('id');
+				$inputdata['modified'] = date('Y-m-d h:m:s');
+				$inputdatavi['article_id'] =  $this->input->post('id');
+				$inputdataen['article_id'] =  $this->input->post('id');
+
+				$this->base_model->update_operation(
+					$inputdata,
+					$this->db->dbprefix('articles'),
+					$where
+				);
+
+				$this->base_model->update_operation($inputdatavi,
+					$this->db->dbprefix('articles_description'),
+					'article_id = '.$this->input->post('id').' and lang = 2'
+				);
+
+
+				$this->base_model->update_operation($inputdataen,
+					$this->db->dbprefix('articles_description'),
+					'article_id = '.$this->input->post('id').' and lang = 1'
+				);
+				$this->prepare_flashmessage("Record Updated Successfully", 0);
+			}
+			redirect('admin/articles');
 		}
 
-//		$this->data['datavi'] = $this->base_model->run_query(
-//			"select * from ".$this->db->dbprefix('pages')." where slug = 'aboutprogram' and lang='vietnamese'"
-//		);
-//		$this->data['dataen'] = $this->base_model->run_query(
-//			"select * from ".$this->db->dbprefix('pages')." where slug = 'aboutprogram' and lang='english'"
-//		);
+		if ($this->uri->segment(3) != '' && is_numeric($this->uri->segment(3))) {
 
-		$this->data['title'] 			= 'Thêm tin tức';
+			$record = $this->base_model->run_query(
+				"select * from " . $this->db->dbprefix('articles')
+				. " where id=" . $this->uri->segment(3));
+			$this->data['datavi'] = $this->base_model->run_query(
+				"select * from " . $this->db->dbprefix('articles_description') . " where article_id = " . $this->uri->segment(3) . " and lang=2");
+			$this->data['dataen'] = $this->base_model->run_query(
+				"select * from " . $this->db->dbprefix('articles_description') . " where article_id = " . $this->uri->segment(3) . " and lang=1");
+			$this->data['data'] = $record;
+			//$this->data['subject_id'] 	= $record[0]->subjectid;
+			$this->data['id'] = $this->uri->segment(3);
+			$title = "Cập nhật tin tức";
+		}
+		else {
+			$this->data['data'] 		= array();
+			$this->data['id'] 			= '';
+			$title = "Thêm mới tin tức";
+		}
+
+		$this->data['title'] 			= $title;
 		$this->data['active_menu'] 		= 'news';
-		$this->data['content'] 			= 'admin/articles/addArticle';
+		$this->data['content'] 			= 'admin/articles/addeditArticle';
 		$this->_render_page('temp/admintemplate', $this->data);
 	}
 }
