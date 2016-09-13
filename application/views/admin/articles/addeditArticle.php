@@ -40,21 +40,29 @@
 			echo $this->session->flashdata('message');
 			?>
 		</div>
-		<form method="POST" action="<?php echo base_url();?>admin/addeditArticle" id="form" enctype="multipart/form-data">
-			<div id="form" class="container">
+		<form method="POST" action="<?php echo base_url();?>admin/addeditArticle" name="articleform" id="articleform" enctype="multipart/form-data">
+
+			<div id="articles" class="container">
 				<div class="row">
 					<div class="col-lg-12 form-group">
+						<?php if(count($data)>0)
+							$article=$data[0];
+						?>
 						<label class="col-lg-12 control-label" for="image">
 							Chọn ảnh đại diện cho bài viết
 							<span style="color:red;">*</span></label>
 						<div class="col-lg-12 ">
+							<?php if(isset($article->image) && $article->image!== ''){ ?>
+							<img src="<?php echo base_url();?>assets/uploads/images/news/<?php echo $article->image; ?>">
+						<?php	} ?>
 							<input type="file" name="image" id="image" class=""/>
+							
 						</div>
 					</div>
 				</div>
 				<div class="form-group">
 					<label for="title">Đường dẫn SEO</label>
-					<input class="form-control" id="slug" name="slug" placeholder="Nhập đường dẫn seo duy nhất. VD: top-muoi-nghe-hot-nhat" type="text" value="<?php echo $slug;?>">
+					<input class="form-control" id="slug" name="slug" placeholder="Nhập đường dẫn seo duy nhất. VD: top-muoi-nghe-hot-nhat" type="text" value="<?php echo $article->slug;?>">
 				</div>
 				<ul class="nav nav-tabs">
 					<li class="active">
@@ -160,9 +168,9 @@
 							{
 								$shorten = $this->input->post( 'shorten' );
 							}
-							elseif(count($datavi))
+							elseif(count($dataen))
 							{
-								$shorten = $datavi->title;
+								$shorten = $dataen->title;
 							}
 							?>
 
@@ -193,8 +201,9 @@
 					</div>
 				</div>
 			</div>
+			<input type="hidden" name="id" value="<?php if(isset($id)) echo $id;?>">
 			<input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>" />
-			<button type="submit" class="btn btn-primary wnm-user">Tạo mới</button>
+			<button type="submit" class="btn btn-primary wnm-user">Submit</button>
 		</form>
 
 	</div>
@@ -373,7 +382,7 @@
 			setupFormValidation: function()
 			{
 				//form validation rules
-				$("#term_content_form").validate({
+				$("#articleform").validate({
 
 					ignore: "", //To validate hidden fields
 					rules: {

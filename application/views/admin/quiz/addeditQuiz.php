@@ -364,10 +364,10 @@
                ?>
             <input type="text" class="form-control" id="negativemark" name="negativemark" value="<?php echo $val;?>" placeholder="Enter Negative Mark" >
          </div>
-         <div class="form-group">
+         <div class="form-group hidden">
             <label for="inputEmail">Difficulty Level</label>
             <?php 
-               $val = 'Medium';
+               $val = 'Easy';
                	if ($this->input->post( 'difficultylevel' ) ) {
 					$val = $this->input->post( 'difficultylevel' );
                	}

@@ -78,8 +78,8 @@ $(document).ready(function() {
 				
 					<tr>
 						<td><?php echo $r->id;?></td>
-						<td><img style="height:45px;width:60px;" src="<?php echo base_url();?>assets/uploads/images(200x200)/<?php
-							if(isset($r->image)&&$r->image!='')echo $r->image; else echo "news.png";?>"></td>
+						<td><img style="height:45px;width:60px;" src="<?php echo base_url();?>assets/uploads/images/news/<?php
+							if(isset($r->image)&&$r->image!='')echo $r->image; else echo "noimage.jpg";?>"></td>
 						<td><?php echo $r->cat_id;?></td>
 						<td><?php echo $r->slug;?></td>
 

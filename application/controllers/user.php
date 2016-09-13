@@ -332,7 +332,7 @@ class User extends MY_Controller {
 		
 		}
 		// Code written for fetching quizzes based on admin restrictions END
-		
+		$options = array();
 		$options_for_all = array();
 		$i=0;
 		foreach($this->data['records'] as $key=> $val) {
@@ -519,12 +519,12 @@ class User extends MY_Controller {
 	
 	//View Quizzes
 	  function quizzes()
-    {        //echo "hello"; die();
-	$this->data['records_for_all'] = array();
+    {
+		$this->data['records_for_all'] = array();
         //Options for Quiz Type
         $qztype['']                     = 'Select Quiz Type';
         $qztype['Free']                 = 'Free';
-        $qztype['Paid']                 = 'Paid';
+       // $qztype['Paid']                 = 'Paid';
         $this->data['quiztypes']         = $qztype;
         
         //Options for Difficulty Level
