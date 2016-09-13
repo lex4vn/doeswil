@@ -39,14 +39,14 @@ $(document).ready(function() {
 
  </div>
  <div class="row">
- 
-   <?php echo validation_errors();
-		echo $this->session->flashdata('message');
+
+	 <?php echo validation_errors();
+	 echo $this->session->flashdata('message');
 	 ?>
 	 <div class="col-md-5">
 		 <div class="ga">
 			 <div class="btn-group ga1">
-				 <a href="<?php echo base_url();?>admin/addArticle" class="btn btn-default dropdown-toggle ga-btn">
+				 <a href="<?php echo base_url();?>admin/addeditArticle" class="btn btn-default dropdown-toggle ga-btn">
 					Thêm tin tức
 				 </a>
 			 </div>
@@ -60,7 +60,9 @@ $(document).ready(function() {
 <table id="example" class="cell-border" cellspacing="0" width="100%">
 			  <thead>
 					<tr>
+
 						<th>ID</th>
+						<th>Ảnh</th>
 						<th>Danh mục</th>
 						<th>Đường dẫn</th>
 						<th>Tạo</th>
@@ -70,23 +72,24 @@ $(document).ready(function() {
 				<tbody>
 				
 				<?php if(count($articles)>0) {
-					$i=1;
 					foreach($articles as $r)
 					{
 				?>
 				
 					<tr>
-						<td><?php echo $i++;?></td>
-						<td><img style="height:45px;width:60px;" src="<?php echo base_url();?>assets/uploads/images(200x200)/<?php 
-						if(isset($r->image)&&$r->image!='')echo $r->image; else echo "dflt-user-icn.png";?>"></td>
+						<td><?php echo $r->id;?></td>
+						<td><img style="height:45px;width:60px;" src="<?php echo base_url();?>assets/uploads/images(200x200)/<?php
+							if(isset($r->image)&&$r->image!='')echo $r->image; else echo "news.png";?>"></td>
 						<td><?php echo $r->cat_id;?></td>
 						<td><?php echo $r->slug;?></td>
+
+
 						<td><?php echo $r->created;?></td>
 						<td><?php echo $r->modified;?></td>
 						<td>
 							 <a href="<?php echo base_url();?>admin/viewArticle/<?php echo $r->id;?>"><div class="btn bg-primary wnm-user">View</div></a>
-						     <a href="<?php echo base_url();?>admin/editArticle/<?php echo $r->id;?>" onclick="return confirm('Are you sure you want to block this user?')"><div class="btn bg-primary wnm-user">Edit</div></a>
-							 <a href="<?php echo base_url();?>admin/deleteArticle/<?php echo $r->id;?>"><div class="btn bg-primary wnm-user" onclick="return confirm('Are you sure you want to delete this record?')">Delete</div></a>
+						     <a href="<?php echo base_url();?>admin/addeditArticle/<?php echo $r->id;?>"><div class="btn bg-primary wnm-user">Edit</div></a>
+							 <a href="<?php echo base_url();?>admin/articles/<?php echo $r->id;?>"><div class="btn bg-primary wnm-user" onclick="return confirm('Are you sure you want to delete this record?')">Delete</div></a>
 							 
 						</td>
 					</tr>

@@ -30,6 +30,11 @@
        <div class="spacer"></div>
        <h2 class="text-center"><?php echo lang('national_final'); ?></h2>
        <div class="text-center"><iframe width="560" height="315" src="https://www.youtube.com/embed/561gM0BTk9c" frameborder="0" allowfullscreen></iframe></div>
+
+       <h2 class="text-center">Wilmar CLV Awards 2016 Introduction</h2>
+       <div class="text-center">
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/sTc82-bMsvQ" frameborder="0" allowfullscreen></iframe>
+       </div>
      <!--  <ul class="list-unstyled video-list-thumbs row">
       <?php
       //You can see related documentation and compose own request here: https://developers.google.com/youtube/v3/docs/search/list

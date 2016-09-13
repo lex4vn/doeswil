@@ -30,33 +30,33 @@
 			<input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>" />
 			
                <div class="form-group paddin-cont">
-                  <label class="col-lg-3 control-label" for="ftname">Name <span style="color:red;">*</span></label>
+                  <label class="col-lg-3 control-label" for="ftname"><?php echo lang('name'); ?> <span style="color:red;">*</span></label>
                   <div class="col-lg-9 ">
-                     <input type="text" placeholder="Name" class="form-control" id="name" name="name">
+                     <input type="text" placeholder="<?php echo lang('name'); ?>" class="form-control" id="name" name="name">
                   </div>
                </div>
                <div class="form-group paddin-cont">
-                  <label class="col-lg-3 control-label" for="emailid">Email <span style="color:red;">*</span></label>
+                  <label class="col-lg-3 control-label" for="emailid"><?php echo lang('email'); ?> <span style="color:red;">*</span></label>
                   <div class="col-lg-9">
-                     <input type="text" placeholder="Email" id="email" class="form-control" name="email">
+                     <input type="text" placeholder="<?php echo lang('email'); ?>" id="email" class="form-control" name="email">
                   </div>
                </div>
                <div class="form-group paddin-cont">
-                  <label class="col-lg-3 control-label" for="mob">Phone <span style="color:red;">*</span></label>
+                  <label class="col-lg-3 control-label" for="mob"><?php echo lang('phone'); ?> <span style="color:red;">*</span></label>
                   <div class="col-lg-9">
-                     <input type="text" placeholder="phone" id="phone" class="form-control" name="phone" maxlength="11">
+                     <input type="text" placeholder="<?php echo lang('phone'); ?>" id="phone" class="form-control" name="phone" maxlength="11">
                   </div>
                </div>
                 <div class="form-group paddin-cont">
-                    <label class="col-lg-3 control-label" for="university">University</span></label>
+                    <label class="col-lg-3 control-label" for="university"><?php echo lang('university'); ?></span></label>
                     <div class="col-lg-9">
-                        <input type="text" placeholder="university" id="university" class="form-control" name="university" maxlength="11">
+                        <input type="text" placeholder="<?php echo lang('university'); ?>" id="university" class="form-control" name="university" maxlength="11">
                     </div>
                 </div>
                 <div class="form-group paddin-cont">
-                    <label class="col-lg-3 control-label" for="major">Major</label>
+                    <label class="col-lg-3 control-label" for="major"><?php echo lang('major'); ?></label>
                     <div class="col-lg-9">
-                        <input type="text" placeholder="major" id="major" class="form-control" name="major" maxlength="11">
+                        <input type="text" placeholder="<?php echo lang('major'); ?>" id="major" class="form-control" name="major" maxlength="11">
                     </div>
                 </div>
 <!--               <div class="form-group paddin-cont">-->
@@ -66,20 +66,20 @@
 <!--                  </div>-->
 <!--               </div>-->
                <div class="form-group paddin-cont">
-                  <label class="col-lg-3 control-label" for="sub">Subject <span style="color:red;">*</span></label>
+                  <label class="col-lg-3 control-label" for="sub"><?php echo lang('subject'); ?> <span style="color:red;">*</span></label>
                   <div class="col-lg-9">
-                     <input type="text" placeholder="Subject" id="subject" class="form-control" name="subject">
+                     <input type="text" placeholder="<?php echo lang('subject'); ?>" id="subject" class="form-control" name="subject">
                   </div>
                </div>
                <div class="form-group paddin-cont">
-                  <label class="col-lg-3 control-label" for="mes">Message</label>
+                  <label class="col-lg-3 control-label" for="mes"><?php echo lang('message'); ?></label>
                   <div class="col-lg-9">
-                     <textarea rows="3" class="form-control" name="msg" placeholder="Message"></textarea>
+                     <textarea rows="3" class="form-control" name="msg" placeholder="<?php echo lang('message'); ?>"></textarea>
                   </div>
                </div>
                <div style="margin-left:60px;" class="form-group ">
                   <div class="col-lg-offset-2 col-lg-10">
-                     <input type="submit" value="Submit" name="submit" class="btn btn-danger butt">
+                     <input type="submit" value="<?php echo lang('submit'); ?>" name="submit" class="btn btn-danger butt">
                   </div>
                </div>
             </form>

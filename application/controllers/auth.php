@@ -503,11 +503,11 @@ class Auth extends MY_Controller {
 	}
 	
 	//create a new user
-	function register()
+	function registerTest()
 	{
 		redirect('https://docs.google.com/forms/d/e/1FAIpQLSegDvQ6D8-it6kEzqPYErIigLxs32kaO9fmAKhPM5X_p495EA/viewform');
 	}
-	function registertest()
+	function register()
 	{
 		$this->data['title'] = "Register";
 			$this->config->load('ion_auth', TRUE);
@@ -534,6 +534,10 @@ class Auth extends MY_Controller {
 				$email    = strtolower($this->input->post('email'));
 				$password = $this->input->post('password');
 				$image = $_FILES['image']['name'];
+				$universityValue = $this->input->post('university');
+				if($universityValue == 0){
+					$universityValue = $this->input->post('university_another');
+				}
 				$additional_data = array(
 					'full_name' => $this->input->post('full_name'),
 					'phone'      => $this->input->post('phone'),
@@ -546,7 +550,7 @@ class Auth extends MY_Controller {
 					'permanent_address'      => $this->input->post('permanent_address'),
 					'temp_address'      => $this->input->post('temp_address'),
 					'major'      => $this->input->post('major'),
-					'university'      => $this->input->post('university'),
+					'university'      => $universityValue,
 					'student_code'      => $this->input->post('student_code'),
 					'score'      => $this->input->post('score'),
 					'date_graduation'      =>  date('Y-m-d',strtotime($this->input->post('date_graduation'))),

@@ -47,3 +47,13 @@ $lang['program_introduction'] = 'Giới thiệu chương trình';
 $lang['organizing_committee'] = 'Ban Tổ chức';
 $lang['local_final'] = 'Chung kết khu vực';
 $lang['national_final'] = 'Chung kết toàn quốc';
+
+// Contact us
+$lang['name'] = 'Họ tên';
+$lang['email'] = 'Email';
+$lang['phone'] = 'Điện thoại';
+$lang['university'] = 'Trường';
+$lang['major'] = 'Chuyên môn';
+$lang['subject'] = 'Tiêu đề';
+$lang['message'] = 'Nội dung';
+$lang['submit'] = 'Gửi lên';

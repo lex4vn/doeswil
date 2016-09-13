@@ -28,7 +28,7 @@
       </div>
    </div>
     <div class="width-form" id="ytplayer">
-        <iframe width="420" height="315" src="https://www.youtube.com/embed/N67kxHLomAc?version=3&enablejsapi=1" frameborder="0" allowfullscreen onload="floaded()"></iframe>
+       <iframe width="560" height="315" src="https://www.youtube.com/embed/sTc82-bMsvQ" frameborder="0" allowfullscreen></iframe>
     </div>
        <a data-slide="prev" href="#myCarousel" class="left carousel-control"><span class="glyphicon glyphicon-chevron-left"></span></a>
    <a data-slide="next" href="#myCarousel" class="right carousel-control"><span class="glyphicon glyphicon-chevron-right"></span></a>
@@ -130,7 +130,7 @@
       player = new YT.Player('ytplayer', {
          height: '315',
          width: '420',
-         videoId: 'N67kxHLomAc',
+         videoId: 'sTc82-bMsvQ',
          events: {
             'onStateChange': function(event) {
                if (event.data == YT.PlayerState.PLAYING) {

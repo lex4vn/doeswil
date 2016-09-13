@@ -48,3 +48,13 @@ $lang['program_introduction'] = 'Program Introduction';
 $lang['organizing_committee'] = 'Organizing Committee';
 $lang['local_final'] = 'Local Final';
 $lang['national_final'] = 'National Final';
+
+// Contact us
+$lang['name'] = 'Name';
+$lang['email'] = 'Email';
+$lang['phone'] = 'Phone';
+$lang['university'] = 'University';
+$lang['major'] = 'Major';
+$lang['subject'] = 'Subject';
+$lang['message'] = 'Message';
+$lang['submit'] = 'Submit';

@@ -40,9 +40,22 @@
 			echo $this->session->flashdata('message');
 			?>
 		</div>
-		<form method="POST" action="<?php echo base_url();?>admin/aboutprogram" id="term_form" enctype="multipart/form-data">
-
-			<div id="term" class="container">
+		<form method="POST" action="<?php echo base_url();?>admin/addeditArticle" id="form" enctype="multipart/form-data">
+			<div id="form" class="container">
+				<div class="row">
+					<div class="col-lg-12 form-group">
+						<label class="col-lg-12 control-label" for="image">
+							Chọn ảnh đại diện cho bài viết
+							<span style="color:red;">*</span></label>
+						<div class="col-lg-12 ">
+							<input type="file" name="image" id="image" class=""/>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="title">Đường dẫn SEO</label>
+					<input class="form-control" id="slug" name="slug" placeholder="Nhập đường dẫn seo duy nhất. VD: top-muoi-nghe-hot-nhat" type="text" value="<?php echo $slug;?>">
+				</div>
 				<ul class="nav nav-tabs">
 					<li class="active">
 						<a  href="#vietnamese" data-toggle="tab">Tiếng Việt</a>
@@ -58,7 +71,6 @@
 						?>
 						<div class="form-group">
 							<label for="title">Tiêu đề</label>
-
 							<?php
 							$title = '';
 							if( ( $this->input->post( 'titlevi' ) ) )
@@ -69,12 +81,29 @@
 							{
 								$title = $datavi->title;
 							}
-
 							?>
 
 							<input class="form-control" id="titlevi" name=
 							"titlevi" placeholder="Enter title" type="text" value=
 								   "<?php echo $title;?>">
+						</div>
+						<div class="form-group">
+							<label for="title">Mô tả ngắn</label>
+							<?php
+							$shortvi = '';
+							if( ( $this->input->post( 'shortvi' ) ) )
+							{
+								$shortvi = $this->input->post( 'shortvi' );
+							}
+							elseif(count($datavi))
+							{
+								$shortvi = $datavi->title;
+							}
+							?>
+
+							<input class="form-control" id="shortvi" name=
+							"shortvi" placeholder="Nhập mô tả ngắn" type="text" value=
+								   "<?php echo $shortvi;?>">
 						</div>
 						<div class="form-group">
 							<label for="bodyvi">Content for Term Page</label>
@@ -97,7 +126,6 @@
 
 						<input type="hidden" name="lang" value="vietnamese">
 						<input type="hidden" name="idvi" value="<?php if(isset($datavi->id)) echo $datavi->id;?>">
-
 
 					</div>
 					<div class="tab-pane" id="english">
@@ -125,6 +153,24 @@
 								   "<?php echo $title;?>">
 						</div>
 						<div class="form-group">
+							<label for="title">Short description</label>
+							<?php
+							$shorten = '';
+							if( ( $this->input->post( 'shorten' ) ) )
+							{
+								$shorten = $this->input->post( 'shorten' );
+							}
+							elseif(count($datavi))
+							{
+								$shorten = $datavi->title;
+							}
+							?>
+
+							<input class="form-control" id="shorten" name=
+							"shorten" placeholder="Enter short description" type="text" value=
+								   "<?php echo $shorten;?>">
+						</div>
+						<div class="form-group">
 							<label for="bodyen">Content for Term Page</label>
 
 							<?php
@@ -147,17 +193,9 @@
 					</div>
 				</div>
 			</div>
-
-
-
-
 			<input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>" />
-
-
 			<button type="submit" class="btn btn-primary wnm-user">Tạo mới</button>
-
 		</form>
-
 
 	</div>
 </div>

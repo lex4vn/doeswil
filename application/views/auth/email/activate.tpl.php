@@ -35,8 +35,8 @@
          <div class="container emailer-wi">
             <h3>Welcome To Wilmar CLV Awards 2016</h3>
             <h5> <?php echo sprintf(lang('email_activate_heading'), $identity);?></h5>
-            <p>Thank you for your interest for registering with Wilmar CLV Awards 2016. It is very helpfull for conducting exams and track the performanance of the students</p>
-            <p><?php echo sprintf(lang('email_activate_subheading'), anchor('auth/activate/'. $id .'/'. $activation, lang('email_activate_link')));?></p>
+            <p>Thank you for your interest in Wilmar CLV Awards 2016. Your registration form has been received. Please wait for the next announcement.
+               Thank you & good luck!</p>
          </div>
          <div class="spacer"></div>
       </div>
