@@ -2,7 +2,7 @@
 <div class="col-md-2 padd">
    <ul class="dropdown-menu sid-sub-menu" role="menu" aria-labelledby="dropdownMenu" >
       <li class="dropdown-submenu "> <a  href="<?php echo base_url();?>">Home</a> </li>
-      <li class="dropdown-submenu <?php if(isset($active_menu) && $active_menu=="dashboard") echo "active";?>"> <a  href="<?php echo base_url();?>user">Dashboard</a> </li>
+      <li class="dropdown-submenu <?php if(isset($active_menu) && $active_menu=="dashboard") echo "active";?>"> <a  href="<?php echo base_url();?>user">Hướng dẫn</a> </li>
 	   <li class="dropdown-submenu <?php if(isset($active_menu) && $active_menu=="exams") echo "active";?>"> <a  href="<?php echo base_url();?>user/quizzes">Quizzes</a> </li>
 	   <li class="dropdown-submenu <?php if(isset($active_menu) && $active_menu=="quiz_history") echo "active";?>"> <a  href="<?php echo base_url();?>user/quiz_history">Quiz History</a> </li>
       <li class="dropdown-submenu <?php if(isset($active_menu) && $active_menu=="profile") echo "active";?>"> <a  href="<?php echo base_url();?>user/profile">My Profile</a> </li>

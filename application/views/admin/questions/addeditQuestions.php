@@ -78,7 +78,7 @@
                		$val = $data->question;
                	}
             ?>
-            <textarea class="editors" id="editor1" name="question" value="<?php echo $val;?>" placeholder="Enter Question"><?php echo $val;?></textarea>
+            <textarea class="editors" id="editor1" name="question" placeholder="Enter Question"><?php echo $val;?></textarea>
          </div>
          <div class="form-group">
             <label for="inputEmail">Answer1</label>
@@ -91,7 +91,7 @@
                		$val = $data->answer1;
                	}
                ?>
-            <textarea class="editors" id="editor2" name="answer1" value="<?php echo $val;?>" placeholder="Enter Answer1"><?php echo $val;?></textarea>
+            <textarea class="editors" id="editor2" name="answer1" placeholder="Enter Answer1"><?php echo $val;?></textarea>
          </div>
          <div class="form-group">
             <label for="inputEmail">Answer2</label>
@@ -104,7 +104,7 @@
                		$val = $data->answer2;
                	}
                ?>
-            <textarea class="editors" id="editor3" name="answer2" value="<?php echo $val;?>" placeholder="Enter Answer2"><?php echo $val;?></textarea>
+            <textarea class="editors" id="editor3" name="answer2" placeholder="Enter Answer2"><?php echo $val;?></textarea>
          </div>
          <div class="form-group">
             <label for="inputEmail">Answer3</label>
@@ -117,7 +117,7 @@
                		$val = $data->answer3;
                	}
                ?>
-            <textarea class="editors" id="editor4" name="answer3" value="<?php echo $val;?>" placeholder="Enter Answer3"><?php echo $val;?></textarea>
+            <textarea class="editors" id="editor4" name="answer3" placeholder="Enter Answer3"><?php echo $val;?></textarea>
          </div>
          <div class="form-group">
             <label for="inputEmail">Answer4</label>
@@ -130,7 +130,7 @@
                		$val = $data->answer4;
                	}
                ?>
-            <textarea class="editors" id="editor5" name="answer4" value="<?php echo $val;?>" placeholder="Enter Answer4"><?php echo $val;?></textarea>
+            <textarea class="editors" id="editor5" name="answer4" placeholder="Enter Answer4"><?php echo $val;?></textarea>
          </div>
          <div class="form-group" id="answer5Div" <?php if(count($data) && $data->answer5=='') echo "style='display:none;'";?>>
             <label for="inputEmail">Answer5</label>
@@ -143,7 +143,7 @@
                		$val = $data->answer5;
                	}
                ?>
-            <textarea class="editors" id="editor6" name="answer5" value="<?php echo $val;?>" placeholder="Enter Answer5"><?php echo $val;?></textarea>
+            <textarea class="editors" id="editor6" name="answer5"  placeholder="Enter Answer5"><?php echo $val;?></textarea>
          </div>
          <div class="form-group">
             <label for="inputEmail">Correct Answer</label>

@@ -107,7 +107,7 @@ class Auth extends MY_Controller {
 						
 						
 						$this->prepare_flashmessage($this->ion_auth->messages(),0);
-						redirect('user', 'refresh');
+						redirect('user/quizzes', 'refresh');
 					}
 				}
 				else
@@ -582,7 +582,7 @@ class Auth extends MY_Controller {
 				//display the create user form
 				//set the flash data error message if there is one
 				$this->prepare_flashmessage((validation_errors() ? validation_errors() : ($this->ion_auth->errors() ? $this->ion_auth->errors() : $this->session->flashdata('message'))),1);
-				redirect("auth/registertest", 'refresh');
+				redirect("auth/register", 'refresh');
 				
 			}
 		}

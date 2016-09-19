@@ -23,81 +23,17 @@
                <!-- /.panel-heading -->
                <div class="panel-body  pre-scrollable scroll-height">
                   <div id="morris-area-chart">
-                     <?php $sno=1;foreach($questions as $row) { 
-                        $i=1;
-                        foreach($row as $q) {
-                        
-                        
-                        ?>
-                     <div class="col-md-12 padd border" id="<?php echo $q->subjectid."_".$i++;?>">
-                        <h4 class="quction"><?php echo $sno++.". ".$q->question;?></h4>
-                           <?php if($q->questiontype == 'Write'){ ?>
-                              <textarea class="editors" id="editorWrite" name="content" value="" placeholder="Enter Answer"><?php echo $content_exam; ?></textarea>
-                           <?php }else{ ?>
-                        <table width="100%" border="0" class="answeers">
-                           <input type="radio" name="<?php echo $q->questionid;?>" value="0" id="" style="display:none;" <?php if(isset($user_options[$q->questionid])) if($user_options[$q->questionid]==0) echo "checked";?> >
-                           <?php 
-                              if (isset($q->answer1)) {  
-                               ?>
-                           <tr>
-                              <td>
-                                 <input type="radio" name="<?php echo $q->questionid;?>" value="1" id="" <?php if(isset($user_options[$q->questionid])) if($user_options[$q->questionid]==1) echo "checked";?> >
-                                 <?php echo $q->answer1;?>
-                              </td>
-                           </tr>
-                           <?php } ?>
-                           <?php 
-                              if (isset($q->answer2)) {  
-                               ?>
-                           <tr>
-                              <td>
-                                 <input type="radio" name="<?php echo $q->questionid;?>" value="2" id="" <?php if(isset($user_options[$q->questionid])) if($user_options[$q->questionid]==2) echo "checked";?> >
-                                 <?php echo $q->answer2;?>
-                              </td>
-                           </tr>
-                           <?php } ?>
-                           <?php 
-                              if (isset($q->answer3)) {  
-                               ?>
-                           <tr>
-                              <td>
-                                 <input type="radio" name="<?php echo $q->questionid;?>" value="3" id="" <?php if(isset($user_options[$q->questionid])) if($user_options[$q->questionid]==3) echo "checked";?> >
-                                 <?php echo $q->answer3;?>
-                              </td>
-                           </tr>
-                           <?php } ?>
-                           <?php 
-                              if (isset($q->answer4)) {  
-                               ?>
-                           <tr>
-                              <td>
-                                 <input type="radio" name="<?php echo $q->questionid;?>" value="4" id="" <?php if(isset($user_options[$q->questionid])) if($user_options[$q->questionid]==4) echo "checked";?> >
-                                 <?php echo $q->answer4;?>
-                              </td>
-                           </tr>
-                           <?php } ?>
-                           <?php 
-                              if (isset($q->answer5)) {  
-                               ?>
-                           <tr>
-                              <td>
-                                 <input type="radio" name="<?php echo $q->questionid;?>" value="5" id="" <?php if(isset($user_options[$q->questionid])) if($user_options[$q->questionid]==5) echo "checked";?> >
-                                 <?php echo $q->answer5;?>
-                              </td>
-                           </tr>
-                           <?php } ?>
-                           <tr>
-                              <td> </td>
-                           </tr>
-                           <tr>
-                              <td>
-                                 <div class="btn bg-primary   <?php if(isset($user_options[$q->questionid])){ if($user_options[$q->questionid]==$answers[$q->questionid])  echo "correct-answ"; else echo "wrong-answ"; } else echo "wrong-answ";?>">Correct answer: <?php echo $answers[$q->questionid]; ?></div>
-                              </td>
-                           </tr>
-                        </table>
-                           <?php } ?>
-                     </div>
-                     <?php } } ?>
+                     <p><i>Ch&uacute;c mừng bạn đ&atilde; ho&agrave;n th&agrave;nh xong phần thi trắc nghiệm. Kết quả của bạn đạt được như sau:</i></p>
+
+                     <ul>
+                        <li><i>IQ: <?php echo $mark1; ?> /25</i></li>
+                        <li><i>Kiến thức tổng hợp: <?php echo $mark1; ?> /25</i></li>
+                        <li><i>Tiếng Anh trắc nghiệm: <?php echo $mark1; ?> /25</i></li>
+                     </ul>
+
+                     <p><i>V&agrave; b&acirc;y giờ bạn h&atilde;y thư gi&atilde;n 10 ph&uacute;t v&agrave; tiếp tục ho&agrave;n th&agrave;nh phần thi viết b&agrave;i luận bằng tiếng Anh nh&eacute;. H&atilde;y lưu &yacute; bạn chỉ c&oacute; 50 ph&uacute;t để ho&agrave;n th&agrave;nh b&agrave;i luận v&agrave; kh&ocirc;ng được sử dụng bất kỳ sự trợ gi&uacute;p n&agrave;o như từ điển, truy cập internet&hellip; Ch&uacute;c bạn sẽ ho&agrave;n th&agrave;nh thật tốt phần thi n&agrave;y!</i></p>
+
+                     <p><i>Nếu đ&atilde; sẵn s&agrave;ng, bạn h&atilde;y bấm START để bắt đầu phần thi viết nh&eacute;!</i></p>
                   </div>
                </div>
                <!-- /.panel-body -->
@@ -115,7 +51,7 @@
             </div>
             <div class="recent-msg-total">
                <div class="lates-users-img-hed quiz-hed">
-                  Time (minutes):<br>
+                  Time (minutes) for all multiple-choice tests:<br>
                </div>
                <div class="btn bg-primary wnm-user"><?php echo $quiz_info->deauration; ?></div>
             </div>
@@ -171,24 +107,6 @@
                   </div>
                </div>
             </div>
-         </div>
-         <div class="lates-users top">
-            <div class="recent-msg-hed quiz-bhed">High Scores in this Quiz <i class="fa fa-flag"></i></div>
-            <?php if(count($previous_score)) { 
-               foreach($previous_score as $s) {
-               
-               ?>
-            <div class="recent-msg-total">
-               <div class="lates-users-img">
-                  <img src="<?php echo base_url();?>assets/uploads/images(200x200)/<?php if(isset($s->image)&&$s->image!='')echo $s->image; else echo "dflt-user-icn.png";?>" width="50" height="50">
-               </div>
-               <div class="lates-users-img-hed quiz-hed">
-                  <?php echo $s->username;?> <br>
-                  <small><?php echo $s->dateoftest."  ".$s->timeoftest;?></small><br>
-               </div>
-               <div class="btn bg-primary wnm-user"><?php echo $s->score; ?> / <?php echo $totalQuestions; ?></div>
-            </div>
-            <?php } } else echo '<div class="recent-msg-total">No Records Available.</div>';?>
          </div>
       </div>
    </div>

@@ -299,6 +299,9 @@ class Exam extends MY_Controller {
 				and qr.quiz_id=".$quizinfo->quizid." ORDER BY qr.score DESC LIMIT 5"
 				);
 				$this->data['previous_score'] 	= $records;
+				$this->data['mark1'] 		= 0;
+				$this->data['mark2'] 		= 0;
+				$this->data['mark3'] 		= 0;
 				$this->data['active_menu'] 		= 'exams';
 				$this->data['title'] 			= 'Exam/Quiz Result';
 				$this->data['content'] 			= 'user/exam/quiz_results';

@@ -68,7 +68,7 @@
                      <?php echo $q->question;?> 
                   </h4>
                    <?php if($q->questiontype == 'Write'){ ?>
-                       <textarea class="editors" id="editorWrite" name="content" value="" placeholder="Enter Answer"></textarea>
+                       <textarea class="editors" id="editorWrite" style="width: 100%;height:350px;" name="content" value="" placeholder="Enter Answer"></textarea>
                    <?php }else{ ?>
                   <table width="100%" border="0" class="answeers">
                      <input type="hidden" name="<?php echo $q->questionid;?>" value="0" id="" checked >
@@ -250,7 +250,7 @@
                 /*
                  * Ensure that htmlwriter plugin, which is required for this sample, is loaded.
                  */
-                extraPlugins: 'htmlwriter',
+                //extraPlugins: 'htmlwriter',
 
                 /*
                  * Style sheet for the contents
