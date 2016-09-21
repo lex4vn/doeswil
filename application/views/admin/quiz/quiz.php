@@ -37,6 +37,9 @@
             <a href="<?php echo base_url();?>admin/addeditQuiz" class="btn btn-default dropdown-toggle ga-btn">
             Add Quiz
             </a>
+            <a href="<?php echo base_url();?>admin/exportResult" class="btn btn-default dropdown-toggle ga-btn">
+            Export result
+            </a>
          </div>
       </div>
    </div>

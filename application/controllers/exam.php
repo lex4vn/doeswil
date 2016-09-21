@@ -105,12 +105,21 @@ class Exam extends MY_Controller {
 		);
 		$questArray = array();
 		foreach ($quizRecords as $r) {
-			$subjectwiseQuestions = $this->base_model->run_query(
-			"select * from ".$this->db->dbprefix('questions')
-			." where subjectid=".$r->subjectid." and difficultylevel='"
-			.$r->difficultylevel."' and answer1!='' and answer2!=''
-			and correctanswer!='' ORDER by rand() LIMIT ".$r->totalquestion
-			);
+			if($r->subjectid < 5){
+				$subjectwiseQuestions = $this->base_model->run_query(
+					"select * from ".$this->db->dbprefix('questions')
+					." where subjectid=".$r->subjectid." and difficultylevel='"
+					.$r->difficultylevel."' and answer1!='' and answer2!=''
+			and correctanswer!='' LIMIT ".$r->totalquestion
+				);
+			}else {
+				$subjectwiseQuestions = $this->base_model->run_query(
+					"select * from " . $this->db->dbprefix('questions')
+					. " where subjectid=" . $r->subjectid . " and difficultylevel='"
+					. $r->difficultylevel . "' and answer1!='' and answer2!=''
+			and correctanswer!='' ORDER by rand() LIMIT " . $r->totalquestion
+				);
+			}
 			array_push($questArray, $subjectwiseQuestions);
 		}
 		$this->data['quiz_info'] = $quizRecords;
@@ -127,6 +136,8 @@ class Exam extends MY_Controller {
 			$data['questions'] 			= serialize($questArray);
 			$data['answers'] 				= serialize($answers);
 			$data['username'] 			= $this->session->userdata('username');
+			$data['userid'] 			= $this->session->userdata('user_id');
+			$data['email'] 			= $this->session->userdata('email');
 			$data['quiz_info'] 			= serialize($quizinfo);
 			$data['quizRecords'] 				= serialize($quizRecords);
 			$data['totalQuestions'] 	= $totalQuestions;
@@ -167,7 +178,12 @@ class Exam extends MY_Controller {
 		$useroptions 					= '';
 		$not_attempted 					= 0;
 		$content = '';
-		$isWriteExam = fasle;
+		$isWriteExam = false;
+		$count = 0;
+		$mark1 = 0;
+		$mark2 = 0;
+		$mark3 = 0;
+
 		if ($this->input->post('Finish') == 'Finish') {
 			foreach ($this->input->post() as $key=>$value) {
 				$useroptions[$key] 		= $value;	
@@ -175,10 +191,20 @@ class Exam extends MY_Controller {
 					if (intval($value) == 0) {
 						$not_attempted++;
 					}
-						
+					$count++;
 					if($answers[$key] == intval($value)){
 						$score++;
+						if($count <= 25){
+							$mark1++;
+						}
+						if($count > 25 && $count <= 50){
+							$mark2++;
+						}
+						if($count > 50){
+							$mark3++;
+						}
 					}
+
 				}
 				if ($key == 'content') {
 					$content = trim($value);
@@ -191,6 +217,15 @@ class Exam extends MY_Controller {
 			$this->data['answers'] 			= $answers;
 			$this->data['questions'] 		= $questions;
 			$this->data['user_options'] 	= $useroptions;
+
+			$where['id'] 				= $id;
+			$tempsession['user_options'] = serialize($useroptions);
+			$this->base_model->update_operation(
+				$tempsession,
+				$this->db->dbprefix('session'),
+				$where
+			);
+
 			$attempted 						= $totalQuestions-$not_attempted;
 			$wrongAnswers 					= $attempted-$score;
 			
@@ -205,7 +240,7 @@ class Exam extends MY_Controller {
 				$score 					-= $totalNegativeMark;
 				$this->data['negativeMark'] = $negativeMark;
 			}
-			//var_dump($content);die(1);
+
 			$this->data['content_exam'] 	= $content;
 			$this->data['attempted'] 	= $attempted;
 			$this->data['score'] 		= $score;
@@ -240,17 +275,27 @@ class Exam extends MY_Controller {
 				$data['username'] 			= $this->session->userdata('username');
 				$data['quiz_id'] 			= $quizinfo->quizid;
 				$data['score'] 				= $score;
+				$data['mark1'] 				= $mark1;
+				$data['mark2'] 				= $mark2;
+				$data['mark3'] 				= $mark3;
 				$data['total_questions'] 	= $totalQuestions;
 				$data['dateoftest'] 		= date('y-m-d');
 				$data['timeoftest'] 		= date('H:i');
 			//	var_dump($data);die(1);
+
 				//INSERT DATA INTO USER QUIZ RESULTS HISTORY
-				$this->base_model->insert_operation(
+				$id = $this->base_model->insert_operation_id(
 				$data, 
 				$this->db->dbprefix('user_quiz_results_history')
 				);
+				$quizID = 0;
+				if($quizinfo->quiztype == 'Write'){
+					$quizID = $quizinfo->quizid - 5;
+				}else{
+					$quizID = $quizinfo->quizid;
+				}
 				$where['userid'] 			= $userid;
-				$where['quiz_id'] 			= $quizinfo->quizid;
+				$where['quiz_id'] 			= $quizID;
 				$records = $this->base_model->fetch_records_from(
 				$this->db->dbprefix('user_quiz_results'), 
 				$where
@@ -264,6 +309,12 @@ class Exam extends MY_Controller {
 						$where['id'] 			= $records->id;
 						$data['approx_rank'] 	= "2000";
 						$data['total_attempts'] = $records->total_attempts + 1;
+						if($quizinfo->quiztype == 'Write'){
+							$data['score'] 				= $records->score;
+							$data['mark1'] 				= $records->mark1;
+							$data['mark2'] 				= $records->mark2;
+							$data['mark3'] 				= $records->mark3;
+						}
 						$this->base_model->update_operation(
 						$data,$this->db->dbprefix('user_quiz_results'), 
 						$where
@@ -274,6 +325,7 @@ class Exam extends MY_Controller {
 						unset($where);
 						$where['id'] 				= $records->id;
 						$tempdata['total_attempts'] = $records->total_attempts + 1;
+						$tempdata['content_exam'] = $content;
 						$this->base_model->update_operation(
 						$tempdata, 
 						$this->db->dbprefix('user_quiz_results'), 
@@ -298,10 +350,12 @@ class Exam extends MY_Controller {
 				." qr,".$this->db->dbprefix('users')." u where u.id=qr.userid 
 				and qr.quiz_id=".$quizinfo->quizid." ORDER BY qr.score DESC LIMIT 5"
 				);
+				$this->data['quiz_id'] 			= $quizinfo->quizid;
+				$this->data['quiz_type'] 			= $quizinfo->quiztype;
 				$this->data['previous_score'] 	= $records;
-				$this->data['mark1'] 		= 0;
-				$this->data['mark2'] 		= 0;
-				$this->data['mark3'] 		= 0;
+				$this->data['mark1'] 		= $mark1;
+				$this->data['mark2'] 		= $mark2;
+				$this->data['mark3'] 		= $mark3;
 				$this->data['active_menu'] 		= 'exams';
 				$this->data['title'] 			= 'Exam/Quiz Result';
 				$this->data['content'] 			= 'user/exam/quiz_results';

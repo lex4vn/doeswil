@@ -565,7 +565,7 @@ class User extends MY_Controller {
         ." c,".$this->db->dbprefix('subcategories')." s,  ".$this->db->dbprefix('quiz_for')." qf 
         where c.catid=q.catid AND s.subcatid=q.subcatid 
         AND (qf.groupid = ".$check_user_group[0]->group." and qf.quizid = q.quizid ) 
-        AND q.status='Active' AND q.enddate>='".$today."' group by q.quizid"
+        AND q.status='Active' AND q.quiztype = 'Free' AND q.enddate>='".$today."' group by q.quizid"
         );
         
         

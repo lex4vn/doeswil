@@ -6,7 +6,7 @@
       <ul>
          <li><a href="<?php echo base_url();?>user">Home</a></li>
          <li><img  src="<?php echo base_url();?>assets/designs/images/arrow.png"></li>
-         <li><a href="#"> Online Assessment Test <?php if(isset($quizName)) echo "(".$quizName.")";?></a></li>
+         <li><a href="#"> <?php if(isset($quizName)) echo "(".$quizName.")";?></a></li>
       </ul>
    </div>
 </div>
@@ -61,14 +61,18 @@
                   	$i++;
                   ?>
                <div id="<?php echo $q->subjectid."_".$i;?>"  class="display_question">
+                   <?php if($q->questiontype != 'Write'){ ?>
                   <div class="bradcome-menu qu-pa">
+
                      <div class="col-md-6"> <span class="question"> Question No. <?php echo $question_slno++; ?></span></div>
+
                   </div>
+                   <?php } ?>
                   <h4 class="quction"  > 
                      <?php echo $q->question;?> 
                   </h4>
                    <?php if($q->questiontype == 'Write'){ ?>
-                       <textarea class="editors" id="editorWrite" style="width: 100%;height:350px;" name="content" value="" placeholder="Enter Answer"></textarea>
+                       <textarea class="editors" id="editorWrite" style="width: 100%;height:350px;" name="content" placeholder="Enter Answer"></textarea>
                    <?php }else{ ?>
                   <table width="100%" border="0" class="answeers">
                      <input type="hidden" name="<?php echo $q->questionid;?>" value="0" id="" checked >
@@ -133,12 +137,14 @@
             <!--End Print questions here-->
          </div>
          <div class="col-md-12 padd  down-buttons">
+             <?php if($q->questiontype != 'Write'){ ?>
             <div class="col-md-8">
                <div id="prev" class="btn bg-primary down-bt">Previous</div>
-               <div id="mnext" class="btn bg-primary down-bt">Mark for Review & Next</div>
+               <div id="mnext" class="btn bg-primary down-bt">Keep Later</div>
                <div id="next" class="btn bg-primary down-bt">Next</div>
                <div id="clearAnswer" class="btn bg-primary down-bt">Clear Answer</div>
             </div>
+             <?php } ?>
             <div class="col-md-4">
                <input type="submit" id="finish" class="btn bg-primary down-bt finished" value="Finish" name="Finish" onclick="return confirm('Are you sure you want to submit the quiz?')"/>
                
@@ -162,6 +168,7 @@
                <small><?php echo $this->session->userdata('username');?></small>
             </div>
          </div>
+          <?php if($q->questiontype != 'Write'){ ?>
          <div class="col-md-12 padd g-awareness">
             <div class="awareness-view">
                <h4 class="awareness-view-hed">You are viewing  <?php if(isset($quizName)) echo $quizName; else echo "Online Assessment Mock Test";?> Section<br>
@@ -224,6 +231,7 @@
                </div>
             </div>
          </div>
+          <?php } ?>
       </div>
    </div>
 </div>
@@ -239,164 +247,7 @@
 <script src="<?php echo base_url();?>assets/designs/js/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="<?php echo base_url();?>assets/designs/js/bootstrap.min.js"></script>
-<!-- CK EDITOR -->
-<script src="<?php echo base_url();?>assets/designs/ckeditor.js"></script>
-<script>
 
-    $(function() {
-        $('.editors').each(function(){
-
-            CKEDITOR.replace($(this).attr('id'), {
-                /*
-                 * Ensure that htmlwriter plugin, which is required for this sample, is loaded.
-                 */
-                //extraPlugins: 'htmlwriter',
-
-                /*
-                 * Style sheet for the contents
-                 */
-                contentsCss: 'body {color:#000; background-color#:FFF;}',
-
-                /*
-                 * Simple HTML5 doctype
-                 */
-                docType: '<!DOCTYPE HTML>',
-
-                /*
-                 * Allowed content rules which beside limiting allowed HTML
-                 * will also take care of transforming styles to attributes
-                 * (currently only for img - see transformation rules defined below).
-                 *
-                 * Read more: http://docs.ckeditor.com/#!/guide/dev_advanced_content_filter
-                 */
-                allowedContent:
-                'h1 h2 h3 p pre[align]; ' +
-                'blockquote code kbd samp var del ins cite q b i u strike ul ol li hr table tbody tr td th caption; ' +
-                'img[!src,alt,align,width,height]; font[!face]; font[!family]; font[!color]; font[!size]; font{!background-color}; a[!href]; a[!name]',
-
-                /*
-                 * Core styles.
-                 */
-                coreStyles_bold: { element: 'b' },
-                coreStyles_italic: { element: 'i' },
-                coreStyles_underline: { element: 'u' },
-                coreStyles_strike: { element: 'strike' },
-
-                /*
-                 * Font face.
-                 */
-
-                // Define the way font elements will be applied to the document.
-                // The "font" element will be used.
-                font_style: {
-                    element: 'font',
-                    attributes: { 'face': '#(family)' }
-                },
-
-                /*
-                 * Font sizes.
-                 */
-                fontSize_sizes: 'xx-small/1;x-small/2;small/3;medium/4;large/5;x-large/6;xx-large/7',
-                fontSize_style: {
-                    element: 'font',
-                    attributes: { 'size': '#(size)' }
-                },
-
-                /*
-                 * Font colors.
-                 */
-
-                colorButton_foreStyle: {
-                    element: 'font',
-                    attributes: { 'color': '#(color)' }
-                },
-
-                colorButton_backStyle: {
-                    element: 'font',
-                    styles: { 'background-color': '#(color)' }
-                },
-
-                /*
-                 * Styles combo.
-                 */
-                stylesSet: [
-                    { name: 'Computer Code', element: 'code' },
-                    { name: 'Keyboard Phrase', element: 'kbd' },
-                    { name: 'Sample Text', element: 'samp' },
-                    { name: 'Variable', element: 'var' },
-                    { name: 'Deleted Text', element: 'del' },
-                    { name: 'Inserted Text', element: 'ins' },
-                    { name: 'Cited Work', element: 'cite' },
-                    { name: 'Inline Quotation', element: 'q' }
-                ],
-
-                on: {
-                    pluginsLoaded: configureTransformations,
-                    loaded: configureHtmlWriter
-                }
-            });
-        });
-
-
-
-    });
-
-    /*
-     * Add missing content transformations.
-     */
-    function configureTransformations( evt ) {
-        var editor = evt.editor;
-
-        editor.dataProcessor.htmlFilter.addRules( {
-            attributes: {
-                style: function( value, element ) {
-                    // Return #RGB for background and border colors
-                    return CKEDITOR.tools.convertRgbToHex( value );
-                }
-            }
-        } );
-
-        // Default automatic content transformations do not yet take care of
-        // align attributes on blocks, so we need to add our own transformation rules.
-        function alignToAttribute( element ) {
-            if ( element.styles[ 'text-align' ] ) {
-                element.attributes.align = element.styles[ 'text-align' ];
-                delete element.styles[ 'text-align' ];
-            }
-        }
-        editor.filter.addTransformations( [
-            [ { element: 'p',	right: alignToAttribute } ],
-            [ { element: 'h1',	right: alignToAttribute } ],
-            [ { element: 'h2',	right: alignToAttribute } ],
-            [ { element: 'h3',	right: alignToAttribute } ],
-            [ { element: 'pre',	right: alignToAttribute } ]
-        ] );
-    }
-
-    /*
-     * Adjust the behavior of htmlWriter to make it output HTML like FCKeditor.
-     */
-    function configureHtmlWriter( evt ) {
-        var editor = evt.editor,
-            dataProcessor = editor.dataProcessor;
-
-        // Out self closing tags the HTML4 way, like <br>.
-        dataProcessor.writer.selfClosingEnd = '>';
-
-        // Make output formatting behave similar to FCKeditor.
-        var dtd = CKEDITOR.dtd;
-        for ( var e in CKEDITOR.tools.extend( {}, dtd.$nonBodyContent, dtd.$block, dtd.$listItem, dtd.$tableContent ) ) {
-            dataProcessor.writer.setRules( e, {
-                indent: true,
-                breakBeforeOpen: true,
-                breakAfterOpen: false,
-                breakBeforeClose: !dtd[ e ][ '#' ],
-                breakAfterClose: true
-            });
-        }
-    }
-
-</script>
 <script>
 $(document).ready(function(){
  

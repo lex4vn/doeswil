@@ -74,8 +74,8 @@
 	<a href="<?php echo base_url();?>admin/activateUser/<?php echo $d->id;?>" onclick="return confirm('Are you sure you want to activate this user?')"><div class="btn bg-primary  exam-histry-btn">Activate User</div></a>
    
    <?php } ?>
-   
-  
+
+     <a href="<?php echo base_url();?>admin/viewQuizResults/<?php echo $d->id;?>"><div class="btn bg-primary  exam-histry-btn">View Quiz Result</div></a>
  </div>
  
  

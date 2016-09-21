@@ -2,42 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b51c947-b3f0-44d8-ab9c-76cdf3ec1b73" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/articles.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/guess.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/result.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/admin/articles/addArticle.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/admin/articles/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/articles/news.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/general/guess.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/general/result.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/controllers/admin/article1.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/controllers/admin/dashboard.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/controllers/admin/page.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/designs/images/wilmar.jpg" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/controllers/article.php" afterPath="$PROJECT_DIR$/application/controllers/article1.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/ion_auth.php" afterPath="$PROJECT_DIR$/application/config/ion_auth.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/admin.php" afterPath="$PROJECT_DIR$/application/controllers/admin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/auth.php" afterPath="$PROJECT_DIR$/application/controllers/auth.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/images.php" afterPath="$PROJECT_DIR$/application/controllers/images.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/info.php" afterPath="$PROJECT_DIR$/application/controllers/info.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/language/english/auth_lang.php" afterPath="$PROJECT_DIR$/application/language/english/auth_lang.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/language/english/general_lang.php" afterPath="$PROJECT_DIR$/application/language/english/general_lang.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/language/vietnamese/auth_lang.php" afterPath="$PROJECT_DIR$/application/language/vietnamese/auth_lang.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/language/vietnamese/general_lang.php" afterPath="$PROJECT_DIR$/application/language/vietnamese/general_lang.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/logs/log-2016-08-29.php" afterPath="$PROJECT_DIR$/application/logs/log-2016-08-29.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/auth/register.php" afterPath="$PROJECT_DIR$/application/views/auth/register.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/general/aboutprogram.php" afterPath="$PROJECT_DIR$/application/views/general/aboutprogram.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/general/aboutus.php" afterPath="$PROJECT_DIR$/application/views/general/aboutus.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/general/contactus.php" afterPath="$PROJECT_DIR$/application/views/general/contactus.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/general/images.php" afterPath="$PROJECT_DIR$/application/views/general/images.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/general/quick_links.php" afterPath="$PROJECT_DIR$/application/views/general/quick_links.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/general/quick_links_about.php" afterPath="$PROJECT_DIR$/application/views/general/quick_links_about.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/general/term.php" afterPath="$PROJECT_DIR$/application/views/general/term.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/general/video.php" afterPath="$PROJECT_DIR$/application/views/general/video.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/temp/adminleftmenu.php" afterPath="$PROJECT_DIR$/application/views/temp/adminleftmenu.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/temp/footer.php" afterPath="$PROJECT_DIR$/application/views/temp/footer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/temp/header.php" afterPath="$PROJECT_DIR$/application/views/temp/header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/exam.php" afterPath="$PROJECT_DIR$/application/controllers/exam.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/user.php" afterPath="$PROJECT_DIR$/application/controllers/user.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/quiz/addeditQuiz.php" afterPath="$PROJECT_DIR$/application/views/admin/quiz/addeditQuiz.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/quiz/quiz.php" afterPath="$PROJECT_DIR$/application/views/admin/quiz/quiz.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/view_user_profile.php" afterPath="$PROJECT_DIR$/application/views/admin/view_user_profile.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/general/index.php" afterPath="$PROJECT_DIR$/application/views/general/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user/exam/examinstructions.php" afterPath="$PROJECT_DIR$/application/views/user/exam/examinstructions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user/exam/exampage.php" afterPath="$PROJECT_DIR$/application/views/user/exam/exampage.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user/exam/quiz_results.php" afterPath="$PROJECT_DIR$/application/views/user/exam/quiz_results.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/designs/css/style.css" afterPath="$PROJECT_DIR$/assets/designs/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/update.sql" afterPath="$PROJECT_DIR$/db/update.sql" />
     </list>
     <ignored path="does.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -58,7 +35,113 @@
     <favorites_list name="does" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="view_quiz_results.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/admin/view_quiz_results.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.29198474">
+              <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="exam.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/exam.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="3.3076923">
+              <caret line="210" column="32" selection-start-line="210" selection-start-column="20" selection-end-line="210" selection-end-column="32" />
+              <folding>
+                <marker date="1474487084935" expanded="true" signature="2884:3059" placeholder="select q.*, ${$this-&gt;db-&gt;dbprefix('quiz')}" />
+                <marker date="1474487084935" expanded="true" signature="3680:3929" placeholder="select q.*,q... ${$this-&gt;db-&gt;dbprefix('quiz')}" />
+                <marker date="1474487084935" expanded="true" signature="4088:4294" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('questions')}" />
+                <marker date="1474487084935" expanded="true" signature="4396:4628" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('questions')}" />
+                <marker date="1474487084935" expanded="true" signature="6370:6428" placeholder="select * sub... ${$this-&gt;db-&gt;dbprefix('quiz')}" />
+                <marker date="1474487084935" expanded="true" signature="11784:11938" placeholder="select qr.*,... ${$this-&gt;db-&gt;dbprefix('user_quiz_results')}" />
+                <marker date="1474487084935" expanded="true" signature="11784:11990" placeholder="select qr.*,... ${$this-&gt;db-&gt;dbprefix('user_quiz_results')}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/admin.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.3207548">
+              <caret line="850" column="48" selection-start-line="850" selection-start-column="48" selection-end-line="850" selection-end-column="48" />
+              <folding>
+                <marker date="1474486895007" expanded="true" signature="1517:1635" placeholder="SELECT u.* F... users" />
+                <marker date="1474486895007" expanded="true" signature="1753:2050" placeholder="SELECT * FRO... *" />
+                <marker date="1474486895007" expanded="true" signature="1767:2009" placeholder="SELECT qh.*,... ${$this-&gt;db-&gt;dbprefix('user_quiz_results_history')}" />
+                <marker date="1474486895007" expanded="true" signature="2136:2397" placeholder="select qr.*,... ${$this-&gt;db-&gt;dbprefix('user_quiz_results')}" />
+                <marker date="1474486895007" expanded="true" signature="2476:2558" placeholder="select * fro... ${$table}" />
+                <marker date="1474486895007" expanded="true" signature="2620:2702" placeholder="select * fro... ${$table}" />
+                <marker date="1474486895007" expanded="true" signature="2900:3102" placeholder="SELECT q.nam... ${$this-&gt;db-&gt;dbprefix('user_quiz_results')}" />
+                <marker date="1474486895007" expanded="true" signature="3178:3355" placeholder="SELECT s.qui... ${$this-&gt;db-&gt;dbprefix('quizsubscriptions')}" />
+                <marker date="1474486895007" expanded="true" signature="3845:3955" placeholder="SELECT u.* F... users" />
+                <marker date="1474486895007" expanded="true" signature="4943:5039" placeholder="SELECT u.* F... users" />
+                <marker date="1474486895007" expanded="true" signature="17927:18078" placeholder="select qr.*,... ${$this-&gt;db-&gt;dbprefix('user_quiz_results')}" />
+                <marker date="1474486895007" expanded="true" signature="19148:19417" placeholder="select qh.*,... ${$this-&gt;db-&gt;dbprefix('user_quiz_results_history')}" />
+                <marker date="1474486895007" expanded="true" signature="22436:22520" placeholder="select image... ${$this-&gt;db-&gt;dbprefix('users')}" />
+                <marker date="1474486895007" expanded="true" signature="26078:26121" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('categories')}" />
+                <marker date="1474486895007" expanded="true" signature="26078:26164" placeholder="select * fro... ${$table}" />
+                <marker date="1474486895007" expanded="true" signature="28815:28883" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('categories')}" />
+                <marker date="1474486895007" expanded="true" signature="30017:30161" placeholder="select s.*,c... ${$this-&gt;db-&gt;dbprefix('subcategories')}" />
+                <marker date="1474486895007" expanded="true" signature="31437:31511" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('subcategories')}" />
+                <marker date="1474486895007" expanded="true" signature="34211:34281" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('subjects')}" />
+                <marker date="1474486895007" expanded="true" signature="35226:35240" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('subjects')}" />
+                <marker date="1474486895007" expanded="true" signature="36410:36586" placeholder="select q.*,s... ${$this-&gt;db-&gt;dbprefix('questions')}" />
+                <marker date="1474486895007" expanded="true" signature="37129:37283" placeholder="select q.*,s... ${$this-&gt;db-&gt;dbprefix('questions')}" />
+                <marker date="1474486895007" expanded="true" signature="37372:37524" placeholder="select q.*,s... ${$this-&gt;db-&gt;dbprefix('questions')}" />
+                <marker date="1474486895007" expanded="true" signature="40787:40859" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('questions')}" />
+                <marker date="1474486895007" expanded="true" signature="43368:43596" placeholder="select q.*,c... ${$this-&gt;db-&gt;dbprefix('quiz')}" />
+                <marker date="1474486895007" expanded="true" signature="49563:49806" placeholder="select q.*,c... ${$this-&gt;db-&gt;dbprefix('quiz')}" />
+                <marker date="1474486895007" expanded="true" signature="49908:50086" placeholder="select qq.*,... ${$this-&gt;db-&gt;dbprefix('quizquestions')}" />
+                <marker date="1474486895007" expanded="true" signature="50168:50210" placeholder="SELECT group... quiz_for" />
+                <marker date="1474486895007" expanded="true" signature="53060:53142" placeholder="select subca... ${$this-&gt;db-&gt;dbprefix('subcategories')}" />
+                <marker date="1474486895007" expanded="true" signature="55614:55683" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('notifications')}" />
+                <marker date="1474486895007" expanded="true" signature="57962:58087" placeholder="select autho... ${$this-&gt;db-&gt;dbprefix('testimonials')}" />
+                <marker date="1474486895007" expanded="true" signature="59370:59438" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('testimonials')}" />
+                <marker date="1474486895007" expanded="true" signature="62176:62234" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('general_settings')}" />
+                <marker date="1474486895007" expanded="true" signature="62763:62821" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('general_settings')}" />
+                <marker date="1474486895007" expanded="true" signature="63179:63237" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('general_settings')}" />
+                <marker date="1474486895007" expanded="true" signature="64874:64932" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('general_settings')}" />
+                <marker date="1474486895007" expanded="true" signature="66361:66416" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('email_setting')}" />
+                <marker date="1474486895007" expanded="true" signature="70447:70538" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('pages')}" />
+                <marker date="1474486895007" expanded="true" signature="70605:70693" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('pages')}" />
+                <marker date="1474486895007" expanded="true" signature="72226:72322" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('pages')}" />
+                <marker date="1474486895007" expanded="true" signature="72389:72482" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('pages')}" />
+                <marker date="1474486895007" expanded="true" signature="73981:74069" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('pages')}" />
+                <marker date="1474486895007" expanded="true" signature="74135:74220" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('pages')}" />
+                <marker date="1474486895007" expanded="true" signature="75118:75175" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('aboutus_content')}" />
+                <marker date="1474486895007" expanded="true" signature="76083:76140" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('aboutus_content')}" />
+                <marker date="1474486895007" expanded="true" signature="76893:77020" placeholder="select count... questions" />
+                <marker date="1474486895007" expanded="true" signature="78481:78581" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix($table)}" />
+                <marker date="1474486895007" expanded="true" signature="79718:79766" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('paypal')}" />
+                <marker date="1474486895007" expanded="true" signature="80773:81085" placeholder="SELECT s.use... ${$this-&gt;db-&gt;dbprefix('quiz')}" />
+                <marker date="1474486895007" expanded="true" signature="83963:84032" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('group_settings')}" />
+                <marker date="1474486895007" expanded="true" signature="88134:88244" placeholder="SELECT u.* F... users" />
+                <marker date="1474486895007" expanded="true" signature="91658:91689" placeholder="SELECT * FRO... user_quiz_results" />
+                <marker date="1474486895007" expanded="true" signature="93325:93347" placeholder="SELECT * FRO... articles" />
+                <marker date="1474486895007" expanded="true" signature="96534:96601" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('articles')}" />
+                <marker date="1474486895007" expanded="true" signature="96692:96818" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('articles_description')}" />
+                <marker date="1474486895007" expanded="true" signature="96884:97010" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('articles_description')}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="view_user_profile.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/admin/view_user_profile.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-50.346153">
+              <caret line="77" column="143" selection-start-line="77" selection-start-column="143" selection-end-line="77" selection-end-column="143" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -66,57 +149,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/application/views/auth/email/forgot_password.tpl.php" />
-        <option value="$PROJECT_DIR$/application/views/auth/email/new_password.tpl.php" />
-        <option value="$PROJECT_DIR$/install/index.php" />
-        <option value="$PROJECT_DIR$/application/views/temp/adminheader.php" />
-        <option value="$PROJECT_DIR$/application/views/temp/moderatorheader.php" />
-        <option value="$PROJECT_DIR$/application/views/temp/userheader.php" />
-        <option value="$PROJECT_DIR$/application/logs/log-2016-08-28.php" />
-        <option value="$PROJECT_DIR$/application/third_party/PHPExcel/PHPExcel.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/view_all_users.php" />
-        <option value="$PROJECT_DIR$/application/views/general/index.php" />
-        <option value="$PROJECT_DIR$/application/models/base_model.php" />
-        <option value="$PROJECT_DIR$/system/database/drivers/mysql/mysql_driver.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/content/term.php" />
-        <option value="$PROJECT_DIR$/application/controllers/about.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/content/aboutus.php" />
-        <option value="$PROJECT_DIR$/application/controllers/aboutus.php" />
-        <option value="$PROJECT_DIR$/assets/designs/css/front-style.css" />
-        <option value="$PROJECT_DIR$/application/views/admin/content/aboutusprogram.php" />
-        <option value="$PROJECT_DIR$/application/controllers/aboutprogram.php" />
-        <option value="$PROJECT_DIR$/application/views/general/term.php" />
-        <option value="$PROJECT_DIR$/application/views/general/contactus.php" />
-        <option value="$PROJECT_DIR$/application/views/general/aboutus.php" />
-        <option value="$PROJECT_DIR$/application/views/general/aboutprogram.php" />
-        <option value="$PROJECT_DIR$/application/controllers/article.php" />
-        <option value="$PROJECT_DIR$/application/views/temp/footer.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/articles/articles.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/articles/index.php" />
-        <option value="$PROJECT_DIR$/application/views/temp/adminleftmenu.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/articles/addArticle.php" />
-        <option value="$PROJECT_DIR$/application/views/temp/header.php" />
-        <option value="$PROJECT_DIR$/application/views/articles/news.php" />
-        <option value="$PROJECT_DIR$/application/controllers/articles.php" />
-        <option value="$PROJECT_DIR$/application/controllers/images.php" />
-        <option value="$PROJECT_DIR$/application/views/general/images.php" />
-        <option value="$PROJECT_DIR$/application/config/ion_auth.php" />
-        <option value="$PROJECT_DIR$/application/views/general/result.php" />
         <option value="$PROJECT_DIR$/application/controllers/result.php" />
         <option value="$PROJECT_DIR$/application/views/general/quick_links.php" />
         <option value="$PROJECT_DIR$/application/views/general/quick_links_about.php" />
         <option value="$PROJECT_DIR$/application/views/general/guess.php" />
         <option value="$PROJECT_DIR$/application/controllers/guess.php" />
-        <option value="$PROJECT_DIR$/application/language/english/general_lang.php" />
-        <option value="$PROJECT_DIR$/application/language/vietnamese/general_lang.php" />
-        <option value="$PROJECT_DIR$/application/views/general/video.php" />
-        <option value="$PROJECT_DIR$/application/controllers/admin.php" />
         <option value="$PROJECT_DIR$/application/controllers/info.php" />
         <option value="$PROJECT_DIR$/application/language/english/auth_lang.php" />
         <option value="$PROJECT_DIR$/application/language/vietnamese/auth_lang.php" />
         <option value="$PROJECT_DIR$/application/logs/log-2016-08-30.php" />
-        <option value="$PROJECT_DIR$/application/controllers/auth.php" />
         <option value="$PROJECT_DIR$/application/views/auth/register.php" />
+        <option value="$PROJECT_DIR$/application/views/general/contactus.php" />
+        <option value="$PROJECT_DIR$/application/language/english/general_lang.php" />
+        <option value="$PROJECT_DIR$/application/language/vietnamese/general_lang.php" />
+        <option value="$PROJECT_DIR$/application/views/auth/email/activate.tpl.php" />
+        <option value="$PROJECT_DIR$/application/views/general/video.php" />
+        <option value="$PROJECT_DIR$/application/logs/log-2016-09-07.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/articles/addArticle.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/articles/index.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/articles/article.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/articles/addeditArticle.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/application/logs/log-2016-09-08.php" />
+        <option value="$PROJECT_DIR$/application/controllers/articles.php" />
+        <option value="$PROJECT_DIR$/application/views/articles/news.php" />
+        <option value="$PROJECT_DIR$/application/views/articles/details.php" />
+        <option value="$PROJECT_DIR$/application/logs/log-2016-09-09.php" />
+        <option value="$PROJECT_DIR$/application/logs/log-2016-09-10.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/content/aboutus.php" />
+        <option value="$PROJECT_DIR$/application/logs/log-2016-09-12.php" />
+        <option value="$PROJECT_DIR$/application/core/MY_Controller.php" />
+        <option value="$PROJECT_DIR$/system/libraries/Session.php" />
+        <option value="$PROJECT_DIR$/application/models/base_model.php" />
+        <option value="$PROJECT_DIR$/application/views/user/exam/quizzes.php" />
+        <option value="$PROJECT_DIR$/application/logs/log-2016-09-13.php" />
+        <option value="$PROJECT_DIR$/application/controllers/auth.php" />
+        <option value="$PROJECT_DIR$/application/views/user/index.php" />
+        <option value="$PROJECT_DIR$/application/views/temp/userleftmenu.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/questions/addeditQuestions.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/quiz/addeditQuiz.php" />
+        <option value="$PROJECT_DIR$/application/controllers/user.php" />
+        <option value="$PROJECT_DIR$/application/views/user/exam/examinstructions.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/quiz/quiz.php" />
+        <option value="$PROJECT_DIR$/application/views/user/exam/exampage.php" />
+        <option value="$PROJECT_DIR$/application/views/general/index.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/view_user_profile.php" />
+        <option value="$PROJECT_DIR$/application/views/user/exam/quiz_results.php" />
+        <option value="$PROJECT_DIR$/application/logs/log-2016-09-21.php" />
+        <option value="$PROJECT_DIR$/application/controllers/admin.php" />
+        <option value="$PROJECT_DIR$/assets/designs/css/style.css" />
+        <option value="$PROJECT_DIR$/application/controllers/exam.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/view_quiz_results.php" />
       </list>
     </option>
   </component>
@@ -160,8 +243,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -252,7 +333,77 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exam" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="does" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="doeswil" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="general" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="does" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="doeswil" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="auth" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="does" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="doeswil" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -288,106 +439,44 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="logs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="does" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="doeswil" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="language" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="does" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="doeswil" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="language" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vietnamese" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="does" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="doeswil" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="language" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="english" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="does" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="doeswil" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../api" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../phimvn" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="143" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="172" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="173" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="848" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="166" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="164" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="166" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="840" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\doeswil\application\views\admin" />
+      <recent name="C:\xampp\htdocs\doeswil\application\views\articles" />
+      <recent name="C:\xampp\htdocs\doeswil\application\views\admin\article" />
       <recent name="C:\xampp\htdocs\doeswil\application\controllers" />
       <recent name="C:\xampp\htdocs\doeswil\application\views\general" />
-      <recent name="C:\xampp\htdocs\doeswil\application\views\admin\articles" />
-      <recent name="C:\xampp\htdocs\doeswil\application\views\admin\content" />
-      <recent name="C:\xampp\htdocs\doeswil\application\third_party\PHPExcel" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\doeswil\application\third_party" />
@@ -435,23 +524,42 @@
       <option name="number" value="Default" />
       <updated>1470423217780</updated>
     </task>
+    <task id="LOCAL-00001" summary="fix excel column">
+      <created>1473358090150</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1473358090150</updated>
+    </task>
+    <task id="LOCAL-00002" summary="article">
+      <created>1473740400071</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1473740400071</updated>
+    </task>
+    <task id="LOCAL-00003" summary="article">
+      <created>1473740424914</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1473740424914</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22547585" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25402635" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2933754" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329429" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3422713" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -464,6 +572,13 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="fix excel column" />
+    <MESSAGE value="article" />
+    <option name="LAST_COMMIT_MESSAGE" value="article" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -480,7 +595,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/controllers/auth.php</url>
-          <line>985</line>
+          <line>989</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -493,170 +608,42 @@
           <line>31</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/application/controllers/auth.php</url>
+          <line>54</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="12" />
+      <option name="time" value="13" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/controllers/aboutprogram.php">
+    <entry file="file://$PROJECT_DIR$/application/config/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.346153">
-          <caret line="40" column="50" selection-start-line="40" selection-start-column="50" selection-end-line="40" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/term.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.884615">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="43" selection-end-column="58" />
-          <folding>
-            <marker date="1471864807325" expanded="true" signature="1461:1550" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('pages')}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/general/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-35.73077">
-          <caret line="137" column="16" selection-start-line="137" selection-start-column="16" selection-end-line="137" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/general/contactus.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.3076923">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/article1.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.576923">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/temp/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.056603">
-          <caret line="39" column="45" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/questions/questionsindex.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.9615384">
-          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="46" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/quiz/quiz.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.153846">
-          <caret line="41" column="9" selection-start-line="33" selection-start-column="3" selection-end-line="41" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/articles/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.8867924">
-          <caret line="48" column="66" selection-start-line="48" selection-start-column="56" selection-end-line="48" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/content/aboutprogram.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.55135137">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="369" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/content/aboutus.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.045945946">
-          <caret line="148" column="18" selection-start-line="44" selection-start-column="12" selection-end-line="148" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/articles/addArticle.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36756757">
-          <caret line="155" column="0" selection-start-line="155" selection-start-column="0" selection-end-line="155" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/temp/adminleftmenu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45945945">
-          <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/aboutus.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7054054">
-          <caret line="44" column="2" selection-start-line="44" selection-start-column="2" selection-end-line="44" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/general/aboutprogram.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.64324325">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/temp/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.5384617">
-          <caret line="64" column="156" selection-start-line="64" selection-start-column="156" selection-end-line="64" selection-end-column="156" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/general/aboutus.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="9.153846">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/video.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="27.461538">
+        <state vertical-scroll-proportion="408.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1471864807328" expanded="true" signature="2076:2255" placeholder="select quizi... ${$table}" />
-            <marker date="1471864807328" expanded="true" signature="2393:2509" placeholder="select * fro... ${$table}" />
-            <marker date="1471864807328" expanded="true" signature="2644:2713" placeholder="select * fro... ${$table}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/images.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.5">
-          <caret line="40" column="42" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/general/images.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.769231">
-          <caret line="27" column="46" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/config/constants.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="41.03846">
+        <state vertical-scroll-proportion="33.923077">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/user_agents.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.115385">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.8172414">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -664,7 +651,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/foreign_chars.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -672,204 +665,212 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/general/result.php">
+    <entry file="file://$PROJECT_DIR$/system/core/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="43" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
-          <folding />
+        <state vertical-scroll-proportion="-0.055172414">
+          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/result.php">
+    <entry file="file://$PROJECT_DIR$/application/config/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="40.46154">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/guess.php">
+    <entry file="file://$PROJECT_DIR$/application/config/ion_auth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.73077">
+          <caret line="204" column="42" selection-start-line="204" selection-start-column="34" selection-end-line="204" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0034482758">
+          <caret line="647" column="9" selection-start-line="647" selection-start-column="9" selection-end-line="647" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/testimonials/testimonials.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.3076923">
+          <caret line="76" column="75" selection-start-line="76" selection-start-column="75" selection-end-line="76" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/testimonials/addeditTestimonials.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5017241">
+          <caret line="27" column="148" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="148" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8344827">
+          <caret line="403" column="46" selection-start-line="403" selection-start-column="46" selection-end-line="403" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/articles/addeditArticle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4942748">
+          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/articles/article.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5862069">
-          <caret line="20" column="48" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
-          <folding />
+          <caret line="80" column="121" selection-start-line="80" selection-start-column="109" selection-end-line="80" selection-end-column="121" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/general/guess.php">
+    <entry file="file://$PROJECT_DIR$/application/controllers/articles.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47241378">
-          <caret line="28" column="36" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/general/quick_links_about.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20862068">
-          <caret line="11" column="65" selection-start-line="11" selection-start-column="65" selection-end-line="11" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/general/quick_links.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11724138">
-          <caret line="4" column="65" selection-start-line="4" selection-start-column="65" selection-end-line="4" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/general/term.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3810345">
-          <caret line="14" column="55" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/general/video.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7034483">
-          <caret line="30" column="62" selection-start-line="30" selection-start-column="62" selection-end-line="30" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/language/vietnamese/general_lang.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8534483">
-          <caret line="48" column="46" selection-start-line="48" selection-start-column="46" selection-end-line="48" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/language/english/general_lang.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8241379">
-          <caret line="49" column="21" selection-start-line="49" selection-start-column="7" selection-end-line="49" selection-end-column="21" />
-          <folding />
+        <state vertical-scroll-proportion="-16.346153">
+          <caret line="25" column="24" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/articles/news.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9086207">
-          <caret line="31" column="41" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
-          <folding />
+        <state vertical-scroll-proportion="-11.769231">
+          <caret line="27" column="62" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="62" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/general/article.php">
+    <entry file="file://$PROJECT_DIR$/application/views/articles/details.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.115385">
+          <caret line="33" column="14" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/user/exam/performance.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/info.php">
+    <entry file="file://$PROJECT_DIR$/application/views/admin/content/aboutus.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5275862">
-          <caret line="155" column="72" selection-start-line="155" selection-start-column="72" selection-end-line="155" selection-end-column="72" />
+        <state vertical-scroll-proportion="-5.8">
+          <caret line="323" column="9" selection-start-line="166" selection-start-column="0" selection-end-line="323" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/core/MY_Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-35.307693">
+          <caret line="58" column="21" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
           <folding>
-            <marker date="1472529951298" expanded="true" signature="2073:2252" placeholder="select quizi... ${$table}" />
-            <marker date="1472529951298" expanded="true" signature="2390:2506" placeholder="select * fro... ${$table}" />
-            <marker date="1472529951298" expanded="true" signature="2641:2710" placeholder="select * fro... ${$table}" />
-            <marker date="1472529951298" expanded="true" signature="4698:4741" placeholder="select conta... general_settings" />
-            <marker date="1472529951298" expanded="true" signature="7066:7122" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('aboutus_content')}" />
-            <marker date="1472529951298" expanded="true" signature="7066:7123" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('aboutus_content')}" />
+            <marker date="1473740828912" expanded="true" signature="5421:5615" placeholder="..." />
+            <marker date="1473740828912" expanded="true" signature="5465:5599" placeholder="..." />
+            <marker date="1473740828912" expanded="true" signature="5678:5869" placeholder="..." />
+            <marker date="1473740828912" expanded="true" signature="5721:5853" placeholder="..." />
+            <marker date="1473740828912" expanded="true" signature="5932:6120" placeholder="..." />
+            <marker date="1473740828912" expanded="true" signature="5973:6104" placeholder="..." />
+            <marker date="1473740828912" expanded="true" signature="6183:6377" placeholder="..." />
+            <marker date="1473740828912" expanded="true" signature="6227:6361" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/system/helpers/form_helper.php">
+    <entry file="file://$PROJECT_DIR$/system/libraries/Session.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34827587">
-          <caret line="1794" column="13" selection-start-line="1794" selection-start-column="13" selection-end-line="1794" selection-end-column="13" />
-          <folding>
-            <marker date="1471864812519" expanded="true" signature="2175:2187" placeholder="..." />
-          </folding>
+        <state vertical-scroll-proportion="1.0706521">
+          <caret line="818" column="5" selection-start-line="818" selection-start-column="4" selection-end-line="818" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/admin.php">
+    <entry file="file://$PROJECT_DIR$/application/views/temp/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="80.51724">
-          <caret line="2764" column="76" selection-start-line="2764" selection-start-column="76" selection-end-line="2764" selection-end-column="76" />
-          <folding>
-            <marker date="1472528554087" expanded="true" signature="1517:1635" placeholder="SELECT u.* F... users" />
-            <marker date="1472528554087" expanded="true" signature="1753:2050" placeholder="SELECT * FRO... *" />
-            <marker date="1472528554087" expanded="true" signature="1767:2009" placeholder="SELECT qh.*,... ${$this-&gt;db-&gt;dbprefix('user_quiz_results_history')}" />
-            <marker date="1472528554087" expanded="true" signature="2136:2397" placeholder="select qr.*,... ${$this-&gt;db-&gt;dbprefix('user_quiz_results')}" />
-            <marker date="1472528554087" expanded="true" signature="2476:2558" placeholder="select * fro... ${$table}" />
-            <marker date="1472528554087" expanded="true" signature="2620:2702" placeholder="select * fro... ${$table}" />
-            <marker date="1472528554087" expanded="true" signature="2900:3102" placeholder="SELECT q.nam... ${$this-&gt;db-&gt;dbprefix('user_quiz_results')}" />
-            <marker date="1472528554087" expanded="true" signature="3178:3355" placeholder="SELECT s.qui... ${$this-&gt;db-&gt;dbprefix('quizsubscriptions')}" />
-            <marker date="1472528554087" expanded="true" signature="3845:3955" placeholder="SELECT u.* F... users" />
-            <marker date="1472528554087" expanded="true" signature="4943:5039" placeholder="SELECT u.* F... users" />
-            <marker date="1472528554087" expanded="true" signature="17927:18078" placeholder="select qr.*,... ${$this-&gt;db-&gt;dbprefix('user_quiz_results')}" />
-            <marker date="1472528554087" expanded="true" signature="19148:19417" placeholder="select qh.*,... ${$this-&gt;db-&gt;dbprefix('user_quiz_results_history')}" />
-            <marker date="1472528554087" expanded="true" signature="22436:22520" placeholder="select image... ${$this-&gt;db-&gt;dbprefix('users')}" />
-            <marker date="1472528554087" expanded="true" signature="27524:27592" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('categories')}" />
-            <marker date="1472528554087" expanded="true" signature="28726:28870" placeholder="select s.*,c... ${$this-&gt;db-&gt;dbprefix('subcategories')}" />
-            <marker date="1472528554087" expanded="true" signature="30146:30220" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('subcategories')}" />
-            <marker date="1472528554087" expanded="true" signature="32920:32990" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('subjects')}" />
-            <marker date="1472528554087" expanded="true" signature="33935:33949" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('subjects')}" />
-            <marker date="1472528554087" expanded="true" signature="35119:35295" placeholder="select q.*,s... ${$this-&gt;db-&gt;dbprefix('questions')}" />
-            <marker date="1472528554087" expanded="true" signature="35838:35992" placeholder="select q.*,s... ${$this-&gt;db-&gt;dbprefix('questions')}" />
-            <marker date="1472528554087" expanded="true" signature="36081:36233" placeholder="select q.*,s... ${$this-&gt;db-&gt;dbprefix('questions')}" />
-            <marker date="1472528554087" expanded="true" signature="39444:39516" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('questions')}" />
-            <marker date="1472528554087" expanded="true" signature="41919:42147" placeholder="select q.*,c... ${$this-&gt;db-&gt;dbprefix('quiz')}" />
-            <marker date="1472528554087" expanded="true" signature="48114:48357" placeholder="select q.*,c... ${$this-&gt;db-&gt;dbprefix('quiz')}" />
-            <marker date="1472528554087" expanded="true" signature="48459:48637" placeholder="select qq.*,... ${$this-&gt;db-&gt;dbprefix('quizquestions')}" />
-            <marker date="1472528554087" expanded="true" signature="48719:48761" placeholder="SELECT group... quiz_for" />
-            <marker date="1472528554087" expanded="true" signature="51611:51693" placeholder="select subca... ${$this-&gt;db-&gt;dbprefix('subcategories')}" />
-            <marker date="1472528554087" expanded="true" signature="54165:54234" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('notifications')}" />
-            <marker date="1472528554087" expanded="true" signature="56513:56638" placeholder="select autho... ${$this-&gt;db-&gt;dbprefix('testimonials')}" />
-            <marker date="1472528554087" expanded="true" signature="57921:57989" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('testimonials')}" />
-            <marker date="1472528554087" expanded="true" signature="60727:60785" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('general_settings')}" />
-            <marker date="1472528554087" expanded="true" signature="61314:61372" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('general_settings')}" />
-            <marker date="1472528554087" expanded="true" signature="61730:61788" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('general_settings')}" />
-            <marker date="1472528554087" expanded="true" signature="63425:63483" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('general_settings')}" />
-            <marker date="1472528554087" expanded="true" signature="64912:64967" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('email_setting')}" />
-            <marker date="1472528554087" expanded="true" signature="68998:69089" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('pages')}" />
-            <marker date="1472528554087" expanded="true" signature="69156:69244" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('pages')}" />
-            <marker date="1472528554087" expanded="true" signature="70777:70873" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('pages')}" />
-            <marker date="1472528554087" expanded="true" signature="70940:71033" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('pages')}" />
-            <marker date="1472528554087" expanded="true" signature="72532:72598" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('pages')}" />
-            <marker date="1472528554087" expanded="true" signature="72532:72602" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('pages')}" />
-            <marker date="1472528554087" expanded="true" signature="72532:72620" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('pages')}" />
-            <marker date="1472528554087" expanded="true" signature="72532:72621" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('aboutus_content')}" />
-            <marker date="1472528554087" expanded="true" signature="72686:72771" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('pages')}" />
-            <marker date="1472528554087" expanded="true" signature="73669:73726" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('aboutus_content')}" />
-            <marker date="1472528554087" expanded="true" signature="74634:74691" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('aboutus_content')}" />
-            <marker date="1472528554087" expanded="true" signature="75444:75619" placeholder="select count... questions" />
-            <marker date="1472528554087" expanded="true" signature="77080:77180" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix($table)}" />
-            <marker date="1472528554087" expanded="true" signature="78317:78365" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('paypal')}" />
-            <marker date="1472528554087" expanded="true" signature="79372:79684" placeholder="SELECT s.use... ${$this-&gt;db-&gt;dbprefix('quiz')}" />
-            <marker date="1472528554087" expanded="true" signature="82562:82631" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('group_settings')}" />
-            <marker date="1472528554087" expanded="true" signature="86733:86843" placeholder="SELECT u.* F... users" />
-            <marker date="1472528554087" expanded="true" signature="89743:89782" placeholder="SELECT u.* F... users" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.05263158">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/logs/log-2016-09-13.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="194" column="0" selection-start-line="194" selection-start-column="0" selection-end-line="194" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/user/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="40" column="57" selection-start-line="40" selection-start-column="57" selection-end-line="40" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/temp/userleftmenu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6153846">
+          <caret line="4" column="161" selection-start-line="4" selection-start-column="161" selection-end-line="4" selection-end-column="161" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/questions/addeditQuestions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.73002756">
+          <caret line="145" column="66" selection-start-line="145" selection-start-column="66" selection-end-line="145" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/user/exam/quizzes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.8461537">
+          <caret line="325" column="116" selection-start-line="325" selection-start-column="27" selection-end-line="325" selection-end-column="116" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/config.php">
+    <entry file="file://$PROJECT_DIR$/application/models/base_model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.05263158">
+        <state vertical-scroll-proportion="-4.5454545">
+          <caret line="54" column="32" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/user/exam/examinstructions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.807693">
+          <caret line="63" column="21" selection-start-line="63" selection-start-column="21" selection-end-line="63" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/quiz/addeditQuiz.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-22.961538">
+          <caret line="449" column="82" selection-start-line="449" selection-start-column="82" selection-end-line="449" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/quiz/quiz.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.045208">
+          <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/auth/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5862069">
+          <caret line="23" column="65" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/auth/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -877,87 +878,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/ion_auth_model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.8683543">
-          <caret line="857" column="38" selection-start-line="857" selection-start-column="38" selection-end-line="857" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/date_c.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.3846154">
-          <caret line="296" column="6" selection-start-line="296" selection-start-column="6" selection-end-line="296" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/language/vietnamese/auth_lang.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3076923">
-          <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/logs/log-2016-08-30.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/libraries/Ion_auth.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35532996">
-          <caret line="413" column="120" selection-start-line="413" selection-start-column="120" selection-end-line="413" selection-end-column="120" />
-          <folding>
-            <marker date="1471864807350" expanded="true" signature="2210:2273" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('email_setting')}" />
-            <marker date="1471864807350" expanded="true" signature="4582:4710" placeholder="SELECT site_... ${$this-&gt;db-&gt;dbprefix('general_settings')}" />
-            <marker date="1471864807350" expanded="true" signature="6852:6980" placeholder="SELECT site_... ${$this-&gt;db-&gt;dbprefix('general_settings')}" />
-            <marker date="1471864807350" expanded="true" signature="11011:11139" placeholder="SELECT site_... ${$this-&gt;db-&gt;dbprefix('general_settings')}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/auth/register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.6">
-          <caret line="44" column="45" selection-start-line="44" selection-start-column="45" selection-end-line="44" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/ion_auth.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-67.46154">
-          <caret line="204" column="42" selection-start-line="204" selection-start-column="34" selection-end-line="204" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/language/english/ion_auth_lang.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.8121827">
-          <caret line="34" column="7" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/language/english/auth_lang.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10684931">
-          <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="84" />
+        <state vertical-scroll-proportion="0.24528302">
+          <caret line="268" column="0" selection-start-line="268" selection-start-column="0" selection-end-line="291" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/auth.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.6834319">
-          <caret line="580" column="43" selection-start-line="580" selection-start-column="31" selection-end-line="580" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.9083558">
+          <caret line="50" column="9" selection-start-line="50" selection-start-column="9" selection-end-line="50" selection-end-column="9" />
           <folding>
-            <element signature="n#login#0;n#Auth#0;n#!!top" expanded="false" />
             <element signature="n#logout#0;n#Auth#0;n#!!top" expanded="false" />
             <element signature="n#change_password#0;n#Auth#0;n#!!top" expanded="false" />
             <element signature="n#forgot_password#0;n#Auth#0;n#!!top" expanded="false" />
@@ -965,19 +896,245 @@
             <element signature="n#activate#0;n#Auth#0;n#!!top" expanded="false" />
             <element signature="n#deactivate#0;n#Auth#0;n#!!top" expanded="false" />
             <element signature="n#_image_check#0;n#Auth#0;n#!!top" expanded="false" />
-            <marker date="1472552685048" expanded="true" signature="3087:3117" placeholder="select * FRO... users" />
+            <marker date="1473931315687" expanded="true" signature="3087:3117" placeholder="select * FRO... users" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/articles.php">
+    <entry file="file://$PROJECT_DIR$/application/controllers/user.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48477158">
-          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.045822103">
+          <caret line="567" column="52" selection-start-line="567" selection-start-column="52" selection-end-line="567" selection-end-column="52" />
           <folding>
-            <marker date="1472470113867" expanded="true" signature="530:747" placeholder="select * fro... ${$table}" />
-            <marker date="1472470113867" expanded="true" signature="530:807" placeholder="select id,ti... ${$table}" />
+            <element signature="e#5134#8209#0#PHP" expanded="false" />
+            <marker date="1474444670062" expanded="true" signature="1565:1750" placeholder="select qr.*,... ${$this-&gt;db-&gt;dbprefix('user_quiz_results')}" />
+            <marker date="1474444670062" expanded="true" signature="2661:2919" placeholder="select qr.*,... ${$this-&gt;db-&gt;dbprefix('user_quiz_results')}" />
+            <marker date="1474444670062" expanded="true" signature="3009:3304" placeholder="SELECT * FRO... *" />
+            <marker date="1474444670062" expanded="true" signature="3024:3266" placeholder="SELECT qh.*,... ${$this-&gt;db-&gt;dbprefix('user_quiz_results_history')}" />
+            <marker date="1474444670062" expanded="true" signature="6449:6530" placeholder="select image... ${$this-&gt;db-&gt;dbprefix('users')}" />
+            <marker date="1474444670062" expanded="true" signature="8362:8445" placeholder="select subca... ${$this-&gt;db-&gt;dbprefix('subcategories')}" />
+            <marker date="1474444670062" expanded="true" signature="8566:8606" placeholder="SELECT quizz... general_settings" />
+            <marker date="1474444670062" expanded="true" signature="8801:8831" placeholder="SELECT * FRO... users" />
+            <marker date="1474444670062" expanded="true" signature="8910:9302" placeholder="select q.*,c... ${$this-&gt;db-&gt;dbprefix('quiz')}" />
+            <marker date="1474444670062" expanded="true" signature="9384:9703" placeholder="select q.*,c... ${$this-&gt;db-&gt;dbprefix('quiz')}" />
+            <marker date="1474444670062" expanded="true" signature="9830:10058" placeholder="select q.*,c... ${$this-&gt;db-&gt;dbprefix('quiz')}" />
+            <marker date="1474444670062" expanded="true" signature="11111:11300" placeholder="select * fro... quizsubscriptions" />
+            <marker date="1474444670062" expanded="true" signature="13037:13091" placeholder="SELECT is_pe... general_settings" />
+            <marker date="1474444670062" expanded="true" signature="13207:13252" placeholder="SELECT * FRO... ${$commontable}" />
+            <marker date="1474444670062" expanded="true" signature="13516:13669" placeholder="select qr.*,... ${$this-&gt;db-&gt;dbprefix('user_quiz_results')}" />
+            <marker date="1474444670062" expanded="true" signature="13845:13891" placeholder="SELECT * FRO... quizsubscriptions" />
+            <marker date="1474444670062" expanded="true" signature="14807:14913" placeholder="SELECT * FRO... ${$this-&gt;db-&gt;dbprefix('user_quiz_results_history')}" />
+            <marker date="1474444670062" expanded="true" signature="15007:15246" placeholder="select qh.*,... ${$this-&gt;db-&gt;dbprefix('user_quiz_results_history')}" />
+            <marker date="1474444670062" expanded="true" signature="17588:17628" placeholder="SELECT quizz... general_settings" />
+            <marker date="1474444670062" expanded="true" signature="17859:17889" placeholder="SELECT * FRO... users" />
+            <marker date="1474444670062" expanded="true" signature="18003:18477" placeholder="select q.*,c... ${$this-&gt;db-&gt;dbprefix('quiz')}" />
+            <marker date="1474444670062" expanded="true" signature="18592:18963" placeholder="select q.*,c... ${$this-&gt;db-&gt;dbprefix('quiz')}" />
+            <marker date="1474444670062" expanded="true" signature="19184:19480" placeholder="select q.*,c... ${$this-&gt;db-&gt;dbprefix('quiz')}" />
+            <marker date="1474444670062" expanded="true" signature="22260:22300" placeholder="SELECT quizz... general_settings" />
+            <marker date="1474444670062" expanded="true" signature="22514:22544" placeholder="SELECT * FRO... users" />
+            <marker date="1474444670062" expanded="true" signature="23799:23839" placeholder="SELECT quizz... general_settings" />
+            <marker date="1474444670062" expanded="true" signature="24053:24083" placeholder="SELECT * FRO... users" />
+            <marker date="1474444670062" expanded="true" signature="24138:24609" placeholder="select q.*,c... ${$this-&gt;db-&gt;dbprefix('quiz')}" />
+            <marker date="1474444670062" expanded="true" signature="24685:25005" placeholder="select q.*,c... ${$this-&gt;db-&gt;dbprefix('quiz')}" />
+            <marker date="1474444670062" expanded="true" signature="25313:25488" placeholder="select qq.*,... ${$this-&gt;db-&gt;dbprefix('quizquestions')}" />
+            <marker date="1474444670062" expanded="true" signature="25873:26143" placeholder="SELECT r.use... ${$this-&gt;db-&gt;dbprefix('user_quiz_results')}" />
+            <marker date="1474444670062" expanded="true" signature="26241:26335" placeholder="select certi... ${$this-&gt;db-&gt;dbprefix('general_settings')}" />
+            <marker date="1474444670062" expanded="true" signature="27672:29636" placeholder="..." />
+            <marker date="1474444670062" expanded="true" signature="27679:29057" placeholder="..." />
+            <marker date="1474444670062" expanded="true" signature="27783:29050" placeholder="..." />
+            <marker date="1474444670062" expanded="true" signature="27799:27933" placeholder="{...}" />
+            <marker date="1474444670062" expanded="true" signature="27940:28011" placeholder="{...}" />
+            <marker date="1474444670062" expanded="true" signature="28021:28157" placeholder="{...}" />
+            <marker date="1474444670062" expanded="true" signature="28170:28240" placeholder="{...}" />
+            <marker date="1474444670062" expanded="true" signature="28246:28413" placeholder="{...}" />
+            <marker date="1474444670062" expanded="true" signature="28421:28438" placeholder="{...}" />
+            <marker date="1474444670062" expanded="true" signature="28458:28662" placeholder="{...}" />
+            <marker date="1474444670062" expanded="true" signature="28669:28692" placeholder="{...}" />
+            <marker date="1474444670062" expanded="true" signature="28703:28773" placeholder="{...}" />
+            <marker date="1474444670062" expanded="true" signature="28784:28891" placeholder="{...}" />
+            <marker date="1474444670062" expanded="true" signature="28901:29009" placeholder="{...}" />
+            <marker date="1474444670062" expanded="true" signature="29064:29628" placeholder="..." />
+            <marker date="1474444670062" expanded="true" signature="29091:29620" placeholder="..." />
+            <marker date="1474444670062" expanded="true" signature="29125:29324" placeholder="..." />
+            <marker date="1474444670062" expanded="true" signature="29147:29214" placeholder="..." />
+            <marker date="1474444670062" expanded="true" signature="29377:29613" placeholder="..." />
+            <marker date="1474444670062" expanded="true" signature="35280:35660" placeholder="SELECT s.tra... ${$this-&gt;db-&gt;dbprefix('quiz')}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/auth/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9083558">
+          <caret line="333" column="0" selection-start-line="333" selection-start-column="0" selection-end-line="333" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3324937">
+          <caret line="1170" column="0" selection-start-line="1170" selection-start-column="0" selection-end-line="1170" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.574124">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/user_quiz_history.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.3746631">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1471864808088" expanded="true" signature="2167:2402" placeholder="..." />
+            <marker date="1471864808088" expanded="true" signature="2198:2392" placeholder="..." />
+            <marker date="1471864808088" expanded="true" signature="2245:2383" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/general/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37466308">
+          <caret line="124" column="37" selection-start-line="124" selection-start-column="37" selection-end-line="124" selection-end-column="37" />
+          <folding>
+            <element signature="n#style#0;n#div#3;n#div#1;n#div#1;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/user/exam/exampage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="5.4528303">
+          <caret line="142" column="72" selection-start-line="142" selection-start-column="72" selection-end-line="142" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/user/exam/quiz_results.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41239893">
+          <caret line="31" column="35" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/designs/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45822102">
+          <caret line="619" column="58" selection-start-line="619" selection-start-column="58" selection-end-line="619" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/logs/log-2016-09-21.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8625337">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/exam.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.3076923">
+          <caret line="210" column="32" selection-start-line="210" selection-start-column="20" selection-end-line="210" selection-end-column="32" />
+          <folding>
+            <marker date="1474487084935" expanded="true" signature="2884:3059" placeholder="select q.*, ${$this-&gt;db-&gt;dbprefix('quiz')}" />
+            <marker date="1474487084935" expanded="true" signature="3680:3929" placeholder="select q.*,q... ${$this-&gt;db-&gt;dbprefix('quiz')}" />
+            <marker date="1474487084935" expanded="true" signature="4088:4294" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('questions')}" />
+            <marker date="1474487084935" expanded="true" signature="4396:4628" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('questions')}" />
+            <marker date="1474487084935" expanded="true" signature="6370:6428" placeholder="select * sub... ${$this-&gt;db-&gt;dbprefix('quiz')}" />
+            <marker date="1474487084935" expanded="true" signature="11784:11938" placeholder="select qr.*,... ${$this-&gt;db-&gt;dbprefix('user_quiz_results')}" />
+            <marker date="1474487084935" expanded="true" signature="11784:11990" placeholder="select qr.*,... ${$this-&gt;db-&gt;dbprefix('user_quiz_results')}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.3207548">
+          <caret line="850" column="48" selection-start-line="850" selection-start-column="48" selection-end-line="850" selection-end-column="48" />
+          <folding>
+            <marker date="1474486895007" expanded="true" signature="1517:1635" placeholder="SELECT u.* F... users" />
+            <marker date="1474486895007" expanded="true" signature="1753:2050" placeholder="SELECT * FRO... *" />
+            <marker date="1474486895007" expanded="true" signature="1767:2009" placeholder="SELECT qh.*,... ${$this-&gt;db-&gt;dbprefix('user_quiz_results_history')}" />
+            <marker date="1474486895007" expanded="true" signature="2136:2397" placeholder="select qr.*,... ${$this-&gt;db-&gt;dbprefix('user_quiz_results')}" />
+            <marker date="1474486895007" expanded="true" signature="2476:2558" placeholder="select * fro... ${$table}" />
+            <marker date="1474486895007" expanded="true" signature="2620:2702" placeholder="select * fro... ${$table}" />
+            <marker date="1474486895007" expanded="true" signature="2900:3102" placeholder="SELECT q.nam... ${$this-&gt;db-&gt;dbprefix('user_quiz_results')}" />
+            <marker date="1474486895007" expanded="true" signature="3178:3355" placeholder="SELECT s.qui... ${$this-&gt;db-&gt;dbprefix('quizsubscriptions')}" />
+            <marker date="1474486895007" expanded="true" signature="3845:3955" placeholder="SELECT u.* F... users" />
+            <marker date="1474486895007" expanded="true" signature="4943:5039" placeholder="SELECT u.* F... users" />
+            <marker date="1474486895007" expanded="true" signature="17927:18078" placeholder="select qr.*,... ${$this-&gt;db-&gt;dbprefix('user_quiz_results')}" />
+            <marker date="1474486895007" expanded="true" signature="19148:19417" placeholder="select qh.*,... ${$this-&gt;db-&gt;dbprefix('user_quiz_results_history')}" />
+            <marker date="1474486895007" expanded="true" signature="22436:22520" placeholder="select image... ${$this-&gt;db-&gt;dbprefix('users')}" />
+            <marker date="1474486895007" expanded="true" signature="26078:26121" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('categories')}" />
+            <marker date="1474486895007" expanded="true" signature="26078:26164" placeholder="select * fro... ${$table}" />
+            <marker date="1474486895007" expanded="true" signature="28815:28883" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('categories')}" />
+            <marker date="1474486895007" expanded="true" signature="30017:30161" placeholder="select s.*,c... ${$this-&gt;db-&gt;dbprefix('subcategories')}" />
+            <marker date="1474486895007" expanded="true" signature="31437:31511" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('subcategories')}" />
+            <marker date="1474486895007" expanded="true" signature="34211:34281" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('subjects')}" />
+            <marker date="1474486895007" expanded="true" signature="35226:35240" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('subjects')}" />
+            <marker date="1474486895007" expanded="true" signature="36410:36586" placeholder="select q.*,s... ${$this-&gt;db-&gt;dbprefix('questions')}" />
+            <marker date="1474486895007" expanded="true" signature="37129:37283" placeholder="select q.*,s... ${$this-&gt;db-&gt;dbprefix('questions')}" />
+            <marker date="1474486895007" expanded="true" signature="37372:37524" placeholder="select q.*,s... ${$this-&gt;db-&gt;dbprefix('questions')}" />
+            <marker date="1474486895007" expanded="true" signature="40787:40859" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('questions')}" />
+            <marker date="1474486895007" expanded="true" signature="43368:43596" placeholder="select q.*,c... ${$this-&gt;db-&gt;dbprefix('quiz')}" />
+            <marker date="1474486895007" expanded="true" signature="49563:49806" placeholder="select q.*,c... ${$this-&gt;db-&gt;dbprefix('quiz')}" />
+            <marker date="1474486895007" expanded="true" signature="49908:50086" placeholder="select qq.*,... ${$this-&gt;db-&gt;dbprefix('quizquestions')}" />
+            <marker date="1474486895007" expanded="true" signature="50168:50210" placeholder="SELECT group... quiz_for" />
+            <marker date="1474486895007" expanded="true" signature="53060:53142" placeholder="select subca... ${$this-&gt;db-&gt;dbprefix('subcategories')}" />
+            <marker date="1474486895007" expanded="true" signature="55614:55683" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('notifications')}" />
+            <marker date="1474486895007" expanded="true" signature="57962:58087" placeholder="select autho... ${$this-&gt;db-&gt;dbprefix('testimonials')}" />
+            <marker date="1474486895007" expanded="true" signature="59370:59438" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('testimonials')}" />
+            <marker date="1474486895007" expanded="true" signature="62176:62234" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('general_settings')}" />
+            <marker date="1474486895007" expanded="true" signature="62763:62821" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('general_settings')}" />
+            <marker date="1474486895007" expanded="true" signature="63179:63237" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('general_settings')}" />
+            <marker date="1474486895007" expanded="true" signature="64874:64932" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('general_settings')}" />
+            <marker date="1474486895007" expanded="true" signature="66361:66416" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('email_setting')}" />
+            <marker date="1474486895007" expanded="true" signature="70447:70538" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('pages')}" />
+            <marker date="1474486895007" expanded="true" signature="70605:70693" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('pages')}" />
+            <marker date="1474486895007" expanded="true" signature="72226:72322" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('pages')}" />
+            <marker date="1474486895007" expanded="true" signature="72389:72482" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('pages')}" />
+            <marker date="1474486895007" expanded="true" signature="73981:74069" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('pages')}" />
+            <marker date="1474486895007" expanded="true" signature="74135:74220" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('pages')}" />
+            <marker date="1474486895007" expanded="true" signature="75118:75175" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('aboutus_content')}" />
+            <marker date="1474486895007" expanded="true" signature="76083:76140" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('aboutus_content')}" />
+            <marker date="1474486895007" expanded="true" signature="76893:77020" placeholder="select count... questions" />
+            <marker date="1474486895007" expanded="true" signature="78481:78581" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix($table)}" />
+            <marker date="1474486895007" expanded="true" signature="79718:79766" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('paypal')}" />
+            <marker date="1474486895007" expanded="true" signature="80773:81085" placeholder="SELECT s.use... ${$this-&gt;db-&gt;dbprefix('quiz')}" />
+            <marker date="1474486895007" expanded="true" signature="83963:84032" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('group_settings')}" />
+            <marker date="1474486895007" expanded="true" signature="88134:88244" placeholder="SELECT u.* F... users" />
+            <marker date="1474486895007" expanded="true" signature="91658:91689" placeholder="SELECT * FRO... user_quiz_results" />
+            <marker date="1474486895007" expanded="true" signature="93325:93347" placeholder="SELECT * FRO... articles" />
+            <marker date="1474486895007" expanded="true" signature="96534:96601" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('articles')}" />
+            <marker date="1474486895007" expanded="true" signature="96692:96818" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('articles_description')}" />
+            <marker date="1474486895007" expanded="true" signature="96884:97010" placeholder="select * fro... ${$this-&gt;db-&gt;dbprefix('articles_description')}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/view_user_profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-50.346153">
+          <caret line="77" column="143" selection-start-line="77" selection-start-column="143" selection-end-line="77" selection-end-column="143" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/view_quiz_results.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29198474">
+          <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>

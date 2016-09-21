@@ -447,7 +447,7 @@
                		$val = $data->quiztype;
                	}
                
-               echo form_dropdown('quiztype', array('Free'=>'Free','Paid'=>'Paid'), $val,'class="form-control" id="quiztype"');
+               echo form_dropdown('quiztype', array('Free'=>'Free','Write'=>'Write'), $val,'class="form-control" id="quiztype"');
                ?>
          </div>
 		 

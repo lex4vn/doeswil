@@ -6,6 +6,13 @@
 <script type="text/javascript" src="<?php echo base_url();?>assets/designs/css/TableBarChart.js"></script>
 <link rel="stylesheet" href="<?php echo base_url();?>assets/designs/css/TableBarChart.css" />
 <script>
+//    window.onload = function(){
+//        var button = document.getElementById('startwriting');
+//        if(button != null){
+//            button.click();
+//        }
+//
+//    }
    function isChecked()
    {
    	if (document.getElementById("exam_chkbox").checked == true) {
@@ -47,14 +54,14 @@
             echo $record->name;
             ?> </p>
       </div>
-      <div class="col-md-12 padd">
-         <div class="sectin-hed">
-             <p><b>HƯỚNG DẪN L&Agrave;M B&Agrave;I</b></p>
-         </div>
-      </div>
+
        <?php if ($is_authorized){ ?>
        <?php if($record->quiztype == 'Free') {?>
-
+               <div class="col-md-12 padd">
+                   <div class="sectin-hed">
+                       <p><b>HƯỚNG DẪN L&Agrave;M B&Agrave;I</b></p>
+                   </div>
+               </div>
                <p>Xin ch&agrave;o c&aacute;c bạn đến với V&ograve;ng kiểm tra tổng hợp của Wilmar CLV Awards 2016!</p>
 
                <p>C&aacute;c bạn h&atilde;y đọc thật kỹ hướng dẫn sau trước khi bắt đầu l&agrave;m b&agrave;i nh&eacute;!</p>
@@ -104,14 +111,8 @@
                </div>
            </div></div>
 	<?php }   elseif($record->quiztype == 'Write') {?>
-        <ol>
-            <li>Total of <?php echo $record->deauration;?> minutes duration will be given to attempt all the questions. <?php if($record->negativemarkstatus == "Active") echo "And there a penalty of minus ".$record->negativemark." marks for each wrong answer."; ?></li>
-            <li>The clock has been set at the server and the countdown timer at the top right corner of your screen will display the time remaining for you to complete the exam. When the clock runs out the exam ends by default - you are not required to end or submit your exam. </li>
-            <li>
-                The question palette at the right of screen shows one of the following statuses of each of the questions numbered:
-                <br><br>
-            </li>
-        </ol>
+               <p>&nbsp;</p>
+               <p>&nbsp;</p>
            <div class="infor-mation">
         <div class="row">
             <div class="col-md-12">
@@ -120,7 +121,7 @@
                     <tr>
                         <td>&nbsp;</td>
                         <td colspan="2">
-                                <a style="cursor:pointer;" target="_self" href="<?php echo base_url();?>exam/startexam/<?php echo $exams[0]->quizid;?>">
+                                <a id="startwriting" style="cursor:pointer;" target="_self" href="<?php echo base_url();?>exam/startexam/<?php echo $exams[0]->quizid;?>">
                                     <div class="btn bg-primary wnm-user rig-ht"> <i class="fa fa-sign-in"></i> Go for writing</div>
                                 </a>
                         </td>

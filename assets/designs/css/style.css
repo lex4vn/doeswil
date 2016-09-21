@@ -380,9 +380,13 @@ background: #505659 !important;
 	padding: 4px 15px;
 
 }
+.quction p {
+	font-weight: normal;
+}
+
 .quction {
 	 clear: both;
- 
+ 	text-align: justify;
     font-size: 13px;
     font-weight: 600;
     line-height: 25px;
@@ -605,7 +609,7 @@ input[type=search]{
  .form-group > label{ font-family: "open Sans"; font-size:14px; line-height:25px;
 }
 .pera-graph{ font-family:"open Sans"}
-.correct-answ{	background: none repeat scroll 0 0 #4b4b4b  !important;
+.correct-answ{	background: none repeat scroll 0 0 #5cb85c  !important;
 	border-bottom: 3px solid #5cb85c;
 	color: #fff;
  
@@ -613,7 +617,7 @@ input[type=search]{
 	margin: 5px; width:auto; cursor:default !important;
 }
 
-.wrong-answ{	background: none repeat scroll 0 0 #4b4b4b  !important;
+.wrong-answ{	background: none repeat scroll 0 0 #d9534f  !important;
 	border-bottom: 3px solid #d9534f;
 	color: #fff;
  
@@ -995,7 +999,9 @@ label.error {
 .progress {
   clear:both !important
 }
-
+tbody tr td p {
+	display: inline;
+}
 .bg-col{background:#2D3C3D !important; box-shadow:none !important; border:none !important;  float:left}
 .infor-mation{ max-width:650px; padding:10px; background:#16a085; border-radius:5px; color:#fff; box-shadow:0px 0px 30px #95a5a6; border:1px solid #fff;}
 .rig-ht{ float:right}

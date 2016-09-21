@@ -826,8 +826,42 @@ class Admin extends MY_Controller {
 			redirect('admin', 'refresh');
 		}
 	}
-	
-	
+
+	function viewQuizResults()
+	{
+		$this->validate_admin();
+
+		if ($this->uri->segment(3) && is_numeric($this->uri->segment(3))) {
+			$userid 					= $this->uri->segment(3);
+			$table 						= $this->db->dbprefix('session');
+			$where['id'] 				= $userid;
+			$results = $this->base_model->run_query(
+				"select * from ".$table
+				." where userid=".$this->uri->segment(3)." order by id desc"
+			);
+			//var_dump($results);die();
+			$result = $results[0];
+		//	$this->data['questions'] = $result['questions'];
+			$quizinfo 						=  unserialize($result->quiz_info);
+			$totalQuestions 				=  $result->totalQuestions;
+			$quizRecords 					=  unserialize($result->quizRecords);
+			$questions 						= unserialize($result->questions);
+			$answers 						= unserialize($result->answers);
+			$score 							= 0;
+			$not_attempted 					= 0;
+			$this->data['quiz_info'] 		= $quizinfo;
+			$this->data['totalQuestions'] 	= $totalQuestions;
+			$this->data['quizRecords'] 		= $quizRecords;
+			$this->data['answers'] 			= $answers;
+			$this->data['questions'] 		= $questions;
+			$this->data['user_options']= unserialize($result->user_options);
+			$this->data['content'] 			= 'admin/view_quiz_results';
+			$this->_render_page('temp/admintemplate', $this->data);
+		}
+		else {
+			redirect('admin', 'refresh');
+		}
+	}
 	//CRUD Operations for Categories
 	function categories()
 	{
@@ -1212,7 +1246,9 @@ class Admin extends MY_Controller {
 				$inputdata['answer2'] 		= $this->input->post('answer2');
 				$inputdata['answer3'] 		= $this->input->post('answer3');
 				$inputdata['answer4'] 		= $this->input->post('answer4');
-				$inputdata['answer5'] 		= $this->input->post('answer5');
+				if($this->input->post('answer5') != ''){
+					$inputdata['answer5'] 		= $this->input->post('answer5');
+				}
 				$inputdata['correctanswer'] = $this->input->post('correctanswer');
 				$inputdata['hint'] 			= "";
 				$inputdata['difficultylevel'] = $this->input->post('difficultylevel');
@@ -2785,6 +2821,54 @@ class Admin extends MY_Controller {
 		exit();
 	}
 
+	public function exportResult(){
+		$heading=array('UserID','User Name','Email','Score','IQ','KTTH','English','Total questions','Date of test','Content writing');
+		include(FCPATH.'/assets/excelassets/PHPExcel/IOFactory.php');
+		//Create a new Object
+		$objPHPExcel = new PHPExcel();
+
+		$objPHPExcel->getActiveSheet()->setTitle("Exam result");
+		//Loop Heading
+		$rowNumberH = 1;
+		$colH = 'A';
+
+		foreach($heading as $h){
+			$objPHPExcel->getActiveSheet()->setCellValue($colH.$rowNumberH,$h);
+			$colH++;
+		}
+		//Loop Result
+		$allUsers 	= $this->base_model->run_query(
+			"SELECT * FROM user_quiz_results"
+		);
+
+		$i=2;$no = 1;
+		foreach($allUsers as $n):
+			$objPHPExcel->getActiveSheet()->setCellValue('A'.$i,$n->userid);
+			$objPHPExcel->getActiveSheet()->setCellValue('B'.$i,$n->username);
+			$objPHPExcel->getActiveSheet()->setCellValue('C'.$i,$n->email);
+			$objPHPExcel->getActiveSheet()->setCellValue('D'.$i,$n->score);
+			$objPHPExcel->getActiveSheet()->setCellValue('E'.$i,$n->mark1);
+			$objPHPExcel->getActiveSheet()->setCellValue('F'.$i,$n->mark2);
+			$objPHPExcel->getActiveSheet()->setCellValue('G'.$i,$n->mark3);
+			$objPHPExcel->getActiveSheet()->setCellValue('H'.$i,$n->total_questions);
+			$objPHPExcel->getActiveSheet()->setCellValue('I'.$i,$n->dateoftest);
+			$objPHPExcel->getActiveSheet()->setCellValue('J'.$i,$n->content_exam);
+			$i++;$no++;
+		endforeach;
+
+
+		//Freeze pane
+		//$objPHPExcel->getActiveSheet()->freezePane('A2');
+		//Save as an Excel BIFF (xls) file
+		$objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel,'Excel5');
+		$fileName = 'ExamResult.'. date("Y-m-d") .'.xls';
+		header('Content-Type: application/vnd.ms-excel');
+		header('Content-Disposition: attachment;filename='.$fileName);
+		header('Cache-Control: max-age=0');
+
+		$objWriter->save('php://output');
+		exit();
+	}
 
 
 	function articles()

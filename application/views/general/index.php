@@ -87,36 +87,61 @@
             </div>
          </marquee>
       </div>
-      <div class="col-lg-4 padding test-moni">
-         <h2 class="test-hed"><?php echo lang('exam'); ?></h2>
-         <marquee direction="up" scrollamount="2" scrolldelay="2" onmouseover="this.setAttribute('scrollamount', 0, 0);" onmouseout="this.setAttribute('scrollamount', 2, 0);" height="218">
-            <div class="notif">
-               <ul>
-                  <?php if (count($latest_quizzes)>0) {
-                     foreach($latest_quizzes as $lq) {
-						$style = '';
-						if ($this->ion_auth->is_admin()) {
-							$style = 'cursor:default;text-decoration:none;';
-							$href = "";
-						}				
-						else {
-							$href = 'href="'.base_url().'user/instructions/'.$lq->quizid.'"';
-						}
-                    ?>
-                  <li>
-                     <a <?php echo $href;?> style="<?php echo $style;?>">
-                     Quiz of <b><?php echo $lq->name;?></b> has been added on <?php echo date('d-m-Y',strtotime($lq->startdate));?>. And will be closed on <?php echo date('d-m-Y',strtotime($lq->enddate));?>.<br/>
-                     Quiz Duration (Minutes): <?php echo $lq->deauration;?>
-                     </a>
-                  </li>
-                  <?php } 
-				  } 
-				  else echo "coming soon.";
-				  ?>
-               </ul>
-            </div>
-         </marquee>
-      </div>
+      <?php $this->load->library('ion_auth');
+      if( $this->ion_auth->logged_in() ){ ?>
+         <div class="col-lg-4 padding test-moni">
+            <h2 class="test-hed"><?php echo lang('exam'); ?></h2>
+            <marquee direction="up" scrollamount="2" scrolldelay="2" onmouseover="this.setAttribute('scrollamount', 0, 0);" onmouseout="this.setAttribute('scrollamount', 2, 0);" height="218">
+               <div class="notif">
+                  <ul>
+                     <?php if (count($latest_quizzes)<0) {
+                        foreach($latest_quizzes as $lq) {
+                           $style = '';
+                           if ($this->ion_auth->is_admin()) {
+                              $style = 'cursor:default;text-decoration:none;';
+                              $href = "";
+                           }
+                           else {
+                              $href = 'href="'.base_url().'user/instructions/'.$lq->quizid.'"';
+                           }
+                           ?>
+                           <li>
+                              <a <?php echo $href;?> style="<?php echo $style;?>">
+                                 Quiz of <b><?php echo $lq->name;?></b> has been added on <?php echo date('d-m-Y',strtotime($lq->startdate));?>. And will be closed on <?php echo date('d-m-Y',strtotime($lq->enddate));?>.<br/>
+                                 Quiz Duration (Minutes): <?php echo $lq->deauration;?>
+                              </a>
+                           </li>
+                        <?php }
+                     }
+                     else echo "coming soon.";
+                     ?>
+                  </ul>
+               </div>
+            </marquee>
+         </div>
+
+          <?php }else{ ?>
+      <div class="col-lg-4 padding test-moni"  style="height: 320px;">
+         <h2 class="test-hed">SIGN IN</h2>
+         <div class="carousel-caption width-form">
+            <div id="infoMessage"><?php  echo $message;?></div>
+            <?php echo form_open("auth/login",'class="form-signin"');?>
+            <p class="type">
+               <?php echo form_input($identity);?>
+            </p>
+            <p class="type">
+               <?php echo form_input($password);?>
+            </p>
+            <p class="type">
+               <?php echo form_submit('submit', $this->lang->line('login_submit_btn'),'class="btn btn-lg btn-primary butt"');?>
+            </p>
+            <?php echo form_close();?>
+            <p class="forget"><a href="<?php echo base_url(); ?>auth/forgot_password"><?php echo lang('login_forgot_password'); ?></a></p>
+            <p class="forget"> <a href="<?php echo base_url(); ?>auth/create_user"> <?php echo lang('signup_user_submit_btn'); ?></a></p>
+
+         </div>
+      <?php } ?>
+      <div class="clearfix"></div>
    </div>
    <div class="spacer"></div>
 </div>
